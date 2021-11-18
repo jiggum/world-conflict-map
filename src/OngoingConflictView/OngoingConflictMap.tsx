@@ -31,8 +31,7 @@ type TMapChartProps = {
 const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
   return (
     <>
-      <ComposableMap data-tip="" projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}
-                     onMouseDown={e => e.preventDefault()}>
+      <ComposableMap projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}>
         <Sphere id="rsm-sphere" stroke="#F0F3FA" strokeWidth={0.5} fill="transparent"/>
         <Graticule stroke="#F0F3FA" strokeWidth={0.5}/>
         <Geographies geography={geography}>

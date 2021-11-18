@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const MapWrapper = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
 `
 
 const Row = styled.div`
@@ -47,16 +47,16 @@ function OngoingConflictView() {
     undefined
   return (
     <Wrapper>
-      <MapWrapper>
+      <MapWrapper data-tip="" >
         <OngoingConflictMap setConflictInfo={setConflictInfo}/>
         <ReactTooltip>
           {
             conflictGroups ?
               conflictGroups.map(([key, conflicts]) => (
-                <>
+                <div key={key}>
                   <b>{key}</b>
                   {conflicts.sort().map(getToolTipRow)}
-                </>
+                </div>
               ))
               : undefined
           }
