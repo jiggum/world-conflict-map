@@ -29,7 +29,7 @@ ongoingArmedConflicts.forEach((e) => {
 
 const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
 
-const colorScale = scaleLinear([-1, 0, 1 / 7, 2 / 7, 3 / 7, 4 / 7, 5 / 7, 6 / 7, 1], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
+const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1, 7 / 6], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
 
 type TMapChartProps = {
   setConflictInfo: (value: TConflictInfo | undefined) => void,
@@ -48,31 +48,30 @@ const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
                 const {NAME} = geo.properties
                 const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
                 const conflicts = [NAME, ...spareCoutries].map(key => ongoingArmedConflictMap[key]).filter(e => e).flat()
+                const onConflict = conflicts.length > 0
                 const deaths = ongoingArmedConflictsDeaths['2020'].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS))
                 const deathsSum = deaths.reduce((acc, val) => acc + val, 0)
+                const colorPoint = deathsSum > 0 ? deathsSum / maxDeaths : -1 / 6
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    setConflictInfo(conflicts.length ? {name: NAME, conflicts} : undefined)
+                    setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
                   }}
                   onMouseLeave={() => {
                     setConflictInfo(undefined)
                   }}
                   style={{
                     default: {
-                      stroke: conflicts.length ? '#FFFFFF' : '#DADFE8',
-                      fill: conflicts.length ? colorScale(deathsSum > 0 ? deathsSum / maxDeaths : -0.6) : '#FFFFFF',
+                      stroke: onConflict ? '#FFFFFF' : '#DADFE8',
+                      fill: onConflict ? colorScale(colorPoint) : '#FFFFFF',
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: '#F53',
-                      outline: 'none',
+                      fill: onConflict ? colorScale(colorPoint + 2 / 6) : '#FFFFFF',
+                      stroke: onConflict ? '#FFFFFF' : '#DADFE8',
+                      strokeWidth: 0.5,
                     },
-                    pressed: {
-                      fill: '#E42',
-                      outline: 'none',
-                    }
                   }}
                 />
               })
