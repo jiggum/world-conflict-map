@@ -8,7 +8,7 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps'
 import { scaleLinear } from 'd3-scale'
-import { TConflictInfo, TYear } from './OngoingConflictView'
+import { TConflictInfo, TPosition, TYear } from './OngoingConflictView'
 import geography from '../data/geography.json'
 import ongoingArmedConflicts from '../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../data/geographyCountryNameMap'
@@ -34,9 +34,16 @@ const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 
 type TMapChartProps = {
   setConflictInfo: (value: TConflictInfo | undefined) => void,
   year: TYear,
+  fixed: TPosition | undefined,
+  setFixed: (value: TPosition | undefined) => void,
 }
 
-const OngoingConflictMap = ({setConflictInfo, year}: TMapChartProps) => {
+const OngoingConflictMap = ({
+  setConflictInfo,
+  year,
+  fixed,
+  setFixed,
+}: TMapChartProps) => {
   return (
     <>
       <ComposableMap projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}>
@@ -55,10 +62,21 @@ const OngoingConflictMap = ({setConflictInfo, year}: TMapChartProps) => {
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
+                  onClick={(e) => {
+                    if (fixed) {
+                      setFixed(undefined)
+                      setConflictInfo(undefined)
+                    } else {
+                      setFixed({left: e.clientX, top: e.clientY})
+                      setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
+                    }
+                  }}
                   onMouseEnter={() => {
+                    if (fixed) return
                     setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
                   }}
                   onMouseLeave={() => {
+                    if (fixed) return
                     setConflictInfo(undefined)
                   }}
                   style={{
@@ -68,9 +86,10 @@ const OngoingConflictMap = ({setConflictInfo, year}: TMapChartProps) => {
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: onConflict ? colorScale(colorPoint + 2 / 6) : '#FFFFFF',
+                      fill: onConflict ? colorScale(fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
+                      cursor: onConflict ? 'pointer' : 'default',
                     },
                   }}
                 />
