@@ -101,8 +101,9 @@ function OngoingConflictView() {
   return (
     <Wrapper data-tip="">
       <MapWrapper>
-        <OngoingConflictMap setConflictInfo={setConflictInfo} fixed={fixed} setFixed={setFixed} year={year}/>
+        <OngoingConflictMap conflictInfo={conflictInfo} setConflictInfo={setConflictInfo} fixed={fixed} setFixed={setFixed} year={year}/>
         <ReactTooltip
+          place="top"
           overridePosition={(position) => {
             if (!fixed) {
               prevTooltipPosition.current = position

@@ -32,6 +32,7 @@ const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.D
 const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1, 7 / 6], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
 
 type TMapChartProps = {
+  conflictInfo: TConflictInfo | undefined,
   setConflictInfo: (value: TConflictInfo | undefined) => void,
   year: TYear,
   fixed: TPosition | undefined,
@@ -39,6 +40,7 @@ type TMapChartProps = {
 }
 
 const OngoingConflictMap = ({
+  conflictInfo,
   setConflictInfo,
   year,
   fixed,
@@ -59,14 +61,12 @@ const OngoingConflictMap = ({
                 const onConflict = conflicts.length > 0
                 const deaths = ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
                 const colorPoint = deaths > 0 ? deaths / maxDeaths : -1 / 6
+                const fixedItem = fixed && [NAME, ...spareCoutries].includes(conflictInfo?.name)
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   onClick={(e) => {
-                    if (fixed) {
-                      setFixed(undefined)
-                      setConflictInfo(undefined)
-                    } else {
+                    if (!fixed) {
                       setFixed({left: e.clientX, top: e.clientY})
                       setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
                     }
@@ -82,11 +82,11 @@ const OngoingConflictMap = ({
                   style={{
                     default: {
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
-                      fill: onConflict ? colorScale(colorPoint) : '#FFFFFF',
+                      fill: onConflict ? colorScale(fixedItem ? 7 / 6 : colorPoint) : '#FFFFFF',
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: onConflict ? colorScale(fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
+                      fill: onConflict ? colorScale(fixedItem ? 7 / 6 : fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
                       cursor: onConflict ? 'pointer' : 'default',
