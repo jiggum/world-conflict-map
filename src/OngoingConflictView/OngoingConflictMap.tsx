@@ -69,6 +69,8 @@ const OngoingConflictMap = ({
                     if (!fixed) {
                       setFixed({left: e.clientX, top: e.clientY})
                       setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
+                    } else {
+                      setFixed(undefined)
                     }
                   }}
                   onMouseEnter={() => {
@@ -89,7 +91,7 @@ const OngoingConflictMap = ({
                       fill: onConflict ? colorScale(fixedItem ? 7 / 6 : fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
-                      cursor: onConflict ? 'pointer' : 'default',
+                      cursor: onConflict && !fixed ? 'pointer' : 'default',
                     },
                   }}
                 />

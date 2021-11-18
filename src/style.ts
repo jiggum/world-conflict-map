@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
   ${normalize}
 
   body {
-    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -22,6 +21,11 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     outline: none !important;
+  }
+  
+  body, p, ul, li {
+    margin: 0;
+    padding: 0;
   }
 `
 

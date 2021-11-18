@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import ReactTooltip from 'react-tooltip'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
-import remarkStringify from 'remark-stringify'
-import { link } from '../remarkHandler'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
 import OngoingConflictMap, { TOngoingArmedConflict } from './OngoingConflictMap'
 import { groupBy } from '../util'
 import ongoingArmedConflictsDeaths from '../data/ongoingArmedConflictsDeaths.json'
@@ -41,6 +41,23 @@ const TooltipRow = styled.div`
   line-break: auto;
   white-space: pre-line;
   font-size: 14px;
+  
+  a {
+    color: #66b5ff;
+  }
+  
+  p {
+    display: inline-block;
+  }
+  
+  ul {
+    font-size: 0;
+    list-style-position: inside;
+  }
+  
+  li {
+    font-size: 14px;
+  }
 `
 
 const Right = styled.div`
@@ -66,10 +83,10 @@ const CloseButton = styled.div`
 export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
 export type TPosition = { left: number, top: number }
 
-const remarkProcessor = unified().use(remarkParse).use(remarkStringify, {handlers: {link}, bullet: '-'})
+const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
 
 const parseDescription = (description: string) =>
-  remarkProcessor.stringify(remarkProcessor.parse(description)).replaceAll('\n\n', '\n')
+  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value
 
 const getTooltipContent = (year: TYear, key: string, conflicts: TOngoingArmedConflict[]) => {
   const deaths = ongoingArmedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
@@ -84,7 +101,7 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TOngoingArmedCon
 
 const getToolTipRow = (conflict: TOngoingArmedConflict, index: number) => (
   <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
-    <div>{parseDescription(conflict.DESCRIPTION)}</div>
+    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
 
@@ -98,10 +115,22 @@ function OngoingConflictView() {
   const conflictGroups = conflictInfo ?
     Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1) :
     undefined
+
+  useEffect(() => {
+    setFixed(undefined)
+    setConflictInfo(undefined)
+  }, [year])
+
   return (
     <Wrapper data-tip="">
       <MapWrapper>
-        <OngoingConflictMap conflictInfo={conflictInfo} setConflictInfo={setConflictInfo} fixed={fixed} setFixed={setFixed} year={year}/>
+        <OngoingConflictMap
+          conflictInfo={conflictInfo}
+          setConflictInfo={setConflictInfo}
+          fixed={fixed}
+          setFixed={setFixed}
+          year={year}
+        />
         <ReactTooltip
           place="top"
           overridePosition={(position) => {
