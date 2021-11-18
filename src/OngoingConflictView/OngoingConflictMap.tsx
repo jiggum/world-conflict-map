@@ -49,9 +49,8 @@ const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
                 const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
                 const conflicts = [NAME, ...spareCoutries].map(key => ongoingArmedConflictMap[key]).filter(e => e).flat()
                 const onConflict = conflicts.length > 0
-                const deaths = ongoingArmedConflictsDeaths['2020'].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS))
-                const deathsSum = deaths.reduce((acc, val) => acc + val, 0)
-                const colorPoint = deathsSum > 0 ? deathsSum / maxDeaths : -1 / 6
+                const deaths = ongoingArmedConflictsDeaths['2020'].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
+                const colorPoint = deaths > 0 ? deaths / maxDeaths : -1 / 6
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}

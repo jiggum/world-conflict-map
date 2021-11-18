@@ -7,6 +7,7 @@ import remarkStringify from 'remark-stringify'
 import { link } from '../remarkHandler'
 import OngoingConflictMap, { TOngoingArmedConflict } from './OngoingConflictMap'
 import { groupBy } from '../util'
+import ongoingArmedConflictsDeaths from '../data/ongoingArmedConflictsDeaths.json'
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,10 +22,19 @@ const MapWrapper = styled.div`
   max-width: 1600px;
 `
 
-const Row = styled.div`
+const TooltipTitle = styled.b`
+  font-size: 16px;
+`
+
+const TooltipDeaths = styled.div`
+  font-size: 14px;
+`
+
+const TooltipRow = styled.div`
   display: flex;
   line-break: auto;
   white-space: pre-line;
+  font-size: 14px;
 `
 
 const remarkProcessor = unified().use(remarkParse).use(remarkStringify, {handlers: {link}, bullet: '-'})
@@ -32,10 +42,21 @@ const remarkProcessor = unified().use(remarkParse).use(remarkStringify, {handler
 const parseDescription = (description: string) =>
   remarkProcessor.stringify(remarkProcessor.parse(description)).replaceAll('\n\n', '\n')
 
+const getTooltipContent = (key: string, conflicts: TOngoingArmedConflict[]) => {
+  const deaths = ongoingArmedConflictsDeaths['2020'].find(e => e.COUNTRY === key)?.DEATHS
+  return (
+    <div key={key}>
+      <TooltipTitle>{key}</TooltipTitle>
+      {deaths && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
+      {conflicts.sort().map(getToolTipRow)}
+    </div>
+  )
+}
+
 const getToolTipRow = (conflict: TOngoingArmedConflict, index: number) => (
-  <Row key={index}>{conflict.YEAR}:&nbsp;
+  <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
     <div>{parseDescription(conflict.DESCRIPTION)}</div>
-  </Row>
+  </TooltipRow>
 )
 
 export type TConflictInfo = { name: string, conflicts: TOngoingArmedConflict[] }
@@ -47,17 +68,12 @@ function OngoingConflictView() {
     undefined
   return (
     <Wrapper>
-      <MapWrapper data-tip="" >
+      <MapWrapper data-tip="">
         <OngoingConflictMap setConflictInfo={setConflictInfo}/>
         <ReactTooltip>
           {
             conflictGroups ?
-              conflictGroups.map(([key, conflicts]) => (
-                <div key={key}>
-                  <b>{key}</b>
-                  {conflicts.sort().map(getToolTipRow)}
-                </div>
-              ))
+              conflictGroups.map((e) => getTooltipContent(...e))
               : undefined
           }
         </ReactTooltip>
