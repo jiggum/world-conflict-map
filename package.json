@@ -9,6 +9,7 @@
     "react-router-dom": "6",
     "react-simple-maps": "^2.3.0",
     "react-tooltip": "^4.2.21",
+    "remark": "^14.0.1",
     "styled-components": "^5.3.3",
     "styled-normalize": "^8.0.7"
   },
