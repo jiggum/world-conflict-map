@@ -6,8 +6,7 @@ import {
   Geography,
   Sphere, Graticule,
 } from 'react-simple-maps'
-
-const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json'
+import geography from '../data/geography.json'
 
 type TMapChartProps = {
   setTooltipContent: (value: string) => void,
@@ -20,7 +19,7 @@ const OngoingConflictMap = ({setTooltipContent}: TMapChartProps) => {
         <ZoomableGroup maxZoom={4} translateExtent={[[0, 0], [800, 400]]}>
           <Sphere id="rsm-sphere" stroke="#F0F3FA" strokeWidth={0.5} fill="transparent"/>
           <Graticule stroke="#F0F3FA" strokeWidth={0.5}/>
-          <Geographies geography={geoUrl}>
+          <Geographies geography={geography}>
             {({geographies}) =>
               geographies.map(geo => (
                 <Geography
