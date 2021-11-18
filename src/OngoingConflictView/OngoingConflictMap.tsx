@@ -8,7 +8,7 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps'
 import { scaleLinear } from 'd3-scale'
-import { TConflictInfo } from './OngoingConflictView'
+import { TConflictInfo, TYear } from './OngoingConflictView'
 import geography from '../data/geography.json'
 import ongoingArmedConflicts from '../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../data/geographyCountryNameMap'
@@ -33,9 +33,10 @@ const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 
 
 type TMapChartProps = {
   setConflictInfo: (value: TConflictInfo | undefined) => void,
+  year: TYear,
 }
 
-const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
+const OngoingConflictMap = ({setConflictInfo, year}: TMapChartProps) => {
   return (
     <>
       <ComposableMap projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}>
@@ -49,7 +50,7 @@ const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
                 const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
                 const conflicts = [NAME, ...spareCoutries].map(key => ongoingArmedConflictMap[key]).filter(e => e).flat()
                 const onConflict = conflicts.length > 0
-                const deaths = ongoingArmedConflictsDeaths['2020'].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
+                const deaths = ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
                 const colorPoint = deaths > 0 ? deaths / maxDeaths : -1 / 6
                 return <Geography
                   key={geo.rsmKey}
