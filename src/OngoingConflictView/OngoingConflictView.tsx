@@ -122,7 +122,14 @@ function OngoingConflictView() {
   }, [year])
 
   return (
-    <Wrapper data-tip="">
+    <Wrapper
+      data-tip=""
+      onClick={() => {
+        setFixed(undefined)
+        setConflictInfo(undefined)
+        console.log('click')
+      }}
+    >
       <MapWrapper>
         <OngoingConflictMap
           conflictInfo={conflictInfo}
@@ -144,7 +151,7 @@ function OngoingConflictView() {
         >
           {
             conflictGroups && (
-              <>
+              <div onClick={e => e.stopPropagation()}>
                 <CloseButton
                   onClick={() => {
                     setConflictInfo(undefined)
@@ -159,7 +166,7 @@ function OngoingConflictView() {
                   </svg>
                 </CloseButton>
                 {conflictGroups.map((e) => getTooltipContent(year, ...e))}
-              </>
+              </div>
             )
           }
         </ReactTooltip>

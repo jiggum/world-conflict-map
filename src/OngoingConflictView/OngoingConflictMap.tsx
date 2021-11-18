@@ -69,13 +69,17 @@ const OngoingConflictMap = ({
                     if (!fixed) {
                       setFixed({left: e.clientX, top: e.clientY})
                       setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
-                    } else {
-                      setFixed(undefined)
+                      e.stopPropagation()
                     }
                   }}
                   onMouseEnter={() => {
                     if (fixed) return
                     setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
+                  }}
+                  onMouseMove={() => {
+                    if (!fixed) {
+                      setConflictInfo({name: NAME, conflicts})
+                    }
                   }}
                   onMouseLeave={() => {
                     if (fixed) return
