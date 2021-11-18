@@ -77,7 +77,7 @@ const OngoingConflictMap = ({
                     setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
                   }}
                   onMouseMove={() => {
-                    if (!fixed) {
+                    if (!fixed && !conflictInfo) {
                       setConflictInfo({name: NAME, conflicts})
                     }
                   }}
