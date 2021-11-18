@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from 'antd'
+import { Button, ButtonProps } from 'antd'
 
 
 const Wrapper = styled.div`
@@ -10,18 +10,22 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
+function IButton(props: ButtonProps) {
+  return <Button type="link" size="large" {...props} />
+}
+
 function Header() {
   return (
     <Wrapper>
-      <Button type="text">
+      <IButton>
         Ongoing Armed Conflict
-      </Button>
-      <Button type="text">
+      </IButton>
+      <IButton>
         Text(disabled)
-      </Button>
-      <Button type="text">
+      </IButton>
+      <IButton>
         Text(disabled)
-      </Button>
+      </IButton>
     </Wrapper>
   )
 }
