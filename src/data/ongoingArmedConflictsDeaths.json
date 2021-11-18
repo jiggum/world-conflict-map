@@ -1,0 +1,422 @@
+{
+  "2015": [
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 55219
+    },
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 36345
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 24113
+    },
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 20525
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 8122
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 6425
+    },
+    {
+      "COUNTRY": "Ukraine",
+      "DEATHS": 4344
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 4087
+    },
+    {
+      "COUNTRY": "Pakistan",
+      "DEATHS": 3688
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 3258
+    },
+    {
+      "COUNTRY": "Sudan",
+      "DEATHS": 3216
+    },
+    {
+      "COUNTRY": "Egypt",
+      "DEATHS": 2836
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 2706
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 1699
+    },
+    {
+      "COUNTRY": "Cameroon",
+      "DEATHS": 1429
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 986
+    },
+    {
+      "COUNTRY": "Myanmar",
+      "DEATHS": 881
+    }
+  ],
+  "2016": [
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 49742
+    },
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 23953
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 23898
+    },
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 23539
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 5575
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 4684
+    },
+    {
+      "COUNTRY": "Sudan",
+      "DEATHS": 3891
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 3544
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 2865
+    },
+    {
+      "COUNTRY": "Turkey",
+      "DEATHS": 2013
+    },
+    {
+      "COUNTRY": "Pakistan",
+      "DEATHS": 1803
+    },
+    {
+      "COUNTRY": "Egypt",
+      "DEATHS": 1707
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 1565
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 1375
+    },
+    {
+      "COUNTRY": "Ethiopia",
+      "DEATHS": 1114
+    },
+    {
+      "COUNTRY": "India",
+      "DEATHS": 905
+    },
+    {
+      "COUNTRY": "Ukraine",
+      "DEATHS": 902
+    }
+  ],
+  "2017": [
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 39000
+    },
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 31174
+    },
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 23065
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 13187
+    },
+    {
+      "COUNTRY": "Myanmar",
+      "DEATHS": 6700
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 4969
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 3528
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 3432
+    },
+    {
+      "COUNTRY": "Sudan",
+      "DEATHS": 2450
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 1857
+    },
+    {
+      "COUNTRY": "Central African Rep.",
+      "DEATHS": 1757
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 1564
+    },
+    {
+      "COUNTRY": "Egypt",
+      "DEATHS": 1506
+    },
+    {
+      "COUNTRY": "Ethiopia",
+      "DEATHS": 1445
+    },
+    {
+      "COUNTRY": "Philippines",
+      "DEATHS": 1429
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 1319
+    },
+    {
+      "COUNTRY": "Pakistan",
+      "DEATHS": 1269
+    }
+  ],
+  "2018": [
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 35941
+    },
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 33341
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 22201
+    },
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 20130
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 4920
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 4850
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 3862
+    },
+    {
+      "COUNTRY": "Saudi Arabia",
+      "DEATHS": 3509
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 1757
+    },
+    {
+      "COUNTRY": "Mali",
+      "DEATHS": 1285
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 1166
+    },
+    {
+      "COUNTRY": "India",
+      "DEATHS": 988
+    },
+    {
+      "COUNTRY": "Cameroon",
+      "DEATHS": 945
+    },
+    {
+      "COUNTRY": "Ethiopia",
+      "DEATHS": 886
+    },
+    {
+      "COUNTRY": "Central African Rep.",
+      "DEATHS": 842
+    },
+    {
+      "COUNTRY": "Pakistan",
+      "DEATHS": 736
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 727
+    }
+  ],
+  "2019": [
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 41735
+    },
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 35588
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 16050
+    },
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 11244
+    },
+    {
+      "COUNTRY": "Saudi Arabia",
+      "DEATHS": 4832
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 2604
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 2200
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 1850
+    },
+    {
+      "COUNTRY": "Mali",
+      "DEATHS": 734
+    },
+    {
+      "COUNTRY": "Egypt",
+      "DEATHS": 529
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 519
+    },
+    {
+      "COUNTRY": "India",
+      "DEATHS": 403
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 302
+    },
+    {
+      "COUNTRY": "Colombia",
+      "DEATHS": 238
+    },
+    {
+      "COUNTRY": "Cameroon",
+      "DEATHS": 234
+    },
+    {
+      "COUNTRY": "Pakistan",
+      "DEATHS": 206
+    },
+    {
+      "COUNTRY": "Thailand",
+      "DEATHS": 163
+    }
+  ],
+  "2020": [
+    {
+      "COUNTRY": "Mexico",
+      "DEATHS": 34512
+    },
+    {
+      "COUNTRY": "Afghanistan",
+      "DEATHS": 20674
+    },
+    {
+      "COUNTRY": "Yemen",
+      "DEATHS": 19561
+    },
+    {
+      "COUNTRY": "Syria",
+      "DEATHS": 7620
+    },
+    {
+      "COUNTRY": "Nigeria",
+      "DEATHS": 7172
+    },
+    {
+      "COUNTRY": "Dem. Rep. Congo",
+      "DEATHS": 6162
+    },
+    {
+      "COUNTRY": "Artsakh",
+      "DEATHS": 6110
+    },
+    {
+      "COUNTRY": "Somalia",
+      "DEATHS": 2950
+    },
+    {
+      "COUNTRY": "Mali",
+      "DEATHS": 2734
+    },
+    {
+      "COUNTRY": "Iraq",
+      "DEATHS": 2436
+    },
+    {
+      "COUNTRY": "Burkina Faso",
+      "DEATHS": 2268
+    },
+    {
+      "COUNTRY": "S. Sudan",
+      "DEATHS": 2245
+    },
+    {
+      "COUNTRY": "Ethiopia",
+      "DEATHS": 1813
+    },
+    {
+      "COUNTRY": "Mozambique",
+      "DEATHS": 1696
+    },
+    {
+      "COUNTRY": "Libya",
+      "DEATHS": 1484
+    },
+    {
+      "COUNTRY": "Cameroon",
+      "DEATHS": 1447
+    },
+    {
+      "COUNTRY": "Philippines",
+      "DEATHS": 1316
+    }
+  ]
+}

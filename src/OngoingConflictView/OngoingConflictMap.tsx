@@ -7,10 +7,12 @@ import {
   Graticule,
   ZoomableGroup,
 } from 'react-simple-maps'
+import { scaleLinear } from 'd3-scale'
 import { TConflictInfo } from './OngoingConflictView'
 import geography from '../data/geography.json'
 import ongoingArmedConflicts from '../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../data/geographyCountryNameMap'
+import ongoingArmedConflictsDeaths from '../data/ongoingArmedConflictsDeaths.json'
 
 export type TOngoingArmedConflict = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
 
@@ -25,6 +27,9 @@ ongoingArmedConflicts.forEach((e) => {
   }
 })
 
+const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
+
+const colorScale = scaleLinear([-1, 0, 1 / 7, 2 / 7, 3 / 7, 4 / 7, 5 / 7, 6 / 7, 1], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
 
 type TMapChartProps = {
   setConflictInfo: (value: TConflictInfo | undefined) => void,
@@ -43,6 +48,8 @@ const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
                 const {NAME} = geo.properties
                 const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
                 const conflicts = [NAME, ...spareCoutries].map(key => ongoingArmedConflictMap[key]).filter(e => e).flat()
+                const deaths = ongoingArmedConflictsDeaths['2020'].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS))
+                const deathsSum = deaths.reduce((acc, val) => acc + val, 0)
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
@@ -54,8 +61,8 @@ const OngoingConflictMap = ({setConflictInfo}: TMapChartProps) => {
                   }}
                   style={{
                     default: {
-                      stroke: conflicts.length ? '#FFCCC7' : '#DADFE8',
-                      fill: conflicts.length ? '#FFF1F0' : '#FFFFFF',
+                      stroke: conflicts.length ? '#FFFFFF' : '#DADFE8',
+                      fill: conflicts.length ? colorScale(deathsSum > 0 ? deathsSum / maxDeaths : -0.6) : '#FFFFFF',
                       strokeWidth: 0.5,
                     },
                     hover: {
