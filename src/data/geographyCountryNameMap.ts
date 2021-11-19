@@ -12,6 +12,7 @@ const geographyCountryNameMap = {
   'Solomon Is.': ['Marshall Is.'],
   Cameroon: ['Ambazonia'],
   Nigeria: ['Biafra'],
+  China: ['Rep. China'],
 }
 
 export default geographyCountryNameMap

@@ -87,7 +87,7 @@ const ArmedConflictsMap = ({
             conflicts,
             position: value.position,
           }
-          const conflictGroups = Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1)
+          const conflictGroups = Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b < a ? 1 : -1)
 
           setConflictInfo(conflictInfo)
           setTooltipProps({

@@ -45,17 +45,21 @@ const DetailWrapper = styled.div`
 
 const DetailContent = styled.div`
   overflow: auto;
-  padding: 16px 24px 16px 24px;
+  padding: 0 24px 16px 24px;
 `
 
 const DescriptionWrapper = styled(TooltipRow)`
-  margin-top: 8px;
+  margin-top: 6px;
   flex-direction: column;
 `
 
 const TeritoryDescription = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+`
+
+const TooltipGroup = styled.div`
+  margin-top: 24px;
 `
 
 const DetailDrawer = styled.div`
@@ -84,10 +88,10 @@ const parseDescription = (description: string) =>
 
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (
-    <div key={key}>
+    <TooltipGroup key={key}>
       <StyledTooltipTitle>{key}</StyledTooltipTitle>
       {disputes.map(getToolTipRow)}
-    </div>
+    </TooltipGroup>
   )
 }
 
@@ -96,7 +100,8 @@ const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
     <DescriptionWrapper key={index}>
       <TeritoryDescription dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
       <div
-        dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString().trim() || 'No description'}}/>
+        dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString().trim() || 'No description'}}
+      />
     </DescriptionWrapper>
   )
 }
@@ -111,7 +116,7 @@ function DetailView({
   hide,
 }: TDetailViewProps) {
   const infoGroups = useMemo(
-    () => Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1),
+    () => Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b < a ? 1 : -1),
     [info],
   )
 

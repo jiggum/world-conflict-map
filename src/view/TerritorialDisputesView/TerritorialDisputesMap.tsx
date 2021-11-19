@@ -18,7 +18,7 @@ const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      <div>{disputes.length} ongoing disputes</div>
+      <div><b>{disputes.length}</b> ongoing disputes</div>
     </div>
   )
 }
@@ -74,7 +74,7 @@ const TerritorialDisputesMap = ({
             disputes,
             position: value.position,
           }
-          const infoGroups = Object.entries(groupBy(info.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1)
+          const infoGroups = Object.entries(groupBy(info.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b < a ? 1 : -1)
           setInfo(info)
           setTooltipProps({
             position: value.position,
