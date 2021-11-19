@@ -61,22 +61,33 @@ const OngoingConflictMap = ({
                 const onConflict = conflicts.length > 0
                 const deaths = ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
                 const colorPoint = deaths > 0 ? deaths / maxDeaths : -1 / 6
-                const isFixedItem = fixed && [NAME, ...spareCoutries].includes(fixedItem)
+                const isSelectedItem = [NAME, ...spareCoutries].includes(fixedItem)
+                const isFixedItem = fixed && isSelectedItem
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   onClick={(e) => {
                     if (!fixed) {
                       setFixed(true)
-                      if (![NAME, ...spareCoutries].includes(fixedItem)) {
-                        setConflictInfo(onConflict ? {name: NAME, conflicts, position: {left: e.clientX, top: e.clientY}} : undefined)
-                      }
-                      e.stopPropagation()
+                    } else if (isSelectedItem) {
+                      setConflictInfo(undefined)
                     }
+                    if (!isSelectedItem) {
+                      setConflictInfo(onConflict ? {
+                        name: NAME,
+                        conflicts,
+                        position: {left: e.clientX, top: e.clientY}
+                      } : undefined)
+                    }
+                    e.stopPropagation()
                   }}
                   onMouseEnter={(e) => {
                     if (fixed) return
-                    setConflictInfo(onConflict ? {name: NAME, conflicts, position: {left: e.clientX, top: e.clientY}} : undefined)
+                    setConflictInfo(onConflict ? {
+                      name: NAME,
+                      conflicts,
+                      position: {left: e.clientX, top: e.clientY}
+                    } : undefined)
                   }}
                   onMouseLeave={() => {
                     if (fixed) return
@@ -89,10 +100,10 @@ const OngoingConflictMap = ({
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: onConflict ? colorScale(isFixedItem ? 7 / 6 : fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
+                      fill: onConflict ? colorScale(isFixedItem ? 7 / 6 : colorPoint + 2 / 6) : '#FFFFFF',
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
-                      cursor: onConflict && !fixed ? 'pointer' : 'default',
+                      cursor: onConflict ? 'pointer' : 'default',
                     },
                   }}
                 />
