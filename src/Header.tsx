@@ -41,6 +41,30 @@ function Header() {
           Territorial Disputes
         </Link>
       </IButton>
+      /
+      <IButton active={location.pathname === '/border-conflicts'}>
+        <Link to="/border-conflicts">
+          Border Conflicts
+        </Link>
+      </IButton>
+      /
+      <IButton active={location.pathname === '/wars'}>
+        <Link to="/wars">
+          Wars
+        </Link>
+      </IButton>
+      /
+      <IButton active={location.pathname === '/massacres'}>
+        <Link to="/massacres">
+          Massacres
+        </Link>
+      </IButton>
+      /
+      <IButton active={location.pathname === '/terrors'}>
+        <Link to="/terrors">
+          Terrors
+        </Link>
+      </IButton>
     </Wrapper>
   )
 }

@@ -18,6 +18,22 @@ function App() {
           path="/territorial-disputes"
           element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
         />
+        <Route
+          path="/border-conflicts"
+          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+        />
+        <Route
+          path="/wars"
+          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+        />
+        <Route
+          path="/massacres"
+          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+        />
+        <Route
+          path="/terrors"
+          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+        />
       </Routes>
       <Header/>
       {
