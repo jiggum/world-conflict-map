@@ -10,7 +10,6 @@ import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 export type TTerritorialDispute = { TERRITORY: string; COUNTRY: string; DESCRIPTION: string; }
 
 const territorialDisputeMapByCountry = groupBy(territorialDisputes, (e) => e.COUNTRY)
-// export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
 const max = 15
 

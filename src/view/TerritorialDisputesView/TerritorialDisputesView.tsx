@@ -6,8 +6,11 @@ import remarkParse from 'remark-parse'
 import styled from 'styled-components'
 import TerritorialDisputesMap, { TTerritorialDispute } from './TerritorialDisputesMap'
 import { TTooltipProps, CloseButton, TooltipTitle, TooltipRow } from '../../component/Tooltip'
+import territorialDisputes from '../../data/territorialDisputes.json'
 import { TPosition } from '../../type'
 import { groupBy } from '../../util'
+
+export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
 const Wrapper = styled.div`
   display: flex;
@@ -96,9 +99,15 @@ const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
 }
 
 const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
+  const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
   return (
     <DescriptionWrapper key={index}>
       <TeritoryDescription dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
+      {
+        claimants.length && (
+          <b>Claimants: {claimants.join(', ')}</b>
+        )
+      }
       <div
         dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString().trim() || 'No description'}}
       />
