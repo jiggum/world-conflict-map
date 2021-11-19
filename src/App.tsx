@@ -11,8 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ArmedConflictsView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}/>
-        <Route path="/territorial-disputes" element={<TerritorialDisputesView/>}/>
+        <Route
+          path="/"
+          element={<ArmedConflictsView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}/>
+        <Route
+          path="/territorial-disputes"
+          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+        />
       </Routes>
       <Header/>
       {

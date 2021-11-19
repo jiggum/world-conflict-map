@@ -55,6 +55,11 @@ function ArmedConflictsView({
     setTooltipProps(undefined)
   }, [year, setTooltipProps])
 
+  useEffect(() => () => {
+    setTooltipProps(undefined)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <Wrapper
       onClick={() => {

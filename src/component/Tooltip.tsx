@@ -8,6 +8,7 @@ const Wrapper = styled.div<{ position: TPosition, fixed: boolean }>`
   left: ${props => props.position.left}px;
   transform: translate(-50%, -100%);
   background-color: #222426;
+  opacity: 0.9;
   padding: 12px 16px 12px 16px;
   color: #FFFFFF;
   border-radius: 4px;
