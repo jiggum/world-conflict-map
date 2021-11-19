@@ -12,12 +12,12 @@ const Wrapper = styled.div<{ position: TPosition, fixed: boolean }>`
   padding: 12px 16px 12px 16px;
   color: #FFFFFF;
   border-radius: 4px;
-  z-index: 10;
   ${props => !props.fixed && 'pointer-events: none;'}
 `
 
 export const TooltipTitle = styled.b`
   font-size: 16px;
+  padding-right: 24px;
 `
 
 export const TooltipDeaths = styled.div`
@@ -48,7 +48,7 @@ export const TooltipRow = styled.div`
   }
 `
 
-const CloseButton = styled.div`
+export const CloseButton = styled.div`
   position: absolute;
   width: 24px;
   height: 24px;
@@ -72,20 +72,18 @@ function Tooltip({
   onClose,
 }: TTooltipProps) {
   return (
-    <Wrapper position={position} fixed={fixed}>
-      <div onClick={e => e.stopPropagation()}>
-        <CloseButton
-          onClick={onClose}
-        >
-          <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-            <polygon
-              fill="#FFFFFF"
-              points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
-            />
-          </svg>
-        </CloseButton>
-        {children}
-      </div>
+    <Wrapper position={position} fixed={fixed} onClick={e => e.stopPropagation()}>
+      <CloseButton
+        onClick={onClose}
+      >
+        <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <polygon
+            fill="#FFFFFF"
+            points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
+          />
+        </svg>
+      </CloseButton>
+      {children}
     </Wrapper>
   )
 }

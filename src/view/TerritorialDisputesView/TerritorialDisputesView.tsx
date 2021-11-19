@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState, memo } from 'react'
+import rehypeStringify from 'rehype-stringify'
+import remarkRehype from 'remark-rehype'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
 import styled from 'styled-components'
-import OngoingConflictMap, { TTerritorialDispute } from './TerritorialDisputesMap'
-import { TTooltipProps } from '../../component/Tooltip'
+import TerritorialDisputesMap, { TTerritorialDispute } from './TerritorialDisputesMap'
+import { TTooltipProps, CloseButton, TooltipTitle, TooltipRow } from '../../component/Tooltip'
 import { TPosition } from '../../type'
+import { groupBy } from '../../util'
 
 const Wrapper = styled.div`
   display: flex;
@@ -17,14 +22,117 @@ const Wrapper = styled.div`
   padding-bottom: 64px;
 `
 
+const StyledTooltipTitle = styled(TooltipTitle)`
+  font-size: 24px;
+`
+
 const MapWrapper = styled.div`
   width: 100%;
   max-width: 1600px;
   padding: 0 64px;
 `
 
+const DetailWrapper = styled.div`
+  background-color: #222426;
+  opacity: 0.95;
+  border-radius: 4px;
+  color: #FFFFFF;
+  max-height: calc(100% - 128px);
+  max-width: calc(100% - 128px);
+  position: relative;
+  display: flex;
+`
+
+const DetailContent = styled.div`
+  overflow: auto;
+  padding: 16px 24px 16px 24px;
+`
+
+const DescriptionWrapper = styled(TooltipRow)`
+  margin-top: 8px;
+  flex-direction: column;
+`
+
+const TeritoryDescription = styled.div`
+  font-size: 20px;
+  font-weight: bold;
+`
+
+const DetailDrawer = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+`
+
+const StyledCloseButton = styled(CloseButton)`
+  top: 12px;
+  right: 16px;
+`
+
 export type TTerritorialDisputeInfo = { country: string, disputes: TTerritorialDispute[], position: TPosition }
 
+const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
+
+const parseDescription = (description: string) =>
+  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
+    .replaceAll('<a href', '<a target="_blank" href')
+
+const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
+  return (
+    <div key={key}>
+      <StyledTooltipTitle>{key}</StyledTooltipTitle>
+      {disputes.map(getToolTipRow)}
+    </div>
+  )
+}
+
+const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
+  return (
+    <DescriptionWrapper key={index}>
+      <TeritoryDescription dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
+      <div
+        dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString().trim() || 'No description'}}/>
+    </DescriptionWrapper>
+  )
+}
+
+type TDetailViewProps = {
+  info: TTerritorialDisputeInfo,
+  hide: () => void,
+}
+
+function DetailView({
+  info,
+  hide,
+}: TDetailViewProps) {
+  const infoGroups = useMemo(
+    () => Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1),
+    [info],
+  )
+
+  return (
+    <DetailDrawer onClick={hide}>
+      <DetailWrapper onClick={e => e.stopPropagation()}>
+        <DetailContent>
+          {infoGroups.map((e) => getTooltipContent(...e))}
+        </DetailContent>
+        <StyledCloseButton onClick={hide}>
+          <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <polygon
+              fill="#FFFFFF"
+              points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
+            />
+          </svg>
+        </StyledCloseButton>
+      </DetailWrapper>
+    </DetailDrawer>
+  )
+}
 
 type TTerritorialDisputesViewProps = {
   tooltipProps?: TTooltipProps,
@@ -36,6 +144,7 @@ function TerritorialDisputesView({
   setTooltipProps,
 }: TTerritorialDisputesViewProps) {
   const [info, setInfo] = useState<TTerritorialDisputeInfo | undefined>()
+  const [detailInfo, setDetailInfo] = useState<TTerritorialDisputeInfo | undefined>()
 
   useEffect(() => () => {
     setTooltipProps(undefined)
@@ -49,15 +158,17 @@ function TerritorialDisputesView({
       }}
     >
       <MapWrapper>
-        <OngoingConflictMap
+        <TerritorialDisputesMap
           tooltipProps={tooltipProps}
           setTooltipProps={setTooltipProps}
           info={info}
           setInfo={setInfo}
+          setDetailInfo={setDetailInfo}
         />
       </MapWrapper>
+      {detailInfo && <DetailView info={detailInfo} hide={() => setDetailInfo(undefined)}/>}
     </Wrapper>
   )
 }
 
-export default TerritorialDisputesView
+export default memo(TerritorialDisputesView)

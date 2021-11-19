@@ -20,6 +20,7 @@ type TMapChartProps = {
   select: (value: undefined | { geo: any, position: TPosition}) => void,
   fixed: boolean,
   setFixed: (value: boolean) => void,
+  onClick?: (geo: any) => void,
 }
 
 function ConflictMap({
@@ -29,6 +30,7 @@ function ConflictMap({
   select,
   fixed,
   setFixed,
+  onClick,
 }: TMapChartProps) {
   return (
     <>
@@ -58,6 +60,7 @@ function ConflictMap({
                         position: {left: e.clientX, top: e.clientY}
                       } : undefined)
                     }
+                    onClick && onClick(geo)
                     e.stopPropagation()
                   }}
                   onMouseEnter={(e) => {
@@ -68,7 +71,6 @@ function ConflictMap({
                     } : undefined)
                   }}
                   onMouseLeave={() => {
-                    if (fixed) return
                     select(undefined)
                   }}
                   style={{

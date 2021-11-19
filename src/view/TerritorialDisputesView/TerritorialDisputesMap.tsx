@@ -1,14 +1,11 @@
 import React, { memo } from 'react'
-import rehypeStringify from 'rehype-stringify'
-import remarkRehype from 'remark-rehype'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
+import styled from 'styled-components'
 import { TTerritorialDisputeInfo } from './TerritorialDisputesView'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import territorialDisputes from '../../data/territorialDisputes.json'
 import ConflictMap from '../../component/ConflictMap'
 import { groupBy } from '../../util'
-import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 
 export type TTerritorialDispute = { TERRITORY: string; COUNTRY: string; DESCRIPTION: string; }
 
@@ -17,32 +14,23 @@ const territorialDisputeMapByCountry = groupBy(territorialDisputes, (e) => e.COU
 
 const max = 15
 
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
-
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      {disputes.sort().map(getToolTipRow)}
+      <div>{disputes.length} ongoing disputes</div>
     </div>
   )
 }
 
-const getToolTipRow = (dispute: TTerritorialDispute, index: number) => (
-  <TooltipRow key={index}>
-    <div dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
-    :&nbsp;
-    <div dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString()}}/>
-  </TooltipRow>
-)
+const ToolBarFooter = styled.div`
+  text-align: center;
+`
 
 type TMapChartProps = {
   info?: TTerritorialDisputeInfo,
   setInfo: (value?: TTerritorialDisputeInfo) => void,
+  setDetailInfo: (value?: TTerritorialDisputeInfo) => void,
   tooltipProps?: TTooltipProps,
   setTooltipProps: (props?: TTooltipProps) => void,
 }
@@ -52,6 +40,7 @@ const TerritorialDisputesMap = ({
   setInfo,
   tooltipProps,
   setTooltipProps,
+  setDetailInfo,
 }: TMapChartProps) => {
 
   return (
@@ -85,11 +74,16 @@ const TerritorialDisputesMap = ({
             disputes,
             position: value.position,
           }
-          const infoGroups = Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1)
+          const infoGroups = Object.entries(groupBy(info.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1)
           setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: infoGroups.map((e) => getTooltipContent(...e)),
+            children: (
+              <>
+                {infoGroups.map((e) => getTooltipContent(...e))}
+                <ToolBarFooter>(Click to see details)</ToolBarFooter>
+              </>
+            ),
             fixed: tooltipProps?.fixed ?? false,
             onClose: () => {
               setInfo(undefined)
@@ -98,7 +92,21 @@ const TerritorialDisputesMap = ({
           })
         }
       }}
-      fixed={tooltipProps?.fixed ?? false}
+      onClick={(geo) => {
+        setInfo(undefined)
+        setTooltipProps(undefined)
+        const {NAME} = geo.properties
+        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+        const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
+        if (!disputes.length) return
+        const info = {
+          country: NAME,
+          disputes,
+          position: geo.position,
+        }
+        setDetailInfo(info)
+      }}
+      fixed={false}
       setFixed={(fixed) => setTooltipProps({
         ...tooltipProps!,
         fixed,
