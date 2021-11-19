@@ -18,10 +18,10 @@ function Header() {
   return (
     <Wrapper>
       <IButton>
-        Ongoing Armed Conflict
+        Ongoing Armed Conflicts
       </IButton>
       <IButton>
-        Text(disabled)
+        Territorial Disputes
       </IButton>
       <IButton>
         Text(disabled)

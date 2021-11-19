@@ -9,10 +9,10 @@ import {
 } from 'react-simple-maps'
 import { scaleLinear } from 'd3-scale'
 import { TConflictInfo, TYear } from './OngoingConflictView'
-import geography from '../data/geography.json'
-import ongoingArmedConflicts from '../data/ongoingArmedConflicts.json'
-import geographyCountryNameMap from '../data/geographyCountryNameMap'
-import ongoingArmedConflictsDeaths from '../data/ongoingArmedConflictsDeaths.json'
+import geography from '../../data/geography.json'
+import ongoingArmedConflicts from '../../data/ongoingArmedConflicts.json'
+import geographyCountryNameMap from '../../data/geographyCountryNameMap'
+import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 
 export type TOngoingArmedConflict = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
 
@@ -49,7 +49,7 @@ const OngoingConflictMap = ({
   return (
     <>
       <ComposableMap projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}>
-        <ZoomableGroup maxZoom={5} translateExtent={[[0, 0], [800, 400]]} disablePanning>
+        <ZoomableGroup maxZoom={5} translateExtent={[[0, 0], [800, 400]]}>
           <Sphere id="rsm-sphere" stroke="#F0F3FA" strokeWidth={0.5} fill="transparent"/>
           <Graticule stroke="#F0F3FA" strokeWidth={0.5}/>
           <Geographies geography={geography}>

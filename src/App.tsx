@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Header from './Header'
-import OngoingConflictView from './OngoingConflictView'
+import OngoingConflictView from './view/OngoingConflictView'
 
 function App() {
   return (

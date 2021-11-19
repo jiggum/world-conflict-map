@@ -4,10 +4,12 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import OngoingConflictMap, { TOngoingArmedConflict } from './OngoingConflictMap'
-import { groupBy } from '../util'
-import ongoingArmedConflictsDeaths from '../data/ongoingArmedConflictsDeaths.json'
 import { Slider } from 'antd'
+import OngoingConflictMap, { TOngoingArmedConflict } from './OngoingConflictMap'
+import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
+import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
+import { groupBy } from '../../util'
+import { TPosition } from '../../type'
 
 const Wrapper = styled.div`
   display: flex;
@@ -28,50 +30,6 @@ const MapWrapper = styled.div`
   padding: 0 64px;
 `
 
-const Tooltip = styled.div<{ position: TPosition, fixed: boolean }>`
-  position: absolute;
-  top: ${props => props.position.top - 20}px;
-  left: ${props => props.position.left}px;
-  transform: translate(-50%, -100%);
-  background-color: #222426;
-  padding: 12px 16px 16px 16px;
-  color: #FFFFFF;
-  border-radius: 4px;
-  ${props => !props.fixed && 'pointer-events: none;'}
-`
-
-const TooltipTitle = styled.b`
-  font-size: 16px;
-`
-
-const TooltipDeaths = styled.div`
-  font-size: 14px;
-`
-
-const TooltipRow = styled.div`
-  display: flex;
-  line-break: auto;
-  white-space: pre-line;
-  font-size: 14px;
-  
-  a {
-    color: #66b5ff;
-  }
-  
-  p {
-    display: inline-block;
-  }
-  
-  ul {
-    font-size: 0;
-    list-style-position: inside;
-  }
-  
-  li {
-    font-size: 14px;
-  }
-`
-
 const Right = styled.div`
   width: 120px;
   height: 400px;
@@ -82,18 +40,7 @@ const SliderMark = styled.span`
   font-size: 16px;
 `
 
-const CloseButton = styled.div`
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  color: red;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-`
-
 export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
-export type TPosition = { left: number, top: number }
 
 const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
 
@@ -150,23 +97,15 @@ function OngoingConflictView() {
         />
         {
           conflictGroups && (
-            <Tooltip position={conflictInfo!.position} fixed={fixed}>
-              <div onClick={e => e.stopPropagation()}>
-                <CloseButton
-                  onClick={() => {
-                    setConflictInfo(undefined)
-                    setFixed(false)
-                  }}
-                >
-                  <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                    <polygon
-                      fill="#FFFFFF"
-                      points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
-                    />
-                  </svg>
-                </CloseButton>
-                {conflictGroups.map((e) => getTooltipContent(year, ...e))}
-              </div>
+            <Tooltip
+              position={conflictInfo!.position}
+              fixed={fixed}
+              onClose={() => {
+                setConflictInfo(undefined)
+                setFixed(false)
+              }}
+            >
+              {conflictGroups.map((e) => getTooltipContent(year, ...e))}
             </Tooltip>
           )
         }
