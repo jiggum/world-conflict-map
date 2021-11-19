@@ -49,7 +49,7 @@ const OngoingConflictMap = ({
   return (
     <>
       <ComposableMap projectionConfig={{rotate: [-10, 0, 0], scale: 147}} width={800} height={400}>
-        <ZoomableGroup maxZoom={5} translateExtent={[[0, 0], [800, 400]]}>
+        <ZoomableGroup maxZoom={5} translateExtent={[[0, 0], [800, 400]]} disablePanning>
           <Sphere id="rsm-sphere" stroke="#F0F3FA" strokeWidth={0.5} fill="transparent"/>
           <Graticule stroke="#F0F3FA" strokeWidth={0.5}/>
           <Geographies geography={geography}>
