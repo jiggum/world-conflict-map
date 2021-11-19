@@ -53,7 +53,7 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      {deaths && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
+      {deaths !== undefined && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
       {conflicts.sort().map(getToolTipRow)}
     </div>
   )

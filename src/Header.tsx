@@ -12,11 +12,13 @@ const Wrapper = styled.div`
   color: #CAD0DB;
 `
 
-const StyledButton = styled(Button)<{ active: boolean }>`
-  color: ${props => props.active ? '#1890ff' : '#303238' };
+const StyledButton = styled(
+  ({active, ...props}) => (<Button {...props} />)
+)<{ active: boolean }>`
+  color: ${props => props.active ? '#1890ff' : '#303238'};
     
   &:hover {
-    color: ${props => props.active ? '#1890ff' : '#303238' };
+    color: ${props => props.active ? '#1890ff' : '#303238'};
   }
 `
 
@@ -25,7 +27,7 @@ function IButton(props: ButtonProps & { active: boolean }) {
 }
 
 function Header() {
-  const location = useLocation();
+  const location = useLocation()
   return (
     <Wrapper>
       <IButton active={location.pathname === '/'}>

@@ -5,7 +5,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import OngoingConflictMap, { TTerritorialDispute } from './TerritorialDisputesMap'
-import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
+import Tooltip, {TooltipRow, TooltipTitle } from '../../component/Tooltip'
 import { groupBy } from '../../util'
 import { TPosition } from '../../type'
 
@@ -35,18 +35,18 @@ const parseDescription = (description: string) =>
     .replaceAll('<a href', '<a target="_blank" href')
 
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
-  const deaths = 0 // ongoingArmedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      {deaths && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
       {disputes.sort().map(getToolTipRow)}
     </div>
   )
 }
 
 const getToolTipRow = (dispute: TTerritorialDispute, index: number) => (
-  <TooltipRow key={index}>{dispute.TERRITORY}:&nbsp;
+  <TooltipRow key={index}>
+    <div dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
+    :&nbsp;
     <div dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
