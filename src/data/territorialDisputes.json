@@ -47,12 +47,12 @@
   {
     "TERRITORY": "[Ceuta](https://en.wikipedia.org/wiki/Ceuta \"Ceuta\"), [Melilla](https://en.wikipedia.org/wiki/Melilla \"Melilla\"), and other [plazas de soberanía](https://en.wikipedia.org/wiki/Plazas_de_soberan%C3%ADa \"Plazas de soberanía\")",
     "COUNTRY": "Spain",
-    "DESCRIPTION": "Ceuta and Melilla are administered by Spain as [autonomous cities](https://en.wikipedia.org/wiki/Autonomous_communities_of_Spain#Autonomous_cities \"Autonomous communities of Spain\").\\\\nAn [incident](https://en.wikipedia.org/wiki/Perejil_Island_crisis \"Perejil Island crisis\") on [Perejil Island](https://en.wikipedia.org/wiki/Perejil_Island \"Perejil Island\") happened in 2002, after which both countries agreed to return to *[status quo](https://en.wikipedia.org/wiki/Status_quo \"Status quo\")*."
+    "DESCRIPTION": "Ceuta and Melilla are administered by Spain as [autonomous cities](https://en.wikipedia.org/wiki/Autonomous_communities_of_Spain#Autonomous_cities \"Autonomous communities of Spain\").\nAn [incident](https://en.wikipedia.org/wiki/Perejil_Island_crisis \"Perejil Island crisis\") on [Perejil Island](https://en.wikipedia.org/wiki/Perejil_Island \"Perejil Island\") happened in 2002, after which both countries agreed to return to *[status quo](https://en.wikipedia.org/wiki/Status_quo \"Status quo\")*."
   },
   {
     "TERRITORY": "[Ceuta](https://en.wikipedia.org/wiki/Ceuta \"Ceuta\"), [Melilla](https://en.wikipedia.org/wiki/Melilla \"Melilla\"), and other [plazas de soberanía](https://en.wikipedia.org/wiki/Plazas_de_soberan%C3%ADa \"Plazas de soberanía\")",
     "COUNTRY": "Morocco",
-    "DESCRIPTION": "Ceuta and Melilla are administered by Spain as [autonomous cities](https://en.wikipedia.org/wiki/Autonomous_communities_of_Spain#Autonomous_cities \"Autonomous communities of Spain\").\\\\nAn [incident](https://en.wikipedia.org/wiki/Perejil_Island_crisis \"Perejil Island crisis\") on [Perejil Island](https://en.wikipedia.org/wiki/Perejil_Island \"Perejil Island\") happened in 2002, after which both countries agreed to return to *[status quo](https://en.wikipedia.org/wiki/Status_quo \"Status quo\")*."
+    "DESCRIPTION": "Ceuta and Melilla are administered by Spain as [autonomous cities](https://en.wikipedia.org/wiki/Autonomous_communities_of_Spain#Autonomous_cities \"Autonomous communities of Spain\").\nAn [incident](https://en.wikipedia.org/wiki/Perejil_Island_crisis \"Perejil Island crisis\") on [Perejil Island](https://en.wikipedia.org/wiki/Perejil_Island \"Perejil Island\") happened in 2002, after which both countries agreed to return to *[status quo](https://en.wikipedia.org/wiki/Status_quo \"Status quo\")*."
   },
   {
     "TERRITORY": "[Chagos Archipelago](https://en.wikipedia.org/wiki/Chagos_Archipelago \"Chagos Archipelago\")",
@@ -902,17 +902,17 @@
   {
     "TERRITORY": "[Lake Constance](https://en.wikipedia.org/wiki/Lake_Constance#International_borders \"Lake Constance\")",
     "COUNTRY": "Germany",
-    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\\n\\nAustria is of the opinion that the contentious area belongs to all the states on its banks.\\\\nGermany holds an ambiguous opinion."
+    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\nAustria is of the opinion that the contentious area belongs to all the states on its banks. \nGermany holds an ambiguous opinion."
   },
   {
     "TERRITORY": "[Lake Constance](https://en.wikipedia.org/wiki/Lake_Constance#International_borders \"Lake Constance\")",
     "COUNTRY": "Austria",
-    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\\n\\nAustria is of the opinion that the contentious area belongs to all the states on its banks.\\\\nGermany holds an ambiguous opinion."
+    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\nAustria is of the opinion that the contentious area belongs to all the states on its banks. \nGermany holds an ambiguous opinion."
   },
   {
     "TERRITORY": "[Lake Constance](https://en.wikipedia.org/wiki/Lake_Constance#International_borders \"Lake Constance\")",
     "COUNTRY": "Switzerland",
-    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\\n\\nAustria is of the opinion that the contentious area belongs to all the states on its banks.\\\\nGermany holds an ambiguous opinion."
+    "DESCRIPTION": "Switzerland holds the view that the border runs through the middle of the lake.\nAustria is of the opinion that the contentious area belongs to all the states on its banks. \nGermany holds an ambiguous opinion."
   },
   {
     "TERRITORY": "[Olivenza](https://en.wikipedia.org/wiki/Olivenza \"Olivenza\") and [Vila Real](https://en.wikipedia.org/wiki/Vila_Real_(Oliven%C3%A7a) \"Vila Real (Olivença)\") (including the [municipality](https://en.wikipedia.org/wiki/Municipality \"Municipality\") of [Táliga](https://en.wikipedia.org/wiki/T%C3%A1liga \"Táliga\"))",
@@ -927,12 +927,12 @@
   {
     "TERRITORY": "[Croatia-Serbia border dispute](https://en.wikipedia.org/wiki/Croatia-Serbia_border_dispute \"Croatia-Serbia border dispute\")",
     "COUNTRY": "Croatia",
-    "DESCRIPTION": "Limited areas along the [Danube](https://en.wikipedia.org/wiki/Danube \"Danube\")\\\\nParts of [Osijek-Baranja](https://en.wikipedia.org/wiki/Osijek-Baranja_County \"Osijek-Baranja County\") and [Vukovar-Syrmia Counties](https://en.wikipedia.org/wiki/Vukovar-Syrmia_County \"Vukovar-Syrmia County\") and [West](https://en.wikipedia.org/wiki/West_Ba%C4%8Dka_District \"West Bačka District\") and [South Bačka Districts](https://en.wikipedia.org/wiki/South_Ba%C4%8Dka_District \"South Bačka District\"), includes [Liberland](https://en.wikipedia.org/wiki/Liberland \"Liberland\")."
+    "DESCRIPTION": "Limited areas along the [Danube](https://en.wikipedia.org/wiki/Danube \"Danube\") \nParts of [Osijek-Baranja](https://en.wikipedia.org/wiki/Osijek-Baranja_County \"Osijek-Baranja County\") and [Vukovar-Syrmia Counties](https://en.wikipedia.org/wiki/Vukovar-Syrmia_County \"Vukovar-Syrmia County\") and [West](https://en.wikipedia.org/wiki/West_Ba%C4%8Dka_District \"West Bačka District\") and [South Bačka Districts](https://en.wikipedia.org/wiki/South_Ba%C4%8Dka_District \"South Bačka District\"), includes [Liberland](https://en.wikipedia.org/wiki/Liberland \"Liberland\")."
   },
   {
     "TERRITORY": "[Croatia-Serbia border dispute](https://en.wikipedia.org/wiki/Croatia-Serbia_border_dispute \"Croatia-Serbia border dispute\")",
     "COUNTRY": "Serbia",
-    "DESCRIPTION": "Limited areas along the [Danube](https://en.wikipedia.org/wiki/Danube \"Danube\")\\\\nParts of [Osijek-Baranja](https://en.wikipedia.org/wiki/Osijek-Baranja_County \"Osijek-Baranja County\") and [Vukovar-Syrmia Counties](https://en.wikipedia.org/wiki/Vukovar-Syrmia_County \"Vukovar-Syrmia County\") and [West](https://en.wikipedia.org/wiki/West_Ba%C4%8Dka_District \"West Bačka District\") and [South Bačka Districts](https://en.wikipedia.org/wiki/South_Ba%C4%8Dka_District \"South Bačka District\"), includes [Liberland](https://en.wikipedia.org/wiki/Liberland \"Liberland\")."
+    "DESCRIPTION": "Limited areas along the [Danube](https://en.wikipedia.org/wiki/Danube \"Danube\") \nParts of [Osijek-Baranja](https://en.wikipedia.org/wiki/Osijek-Baranja_County \"Osijek-Baranja County\") and [Vukovar-Syrmia Counties](https://en.wikipedia.org/wiki/Vukovar-Syrmia_County \"Vukovar-Syrmia County\") and [West](https://en.wikipedia.org/wiki/West_Ba%C4%8Dka_District \"West Bačka District\") and [South Bačka Districts](https://en.wikipedia.org/wiki/South_Ba%C4%8Dka_District \"South Bačka District\"), includes [Liberland](https://en.wikipedia.org/wiki/Liberland \"Liberland\")."
   },
   {
     "TERRITORY": "[Island of Šarengrad](https://en.wikipedia.org/wiki/Island_of_%C5%A0arengrad \"Island of Šarengrad\")",
@@ -967,12 +967,12 @@
   {
     "TERRITORY": "[Gulf of Piran](https://en.wikipedia.org/wiki/Gulf_of_Piran \"Gulf of Piran\")",
     "COUNTRY": "Slovenia",
-    "DESCRIPTION": "An agreement was signed (and ratified by Croatia's parliament on 20 November 2009) to pursue binding arbitration to both the land and maritime portions of this continuing dispute.\\n\\nIn 2015 collusion between the Slovenian judge on the arbitration panel and a representative from the Slovenian government was uncovered. The Croatian [Sabor](https://en.wikipedia.org/wiki/Croatian_Parliament \"Croatian Parliament\") voted to withdraw from the arbitration, citing allegations of significant breaches of arbitration rules by Slovenia as the reason.\\n\\nDespite this the arbitration tribunal continued its work, issuing a ruling in 2017."
+    "DESCRIPTION": "An agreement was signed (and ratified by Croatia's parliament on 20 November 2009) to pursue binding arbitration to both the land and maritime portions of this continuing dispute.\nIn 2015 collusion between the Slovenian judge on the arbitration panel and a representative from the Slovenian government was uncovered. The Croatian [Sabor](https://en.wikipedia.org/wiki/Croatian_Parliament \"Croatian Parliament\") voted to withdraw from the arbitration, citing allegations of significant breaches of arbitration rules by Slovenia as the reason.\nDespite this the arbitration tribunal continued its work, issuing a ruling in 2017."
   },
   {
     "TERRITORY": "[Gulf of Piran](https://en.wikipedia.org/wiki/Gulf_of_Piran \"Gulf of Piran\")",
     "COUNTRY": "Croatia",
-    "DESCRIPTION": "An agreement was signed (and ratified by Croatia's parliament on 20 November 2009) to pursue binding arbitration to both the land and maritime portions of this continuing dispute.\\n\\nIn 2015 collusion between the Slovenian judge on the arbitration panel and a representative from the Slovenian government was uncovered. The Croatian [Sabor](https://en.wikipedia.org/wiki/Croatian_Parliament \"Croatian Parliament\") voted to withdraw from the arbitration, citing allegations of significant breaches of arbitration rules by Slovenia as the reason.\\n\\nDespite this the arbitration tribunal continued its work, issuing a ruling in 2017."
+    "DESCRIPTION": "An agreement was signed (and ratified by Croatia's parliament on 20 November 2009) to pursue binding arbitration to both the land and maritime portions of this continuing dispute.\nIn 2015 collusion between the Slovenian judge on the arbitration panel and a representative from the Slovenian government was uncovered. The Croatian [Sabor](https://en.wikipedia.org/wiki/Croatian_Parliament \"Croatian Parliament\") voted to withdraw from the arbitration, citing allegations of significant breaches of arbitration rules by Slovenia as the reason.\nDespite this the arbitration tribunal continued its work, issuing a ruling in 2017."
   },
   {
     "TERRITORY": "Military complex near [Sveta Gera](https://en.wikipedia.org/wiki/Sveta_Gera \"Sveta Gera\")",
@@ -1007,12 +1007,12 @@
   {
     "TERRITORY": "Tip of the [Klek peninsula](https://en.wikipedia.org/wiki/Klek_(peninsula) \"Klek (peninsula)\"), and the islands of [Veliki Školj](https://en.wikipedia.org/wiki/Veliki_%C5%A0kolj \"Veliki Školj\") and [Mali Školj](https://en.wikipedia.org/wiki/Mali_%C5%A0kolj \"Mali Školj\") (near [Neum](https://en.wikipedia.org/wiki/Neum \"Neum\"))",
     "COUNTRY": "Serbia",
-    "DESCRIPTION": "**![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/23px-Flag_of_Croatia.svg.png) [Croatia](https://en.wikipedia.org/wiki/Croatia \"Croatia\")**\\\\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/23px-Flag_of_Bosnia_and_Herzegovina.svg.png) [Bosnia and Herzegovina](https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina \"Bosnia and Herzegovina\")"
+    "DESCRIPTION": "**![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/23px-Flag_of_Croatia.svg.png) [Croatia](https://en.wikipedia.org/wiki/Croatia \"Croatia\")** \n![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/23px-Flag_of_Bosnia_and_Herzegovina.svg.png) [Bosnia and Herzegovina](https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina \"Bosnia and Herzegovina\")"
   },
   {
     "TERRITORY": "Tip of the [Klek peninsula](https://en.wikipedia.org/wiki/Klek_(peninsula) \"Klek (peninsula)\"), and the islands of [Veliki Školj](https://en.wikipedia.org/wiki/Veliki_%C5%A0kolj \"Veliki Školj\") and [Mali Školj](https://en.wikipedia.org/wiki/Mali_%C5%A0kolj \"Mali Školj\") (near [Neum](https://en.wikipedia.org/wiki/Neum \"Neum\"))",
     "COUNTRY": "Bosnia and Herz.",
-    "DESCRIPTION": "**![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/23px-Flag_of_Croatia.svg.png) [Croatia](https://en.wikipedia.org/wiki/Croatia \"Croatia\")**\\\\n![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/23px-Flag_of_Bosnia_and_Herzegovina.svg.png) [Bosnia and Herzegovina](https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina \"Bosnia and Herzegovina\")"
+    "DESCRIPTION": "**![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/23px-Flag_of_Croatia.svg.png) [Croatia](https://en.wikipedia.org/wiki/Croatia \"Croatia\")** \n![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/23px-Flag_of_Bosnia_and_Herzegovina.svg.png) [Bosnia and Herzegovina](https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina \"Bosnia and Herzegovina\")"
   },
   {
     "TERRITORY": "[Aves Island](https://en.wikipedia.org/wiki/Isla_de_Aves \"Isla de Aves\")",
@@ -1260,12 +1260,12 @@
     "DESCRIPTION": "Dispute regarding the undefined sea border between both countries."
   },
   {
-    "TERRITORY": "[Southern Patagonian Ice Field](https://en.wikipedia.org/wiki/Southern_Patagonian_Ice_Field \"Southern Patagonian Ice Field\") between\\\\n[Monte Fitz Roy](https://en.wikipedia.org/wiki/Monte_Fitz_Roy \"Monte Fitz Roy\") and [Cerro Murallón](https://en.wikipedia.org/wiki/Cerro_Murall%C3%B3n \"Cerro Murallón\")",
+    "TERRITORY": "[Southern Patagonian Ice Field](https://en.wikipedia.org/wiki/Southern_Patagonian_Ice_Field \"Southern Patagonian Ice Field\") between [Monte Fitz Roy](https://en.wikipedia.org/wiki/Monte_Fitz_Roy \"Monte Fitz Roy\") and [Cerro Murallón](https://en.wikipedia.org/wiki/Cerro_Murall%C3%B3n \"Cerro Murallón\")",
     "COUNTRY": "Argentina",
     "DESCRIPTION": "Parts of the border still officially undefined."
   },
   {
-    "TERRITORY": "[Southern Patagonian Ice Field](https://en.wikipedia.org/wiki/Southern_Patagonian_Ice_Field \"Southern Patagonian Ice Field\") between\\\\n[Monte Fitz Roy](https://en.wikipedia.org/wiki/Monte_Fitz_Roy \"Monte Fitz Roy\") and [Cerro Murallón](https://en.wikipedia.org/wiki/Cerro_Murall%C3%B3n \"Cerro Murallón\")",
+    "TERRITORY": "[Southern Patagonian Ice Field](https://en.wikipedia.org/wiki/Southern_Patagonian_Ice_Field \"Southern Patagonian Ice Field\") between [Monte Fitz Roy](https://en.wikipedia.org/wiki/Monte_Fitz_Roy \"Monte Fitz Roy\") and [Cerro Murallón](https://en.wikipedia.org/wiki/Cerro_Murall%C3%B3n \"Cerro Murallón\")",
     "COUNTRY": "Chile",
     "DESCRIPTION": "Parts of the border still officially undefined."
   },
@@ -1565,17 +1565,17 @@
     "DESCRIPTION": "Controlled by the PRC since the [2012 Scarborough Shoal standoff](https://en.wikipedia.org/wiki/2012_Scarborough_Shoal_standoff \"2012 Scarborough Shoal standoff\")."
   },
   {
-    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"),\\n\\n[Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"),\\n\\n[Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"),\\n\\n[Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"),\\n\\n[Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"),\\n\\n[Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
+    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"), [Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"), [Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"), [Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"), [Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"), [Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
     "COUNTRY": "India",
     "DESCRIPTION": "Disputed areas located between [Aksai Chin](https://en.wikipedia.org/wiki/Aksai_Chin \"Aksai Chin\") and [Nepal](https://en.wikipedia.org/wiki/Nepal \"Nepal\")."
   },
   {
-    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"),\\n\\n[Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"),\\n\\n[Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"),\\n\\n[Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"),\\n\\n[Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"),\\n\\n[Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
+    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"), [Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"), [Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"), [Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"), [Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"), [Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
     "COUNTRY": "China",
     "DESCRIPTION": "Disputed areas located between [Aksai Chin](https://en.wikipedia.org/wiki/Aksai_Chin \"Aksai Chin\") and [Nepal](https://en.wikipedia.org/wiki/Nepal \"Nepal\")."
   },
   {
-    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"),\\n\\n[Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"),\\n\\n[Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"),\\n\\n[Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"),\\n\\n[Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"),\\n\\n[Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
+    "TERRITORY": "[Depsang Plains](https://en.wikipedia.org/wiki/Depsang_Plains \"Depsang Plains\"), [Chumar](https://en.wikipedia.org/wiki/Chumar \"Chumar\"), [Kaurik](https://en.wikipedia.org/wiki/Kaurik \"Kaurik\"), [Shipki La](https://en.wikipedia.org/wiki/Shipki_La \"Shipki La\"), [Barahoti](https://en.wikipedia.org/wiki/Barahoti \"Barahoti\"), [Jadhang](https://en.wikipedia.org/wiki/Jadh_Ganga \"Jadh Ganga\"), [Lapthal](https://en.wikipedia.org/wiki/Lapthal \"Lapthal\"), [Nelang](https://en.wikipedia.org/wiki/Nelang \"Nelang\"), [Pulam Sumda](https://en.wikipedia.org/wiki/Pulam_Sumda \"Pulam Sumda\") and [Sang](https://en.wikipedia.org/wiki/Sang,_Uttarakhand \"Sang, Uttarakhand\")",
     "COUNTRY": "China",
     "DESCRIPTION": "Disputed areas located between [Aksai Chin](https://en.wikipedia.org/wiki/Aksai_Chin \"Aksai Chin\") and [Nepal](https://en.wikipedia.org/wiki/Nepal \"Nepal\")."
   },
@@ -1645,34 +1645,34 @@
     "DESCRIPTION": "Further information: [Abkhaz--Georgian conflict](https://en.wikipedia.org/wiki/Abkhaz%E2%80%93Georgian_conflict \"Abkhaz--Georgian conflict\")"
   },
   {
-    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)^[[note 3]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-Korea-92)^",
+    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)",
     "COUNTRY": "China",
-    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)^[[note 3]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-Korea-92)^",
+    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)",
     "COUNTRY": "North Korea",
-    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)^[[note 3]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-Korea-92)^",
+    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)",
     "COUNTRY": "China",
-    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)^[[note 3]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-Korea-92)^",
+    "TERRITORY": "[Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\") (disputed sovereignty of certain islands)",
     "COUNTRY": "South Korea",
-    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in 2005. North Korea is allocated all of the large islands in the lower [Yalu River](https://en.wikipedia.org/wiki/Yalu_River \"Yalu River\"), including [Pidan](https://en.wikipedia.org/wiki/Pidansom \"Pidansom\") and [Sindo](https://en.wikipedia.org/wiki/Sindo_(island) \"Sindo (island)\") at the mouth. The river's maritime rights remain shared between North Korea and the PRC. However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\")\\\\n(eastern half)",
+    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\") (eastern half)",
     "COUNTRY": "Russia",
-    "DESCRIPTION": "Generally held to have been resolved in October 2004 by the [Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary](https://en.wikipedia.org/wiki/Complementary_Agreement_between_the_People%27s_Republic_of_China_and_the_Russian_Federation_on_the_Eastern_Section_of_the_China-Russia_Boundary \"Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary\"). However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in October 2004 by the [Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary](https://en.wikipedia.org/wiki/Complementary_Agreement_between_the_People%27s_Republic_of_China_and_the_Russian_Federation_on_the_Eastern_Section_of_the_China-Russia_Boundary \"Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary\"). However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\")\\\\n(eastern half)",
+    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\") (eastern half)",
     "COUNTRY": "China",
-    "DESCRIPTION": "Generally held to have been resolved in October 2004 by the [Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary](https://en.wikipedia.org/wiki/Complementary_Agreement_between_the_People%27s_Republic_of_China_and_the_Russian_Federation_on_the_Eastern_Section_of_the_China-Russia_Boundary \"Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary\"). However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "Generally held to have been resolved in October 2004 by the [Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary](https://en.wikipedia.org/wiki/Complementary_Agreement_between_the_People%27s_Republic_of_China_and_the_Russian_Federation_on_the_Eastern_Section_of_the_China-Russia_Boundary \"Complementary Agreement between the People's Republic of China and the Russian Federation on the Eastern Section of the China-Russia Boundary\"). However, the settlement is not recognized by the Republic of China."
   },
   {
     "TERRITORY": "[Kosovo](https://en.wikipedia.org/wiki/Kosovo \"Kosovo\")",
@@ -1705,12 +1705,12 @@
     "DESCRIPTION": "Main article: [Cross-Strait relations](https://en.wikipedia.org/wiki/Cross-Strait_relations \"Cross-Strait relations\")"
   },
   {
-    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\")\\\\n(western half)",
+    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\") (western half)",
     "COUNTRY": "China",
     "DESCRIPTION": "Main article: [Cross-Strait relations](https://en.wikipedia.org/wiki/Cross-Strait_relations \"Cross-Strait relations\")"
   },
   {
-    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\")\\\\n(western half)",
+    "TERRITORY": "[Heixiazi](https://en.wikipedia.org/wiki/Heixiazi \"Heixiazi\") / [Bolshoy Ussuriysky Island](https://en.wikipedia.org/wiki/Bolshoy_Ussuriysky_Island \"Bolshoy Ussuriysky Island\") (western half)",
     "COUNTRY": "China",
     "DESCRIPTION": "Main article: [Cross-Strait relations](https://en.wikipedia.org/wiki/Cross-Strait_relations \"Cross-Strait relations\")"
   },
@@ -1727,22 +1727,22 @@
   {
     "TERRITORY": "[Outer Mongolia](https://en.wikipedia.org/wiki/Mongolia \"Mongolia\")",
     "COUNTRY": "Mongolia",
-    "DESCRIPTION": "Main article: [Taiwan-Mongolia relations](https://en.wikipedia.org/wiki/Taiwan-Mongolia_relations \"Taiwan-Mongolia relations\")\\n\\nThe Republic of China briefly recognized Mongolia's independence between 1945 and 1952, and from 2002 onwards; however, under the [Constitution of the Republic of China](https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China \"Constitution of the Republic of China\"), the ROC claim on Mongolia cannot be withdrawn without recourse to a referendum."
+    "DESCRIPTION": "Main article: [Taiwan-Mongolia relations](https://en.wikipedia.org/wiki/Taiwan-Mongolia_relations \"Taiwan-Mongolia relations\")\nThe Republic of China briefly recognized Mongolia's independence between 1945 and 1952, and from 2002 onwards; however, under the [Constitution of the Republic of China](https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China \"Constitution of the Republic of China\"), the ROC claim on Mongolia cannot be withdrawn without recourse to a referendum."
   },
   {
     "TERRITORY": "[Outer Mongolia](https://en.wikipedia.org/wiki/Mongolia \"Mongolia\")",
     "COUNTRY": "China",
-    "DESCRIPTION": "Main article: [Taiwan-Mongolia relations](https://en.wikipedia.org/wiki/Taiwan-Mongolia_relations \"Taiwan-Mongolia relations\")\\n\\nThe Republic of China briefly recognized Mongolia's independence between 1945 and 1952, and from 2002 onwards; however, under the [Constitution of the Republic of China](https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China \"Constitution of the Republic of China\"), the ROC claim on Mongolia cannot be withdrawn without recourse to a referendum."
+    "DESCRIPTION": "Main article: [Taiwan-Mongolia relations](https://en.wikipedia.org/wiki/Taiwan-Mongolia_relations \"Taiwan-Mongolia relations\")\nThe Republic of China briefly recognized Mongolia's independence between 1945 and 1952, and from 2002 onwards; however, under the [Constitution of the Republic of China](https://en.wikipedia.org/wiki/Constitution_of_the_Republic_of_China \"Constitution of the Republic of China\"), the ROC claim on Mongolia cannot be withdrawn without recourse to a referendum."
   },
   {
     "TERRITORY": "[North Cyprus](https://en.wikipedia.org/wiki/Cyprus_dispute \"Cyprus dispute\")",
     "COUNTRY": "N. Cyprus",
-    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") (a state with limited recognition) controls and administers the northern part of the island.\\\\nRepublic of Cyprus claims the whole island."
+    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") (a state with limited recognition) controls and administers the northern part of the island.\nRepublic of Cyprus claims the whole island."
   },
   {
     "TERRITORY": "[North Cyprus](https://en.wikipedia.org/wiki/Cyprus_dispute \"Cyprus dispute\")",
     "COUNTRY": "Cyprus",
-    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") (a state with limited recognition) controls and administers the northern part of the island.\\\\nRepublic of Cyprus claims the whole island."
+    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") (a state with limited recognition) controls and administers the northern part of the island.\nRepublic of Cyprus claims the whole island."
   },
   {
     "TERRITORY": "[Kokkina/Erenköy exclave](https://en.wikipedia.org/wiki/Kokkina_exclave \"Kokkina exclave\")",
@@ -1757,12 +1757,12 @@
   {
     "TERRITORY": "Border' checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\")",
     "COUNTRY": "United Kingdom",
-    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") controls and administers the border checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\").\\\\nUK's claim in regard to its [Sovereign Base Areas](https://en.wikipedia.org/wiki/Sovereign_Base_Areas \"Sovereign Base Areas\")\\\\nTechnically, of course, this also involves ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/23px-Flag_of_Cyprus.svg.png) [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\"); the checkpoint is partially on [UN](https://en.wikipedia.org/wiki/UN \"UN\")-administered land, and [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\") claims all of the island. (See: [Europe](https://en.wikipedia.org/wiki/List_of_territorial_disputes#In_Europe))"
+    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") controls and administers the border checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\").\nUK's claim in regard to its [Sovereign Base Areas](https://en.wikipedia.org/wiki/Sovereign_Base_Areas \"Sovereign Base Areas\")\nTechnically, of course, this also involves ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/23px-Flag_of_Cyprus.svg.png) [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\"); the checkpoint is partially on [UN](https://en.wikipedia.org/wiki/UN \"UN\")-administered land, and [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\") claims all of the island. (See: [Europe](https://en.wikipedia.org/wiki/List_of_territorial_disputes#In_Europe))"
   },
   {
     "TERRITORY": "Border' checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\")",
     "COUNTRY": "N. Cyprus",
-    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") controls and administers the border checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\").\\\\nUK's claim in regard to its [Sovereign Base Areas](https://en.wikipedia.org/wiki/Sovereign_Base_Areas \"Sovereign Base Areas\")\\\\nTechnically, of course, this also involves ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/23px-Flag_of_Cyprus.svg.png) [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\"); the checkpoint is partially on [UN](https://en.wikipedia.org/wiki/UN \"UN\")-administered land, and [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\") claims all of the island. (See: [Europe](https://en.wikipedia.org/wiki/List_of_territorial_disputes#In_Europe))"
+    "DESCRIPTION": "[Northern Cyprus](https://en.wikipedia.org/wiki/Northern_Cyprus \"Northern Cyprus\") controls and administers the border checkpoint near [Strovilia](https://en.wikipedia.org/wiki/Strovilia \"Strovilia\").\nUK's claim in regard to its [Sovereign Base Areas](https://en.wikipedia.org/wiki/Sovereign_Base_Areas \"Sovereign Base Areas\")\nTechnically, of course, this also involves ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/23px-Flag_of_Cyprus.svg.png) [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\"); the checkpoint is partially on [UN](https://en.wikipedia.org/wiki/UN \"UN\")-administered land, and [Cyprus](https://en.wikipedia.org/wiki/Cyprus \"Cyprus\") claims all of the island. (See: [Europe](https://en.wikipedia.org/wiki/List_of_territorial_disputes#In_Europe))"
   },
   {
     "TERRITORY": "[Jiangxinpo](https://en.wikipedia.org/wiki/Jiangxinpo \"Jiangxinpo\")",
@@ -1802,20 +1802,20 @@
   {
     "TERRITORY": "Eastern part of [Wakhan Corridor](https://en.wikipedia.org/wiki/Wakhan_Corridor \"Wakhan Corridor\")",
     "COUNTRY": "Afghanistan",
-    "DESCRIPTION": "The border was established between Afghanistan and China in an agreement between the British and the Russians in 1895 as part of [the Great Game](https://en.wikipedia.org/wiki/The_Great_Game \"The Great Game\"), although the Chinese and Afghans did not finally agree on the border until 1963. The [Kingdom of Afghanistan](https://en.wikipedia.org/wiki/Kingdom_of_Afghanistan \"Kingdom of Afghanistan\") and the [People's Republic of China](https://en.wikipedia.org/wiki/People%27s_Republic_of_China \"People's Republic of China\") demarcated their border in 1963.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^ However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "The border was established between Afghanistan and China in an agreement between the British and the Russians in 1895 as part of [the Great Game](https://en.wikipedia.org/wiki/The_Great_Game \"The Great Game\"), although the Chinese and Afghans did not finally agree on the border until 1963. The [Kingdom of Afghanistan](https://en.wikipedia.org/wiki/Kingdom_of_Afghanistan \"Kingdom of Afghanistan\") and the [People's Republic of China](https://en.wikipedia.org/wiki/People%27s_Republic_of_China \"People's Republic of China\") demarcated their border in 1963. However, the settlement is not recognized by the Republic of China."
   },
   {
     "TERRITORY": "Eastern part of [Wakhan Corridor](https://en.wikipedia.org/wiki/Wakhan_Corridor \"Wakhan Corridor\")",
     "COUNTRY": "China",
-    "DESCRIPTION": "The border was established between Afghanistan and China in an agreement between the British and the Russians in 1895 as part of [the Great Game](https://en.wikipedia.org/wiki/The_Great_Game \"The Great Game\"), although the Chinese and Afghans did not finally agree on the border until 1963. The [Kingdom of Afghanistan](https://en.wikipedia.org/wiki/Kingdom_of_Afghanistan \"Kingdom of Afghanistan\") and the [People's Republic of China](https://en.wikipedia.org/wiki/People%27s_Republic_of_China \"People's Republic of China\") demarcated their border in 1963.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^ However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "The border was established between Afghanistan and China in an agreement between the British and the Russians in 1895 as part of [the Great Game](https://en.wikipedia.org/wiki/The_Great_Game \"The Great Game\"), although the Chinese and Afghans did not finally agree on the border until 1963. The [Kingdom of Afghanistan](https://en.wikipedia.org/wiki/Kingdom_of_Afghanistan \"Kingdom of Afghanistan\") and the [People's Republic of China](https://en.wikipedia.org/wiki/People%27s_Republic_of_China \"People's Republic of China\") demarcated their border in 1963. However, the settlement is not recognized by the Republic of China."
   },
   {
-    "TERRITORY": "[Taiwan](https://en.wikipedia.org/wiki/Geography_of_Taiwan \"Geography of Taiwan\"),\\\\n[Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"),\\\\n[Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"),\\\\n[Matsu Islands](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"),\\\\n[Pratas Island](https://en.wikipedia.org/wiki/Pratas_Island \"Pratas Island\") and the Vereker Banks",
+    "TERRITORY": "[Taiwan](https://en.wikipedia.org/wiki/Geography_of_Taiwan \"Geography of Taiwan\"), [Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"), [Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"), [Matsu Islands](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"), [Pratas Island](https://en.wikipedia.org/wiki/Pratas_Island \"Pratas Island\") and the Vereker Banks",
     "COUNTRY": "China",
     "DESCRIPTION": "The government of the People's Republic of China claims the entire island of Taiwan, as well as a number of minor islands, such as [Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"), [Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"), and [Matsu](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"), that are controlled by the Republic of China. See also: [Anti-Secession Law](https://en.wikipedia.org/wiki/Anti-Secession_Law \"Anti-Secession Law\"), [Legal status of Taiwan](https://en.wikipedia.org/wiki/Legal_status_of_Taiwan \"Legal status of Taiwan\")."
   },
   {
-    "TERRITORY": "[Taiwan](https://en.wikipedia.org/wiki/Geography_of_Taiwan \"Geography of Taiwan\"),\\\\n[Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"),\\\\n[Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"),\\\\n[Matsu Islands](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"),\\\\n[Pratas Island](https://en.wikipedia.org/wiki/Pratas_Island \"Pratas Island\") and the Vereker Banks",
+    "TERRITORY": "[Taiwan](https://en.wikipedia.org/wiki/Geography_of_Taiwan \"Geography of Taiwan\"), [Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"), [Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"), [Matsu Islands](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"), [Pratas Island](https://en.wikipedia.org/wiki/Pratas_Island \"Pratas Island\") and the Vereker Banks",
     "COUNTRY": "China",
     "DESCRIPTION": "The government of the People's Republic of China claims the entire island of Taiwan, as well as a number of minor islands, such as [Penghu](https://en.wikipedia.org/wiki/Penghu \"Penghu\"), [Kinmen](https://en.wikipedia.org/wiki/Kinmen \"Kinmen\"), and [Matsu](https://en.wikipedia.org/wiki/Matsu_Islands \"Matsu Islands\"), that are controlled by the Republic of China. See also: [Anti-Secession Law](https://en.wikipedia.org/wiki/Anti-Secession_Law \"Anti-Secession Law\"), [Legal status of Taiwan](https://en.wikipedia.org/wiki/Legal_status_of_Taiwan \"Legal status of Taiwan\")."
   },
@@ -1837,17 +1837,17 @@
   {
     "TERRITORY": "[Pamir Mountains](https://en.wikipedia.org/wiki/Pamir_Mountains \"Pamir Mountains\")",
     "COUNTRY": "Tajikistan",
-    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^ However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011. However, the settlement is not recognized by the Republic of China."
   },
   {
     "TERRITORY": "[Pamir Mountains](https://en.wikipedia.org/wiki/Pamir_Mountains \"Pamir Mountains\")",
     "COUNTRY": "China",
-    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^ However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011. However, the settlement is not recognized by the Republic of China."
   },
   {
     "TERRITORY": "[Pamir Mountains](https://en.wikipedia.org/wiki/Pamir_Mountains \"Pamir Mountains\")",
     "COUNTRY": "China",
-    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^ However, the settlement is not recognized by the Republic of China.^[[note 2]](https://en.wikipedia.org/wiki/List_of_territorial_disputes#cite_note-China2-81)^"
+    "DESCRIPTION": "The Tajik Government ceded 1,158 km^2^ to the PRC, while PRC relinquished its 73,000 km^2^ claim over the remaining territory with final ratification of a treaty in January 2011. However, the settlement is not recognized by the Republic of China."
   },
   {
     "TERRITORY": "[Western Sahara](https://en.wikipedia.org/wiki/Western_Sahara \"Western Sahara\")",
