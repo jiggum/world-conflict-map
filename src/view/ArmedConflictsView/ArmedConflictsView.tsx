@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
 import { Slider } from 'antd'
 import ArmedConflictMap, { TArmedConflicts } from './ArmedConflictsMap'
-import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
-import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
-import { groupBy } from '../../util'
+import { TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 
 const Wrapper = styled.div`
@@ -42,73 +36,39 @@ const SliderMark = styled.span`
 
 export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
 
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
-
-const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[]) => {
-  const deaths = armedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
-  return (
-    <div key={key}>
-      <TooltipTitle>{key}</TooltipTitle>
-      {deaths !== undefined && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
-      {conflicts.sort().map(getToolTipRow)}
-    </div>
-  )
-}
-
-const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
-  <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
-    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
-  </TooltipRow>
-)
-
 export type TConflictInfo = { name: string, conflicts: TArmedConflicts[], position: TPosition }
 
-function ArmedConflictsView() {
+type TArmedConflictsViewProps = {
+  tooltipProps?: TTooltipProps,
+  setTooltipProps: (props?: TTooltipProps) => void,
+}
+
+function ArmedConflictsView({
+  tooltipProps,
+  setTooltipProps,
+}: TArmedConflictsViewProps) {
   const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
-  const [fixed, setFixed] = useState<boolean>(false)
   const [year, setYear] = useState<TYear>('2020')
-  const conflictGroups = conflictInfo ?
-    Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1) :
-    undefined
 
   useEffect(() => {
-    setFixed(false)
     setConflictInfo(undefined)
-  }, [year])
+    setTooltipProps(undefined)
+  }, [year, setTooltipProps])
 
   return (
     <Wrapper
       onClick={() => {
-        setFixed(false)
-        setConflictInfo(undefined)
+        setTooltipProps(undefined)
       }}
     >
       <MapWrapper>
         <ArmedConflictMap
-          selectedItem={conflictInfo?.name}
+          tooltipProps={tooltipProps}
+          conflictInfo={conflictInfo}
           setConflictInfo={setConflictInfo}
-          fixed={fixed}
-          setFixed={setFixed}
+          setTooltipProps={setTooltipProps}
           year={year}
         />
-        {
-          conflictGroups && (
-            <Tooltip
-              position={conflictInfo!.position}
-              fixed={fixed}
-              onClose={() => {
-                setConflictInfo(undefined)
-                setFixed(false)
-              }}
-            >
-              {conflictGroups.map((e) => getTooltipContent(year, ...e))}
-            </Tooltip>
-          )
-        }
       </MapWrapper>
       <Right>
         <Slider

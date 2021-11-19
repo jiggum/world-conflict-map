@@ -11,6 +11,7 @@ const Wrapper = styled.div<{ position: TPosition, fixed: boolean }>`
   padding: 12px 16px 12px 16px;
   color: #FFFFFF;
   border-radius: 4px;
+  z-index: 10;
   ${props => !props.fixed && 'pointer-events: none;'}
 `
 
@@ -56,7 +57,7 @@ const CloseButton = styled.div`
   cursor: pointer;
 `
 
-type TTooltipProps = {
+export type TTooltipProps = {
   children: ReactNode,
   position: TPosition,
   fixed: boolean,

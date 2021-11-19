@@ -13,8 +13,8 @@ const territorialDisputeMapByCountry = groupBy(territorialDisputes, (e) => e.COU
 const max = 15
 
 type TMapChartProps = {
-  selectedItem: string | undefined,
-  setInfo: (value: TTerritorialDisputeInfo | undefined) => void,
+  selectedItem?: string,
+  setInfo: (value?: TTerritorialDisputeInfo) => void,
   fixed: boolean,
   setFixed: (value: boolean) => void,
 }
