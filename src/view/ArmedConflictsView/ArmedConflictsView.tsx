@@ -5,7 +5,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { Slider } from 'antd'
-import ArmedConflictMap, { ArmedConflicts } from './ArmedConflictsMap'
+import ArmedConflictMap, { TArmedConflicts } from './ArmedConflictsMap'
 import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
 import { groupBy } from '../../util'
@@ -48,7 +48,7 @@ const parseDescription = (description: string) =>
   remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
     .replaceAll('<a href', '<a target="_blank" href')
 
-const getTooltipContent = (year: TYear, key: string, conflicts: ArmedConflicts[]) => {
+const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[]) => {
   const deaths = armedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
   return (
     <div key={key}>
@@ -59,13 +59,13 @@ const getTooltipContent = (year: TYear, key: string, conflicts: ArmedConflicts[]
   )
 }
 
-const getToolTipRow = (conflict: ArmedConflicts, index: number) => (
+const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
   <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
     <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
 
-export type TConflictInfo = { name: string, conflicts: ArmedConflicts[], position: TPosition }
+export type TConflictInfo = { name: string, conflicts: TArmedConflicts[], position: TPosition }
 
 function ArmedConflictsView() {
   const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()

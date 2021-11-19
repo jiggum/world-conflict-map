@@ -1,35 +1,28 @@
 import React, { memo } from 'react'
-import { TConflictInfo } from './TerritorialDisputesView'
+import { TTerritorialDisputeInfo } from './TerritorialDisputesView'
 import ongoingArmedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
-import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
+import territorialDisputes from '../../data/territorialDisputes.json'
 import ConflictMap from '../../component/ConflictMap'
+import { groupBy } from '../../util'
 
-export type ArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
+export type TTerritorialDispute = { TERRITORY: string; COUNTRY: string; DESCRIPTION: string; }
 
-const ongoingArmedConflictMap: { [key: string]: ArmedConflicts[] } = {}
+const territorialDisputeMapByCountry = groupBy(territorialDisputes, (e) => e.COUNTRY)
+export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
-ongoingArmedConflicts.forEach((e) => {
-  const key = e.COUNTRY
-  if (!ongoingArmedConflictMap[key]) {
-    ongoingArmedConflictMap[key] = [e]
-  } else {
-    ongoingArmedConflictMap[key].push(e)
-  }
-})
-
-const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
+const maxDeaths = 11 // Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
 
 type TMapChartProps = {
   selectedItem: string | undefined,
-  setConflictInfo: (value: TConflictInfo | undefined) => void,
+  setInfo: (value: TTerritorialDisputeInfo | undefined) => void,
   fixed: boolean,
   setFixed: (value: boolean) => void,
 }
 
 const TerritorialDisputesMap = ({
   selectedItem,
-  setConflictInfo,
+  setInfo,
   fixed,
   setFixed,
 }: TMapChartProps) => {
@@ -44,7 +37,7 @@ const TerritorialDisputesMap = ({
       isActive={geo => {
         const {NAME} = geo.properties
         const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-        return [NAME, ...spareCoutries].findIndex(key => ongoingArmedConflictMap[key]) >= 0
+        return [NAME, ...spareCoutries].findIndex(key => territorialDisputeMapByCountry[key]) >= 0
       }}
       getColorPoint={(geo) => {
         const {NAME} = geo.properties
@@ -54,14 +47,14 @@ const TerritorialDisputesMap = ({
       }}
       select={(value) => {
         if (!value) {
-          setConflictInfo(undefined)
+          setInfo(undefined)
         } else {
           const {NAME} = value.geo.properties
           const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-          const conflicts = [NAME, ...spareCoutries].map(key => ongoingArmedConflictMap[key]).filter(e => e).flat()
-          setConflictInfo({
-            name: NAME,
-            conflicts,
+          const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
+          setInfo({
+            country: NAME,
+            disputes,
             position: value.position,
           })
         }

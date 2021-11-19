@@ -4,7 +4,7 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import OngoingConflictMap, { ArmedConflicts } from './TerritorialDisputesMap'
+import OngoingConflictMap, { TTerritorialDispute } from './TerritorialDisputesMap'
 import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
 import { groupBy } from '../../util'
 import { TPosition } from '../../type'
@@ -34,57 +34,57 @@ const parseDescription = (description: string) =>
   remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
     .replaceAll('<a href', '<a target="_blank" href')
 
-const getTooltipContent = (key: string, conflicts: ArmedConflicts[]) => {
+const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   const deaths = 0 // ongoingArmedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
       {deaths && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
-      {conflicts.sort().map(getToolTipRow)}
+      {disputes.sort().map(getToolTipRow)}
     </div>
   )
 }
 
-const getToolTipRow = (conflict: ArmedConflicts, index: number) => (
-  <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
-    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
+const getToolTipRow = (dispute: TTerritorialDispute, index: number) => (
+  <TooltipRow key={index}>{dispute.TERRITORY}:&nbsp;
+    <div dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
 
-export type TConflictInfo = { name: string, conflicts: ArmedConflicts[], position: TPosition }
+export type TTerritorialDisputeInfo = { country: string, disputes: TTerritorialDispute[], position: TPosition }
 
 function TerritorialDisputesView() {
-  const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
+  const [info, setInfo] = useState<TTerritorialDisputeInfo | undefined>()
   const [fixed, setFixed] = useState<boolean>(false)
-  const conflictGroups = conflictInfo ?
-    Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1) :
+  const infoGroups = info ?
+    Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1) :
     undefined
 
   return (
     <Wrapper
       onClick={() => {
         setFixed(false)
-        setConflictInfo(undefined)
+        setInfo(undefined)
       }}
     >
       <MapWrapper>
         <OngoingConflictMap
-          selectedItem={conflictInfo?.name}
-          setConflictInfo={setConflictInfo}
+          selectedItem={info?.country}
+          setInfo={setInfo}
           fixed={fixed}
           setFixed={setFixed}
         />
         {
-          conflictGroups && (
+          infoGroups && (
             <Tooltip
-              position={conflictInfo!.position}
+              position={info!.position}
               fixed={fixed}
               onClose={() => {
-                setConflictInfo(undefined)
+                setInfo(undefined)
                 setFixed(false)
               }}
             >
-              {conflictGroups.map((e) => getTooltipContent(...e))}
+              {infoGroups.map((e) => getTooltipContent(...e))}
             </Tooltip>
           )
         }

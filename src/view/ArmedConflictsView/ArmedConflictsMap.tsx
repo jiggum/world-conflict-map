@@ -4,19 +4,11 @@ import armedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import ConflictMap from '../../component/ConflictMap'
+import { groupBy } from '../../util'
 
-export type ArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
+export type TArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
 
-const armedConflictMap: { [key: string]: ArmedConflicts[] } = {}
-
-armedConflicts.forEach((e) => {
-  const key = e.COUNTRY
-  if (!armedConflictMap[key]) {
-    armedConflictMap[key] = [e]
-  } else {
-    armedConflictMap[key].push(e)
-  }
-})
+const armedConflictMap = groupBy(armedConflicts, (e) => e.COUNTRY)
 
 const maxDeaths = Object.values(armedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
 
