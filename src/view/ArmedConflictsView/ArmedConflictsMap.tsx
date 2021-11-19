@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { TConflictInfo, TYear } from './OngoingConflictView'
+import { TConflictInfo, TYear } from './ArmedConflictsView'
 import ongoingArmedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
@@ -28,7 +28,7 @@ type TMapChartProps = {
   setFixed: (value: boolean) => void,
 }
 
-const OngoingConflictMap = ({
+const ArmedConflictsMap = ({
   selectedItem,
   setConflictInfo,
   year,
@@ -74,4 +74,4 @@ const OngoingConflictMap = ({
   )
 }
 
-export default memo(OngoingConflictMap)
+export default memo(ArmedConflictsMap)

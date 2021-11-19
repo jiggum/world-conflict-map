@@ -5,7 +5,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { Slider } from 'antd'
-import OngoingConflictMap, { TOngoingArmedConflict } from './OngoingConflictMap'
+import OngoingConflictMap, { TOngoingArmedConflict } from './ArmedConflictsMap'
 import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
 import { groupBy } from '../../util'
@@ -67,7 +67,7 @@ const getToolTipRow = (conflict: TOngoingArmedConflict, index: number) => (
 
 export type TConflictInfo = { name: string, conflicts: TOngoingArmedConflict[], position: TPosition }
 
-function OngoingConflictView() {
+function ArmedConflictsView() {
   const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
   const [fixed, setFixed] = useState<boolean>(false)
   const [year, setYear] = useState<TYear>('2020')
@@ -134,4 +134,4 @@ function OngoingConflictView() {
   )
 }
 
-export default OngoingConflictView
+export default ArmedConflictsView
