@@ -41,10 +41,6 @@ function Header() {
           Territorial Disputes
         </Link>
       </IButton>
-      /
-      <IButton active={false}>
-        Text(disabled)
-      </IButton>
     </Wrapper>
   )
 }
