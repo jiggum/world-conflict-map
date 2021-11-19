@@ -89,7 +89,7 @@ function OngoingConflictView() {
     >
       <MapWrapper>
         <OngoingConflictMap
-          fixedItem={conflictInfo?.name}
+          selectedItem={conflictInfo?.name}
           setConflictInfo={setConflictInfo}
           fixed={fixed}
           setFixed={setFixed}
