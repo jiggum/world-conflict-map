@@ -44,11 +44,11 @@ const DetailWrapper = styled.div`
   max-width: calc(100% - 128px);
   position: relative;
   display: flex;
+  padding: 40px 24px 24px 24px;
 `
 
 const DetailContent = styled.div`
   overflow: auto;
-  padding: 0 24px 16px 24px;
 `
 
 const DescriptionWrapper = styled(TooltipRow)`
@@ -62,7 +62,9 @@ const TeritoryDescription = styled.div`
 `
 
 const TooltipGroup = styled.div`
-  margin-top: 24px;
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
 `
 
 const DetailDrawer = styled.div`
@@ -78,7 +80,7 @@ const DetailDrawer = styled.div`
 
 const StyledCloseButton = styled(CloseButton)`
   top: 12px;
-  right: 16px;
+  right: 20px;
 `
 
 export type TTerritorialDisputeInfo = { country: string, disputes: TTerritorialDispute[], position: TPosition }

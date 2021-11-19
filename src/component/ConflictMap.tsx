@@ -71,6 +71,7 @@ function ConflictMap({
                     } : undefined)
                   }}
                   onMouseLeave={() => {
+                    if (fixed) return
                     select(undefined)
                   }}
                   style={{
