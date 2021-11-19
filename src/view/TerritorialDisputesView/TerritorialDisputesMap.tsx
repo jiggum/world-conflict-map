@@ -1,13 +1,13 @@
 import React, { memo } from 'react'
-import { TConflictInfo, TYear } from './TerritorialDisputesView'
+import { TConflictInfo } from './TerritorialDisputesView'
 import ongoingArmedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import ConflictMap from '../../component/ConflictMap'
 
-export type TOngoingArmedConflict = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
+export type ArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
 
-const ongoingArmedConflictMap: { [key: string]: TOngoingArmedConflict[] } = {}
+const ongoingArmedConflictMap: { [key: string]: ArmedConflicts[] } = {}
 
 ongoingArmedConflicts.forEach((e) => {
   const key = e.COUNTRY
@@ -23,7 +23,6 @@ const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.D
 type TMapChartProps = {
   selectedItem: string | undefined,
   setConflictInfo: (value: TConflictInfo | undefined) => void,
-  year: TYear,
   fixed: boolean,
   setFixed: (value: boolean) => void,
 }
@@ -31,7 +30,6 @@ type TMapChartProps = {
 const TerritorialDisputesMap = ({
   selectedItem,
   setConflictInfo,
-  year,
   fixed,
   setFixed,
 }: TMapChartProps) => {
@@ -51,7 +49,7 @@ const TerritorialDisputesMap = ({
       getColorPoint={(geo) => {
         const {NAME} = geo.properties
         const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-        const deaths = ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
+        const deaths = 0 // ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
         return deaths > 0 ? deaths / maxDeaths : -1 / 6
       }}
       select={(value) => {

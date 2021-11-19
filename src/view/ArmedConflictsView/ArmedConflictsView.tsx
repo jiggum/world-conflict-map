@@ -5,8 +5,8 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { Slider } from 'antd'
-import OngoingConflictMap, { TOngoingArmedConflict } from './ArmedConflictsMap'
-import ongoingArmedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
+import ArmedConflictMap, { ArmedConflicts } from './ArmedConflictsMap'
+import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import Tooltip, {TooltipDeaths, TooltipRow, TooltipTitle } from '../../component/Tooltip'
 import { groupBy } from '../../util'
 import { TPosition } from '../../type'
@@ -48,8 +48,8 @@ const parseDescription = (description: string) =>
   remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
     .replaceAll('<a href', '<a target="_blank" href')
 
-const getTooltipContent = (year: TYear, key: string, conflicts: TOngoingArmedConflict[]) => {
-  const deaths = ongoingArmedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
+const getTooltipContent = (year: TYear, key: string, conflicts: ArmedConflicts[]) => {
+  const deaths = armedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
@@ -59,13 +59,13 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TOngoingArmedCon
   )
 }
 
-const getToolTipRow = (conflict: TOngoingArmedConflict, index: number) => (
+const getToolTipRow = (conflict: ArmedConflicts, index: number) => (
   <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
     <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
 
-export type TConflictInfo = { name: string, conflicts: TOngoingArmedConflict[], position: TPosition }
+export type TConflictInfo = { name: string, conflicts: ArmedConflicts[], position: TPosition }
 
 function ArmedConflictsView() {
   const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
@@ -88,7 +88,7 @@ function ArmedConflictsView() {
       }}
     >
       <MapWrapper>
-        <OngoingConflictMap
+        <ArmedConflictMap
           selectedItem={conflictInfo?.name}
           setConflictInfo={setConflictInfo}
           fixed={fixed}
