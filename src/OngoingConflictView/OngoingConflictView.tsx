@@ -98,7 +98,8 @@ export type TPosition = { left: number, top: number }
 const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify) //.use(remarkStringify, {handlers: {link}, bullet: '-'})
 
 const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value
+  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
+    .replaceAll('<a href', '<a target="_blank" href')
 
 const getTooltipContent = (year: TYear, key: string, conflicts: TOngoingArmedConflict[]) => {
   const deaths = ongoingArmedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
