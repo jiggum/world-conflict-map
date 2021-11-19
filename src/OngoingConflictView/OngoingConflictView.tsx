@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import ReactTooltip from 'react-tooltip'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
@@ -18,6 +17,7 @@ const Wrapper = styled.div`
   right: 0;
   bottom: 0;
   align-items: center;
+  justify-content: center;
   padding-top: 80px;
   padding-bottom: 64px;
 `
@@ -26,6 +26,18 @@ const MapWrapper = styled.div`
   width: 100%;
   max-width: 1600px;
   padding: 0 64px;
+`
+
+const Tooltip = styled.div<{ position: TPosition, fixed: boolean }>`
+  position: absolute;
+  top: ${props => props.position.top - 20}px;
+  left: ${props => props.position.left}px;
+  transform: translate(-50%, -100%);
+  background-color: #222426;
+  padding: 12px 16px 16px 16px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  ${props => !props.fixed && 'pointer-events: none;'}
 `
 
 const TooltipTitle = styled.b`
@@ -105,57 +117,44 @@ const getToolTipRow = (conflict: TOngoingArmedConflict, index: number) => (
   </TooltipRow>
 )
 
-export type TConflictInfo = { name: string, conflicts: TOngoingArmedConflict[] }
+export type TConflictInfo = { name: string, conflicts: TOngoingArmedConflict[], position: TPosition }
 
 function OngoingConflictView() {
   const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
-  const [fixed, setFixed] = useState<TPosition | undefined>(undefined)
-  const prevTooltipPosition = useRef<TPosition | undefined>(undefined)
+  const [fixed, setFixed] = useState<boolean>(false)
   const [year, setYear] = useState<TYear>('2020')
   const conflictGroups = conflictInfo ?
     Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b > a ? 1 : -1) :
     undefined
 
   useEffect(() => {
-    setFixed(undefined)
+    setFixed(false)
     setConflictInfo(undefined)
   }, [year])
 
   return (
     <Wrapper
-      data-tip=""
       onClick={() => {
-        setFixed(undefined)
+        setFixed(false)
         setConflictInfo(undefined)
-        console.log('click')
       }}
     >
       <MapWrapper>
         <OngoingConflictMap
-          conflictInfo={conflictInfo}
+          fixedItem={conflictInfo?.name}
           setConflictInfo={setConflictInfo}
           fixed={fixed}
           setFixed={setFixed}
           year={year}
         />
-        <ReactTooltip
-          place="top"
-          overridePosition={(position) => {
-            if (!fixed) {
-              prevTooltipPosition.current = position
-            }
-            return fixed ? prevTooltipPosition.current ?? position : position
-          }}
-          delayUpdate={200}
-          arrowColor="transparent"
-        >
-          {
-            conflictGroups && (
+        {
+          conflictGroups && (
+            <Tooltip position={conflictInfo!.position} fixed={fixed}>
               <div onClick={e => e.stopPropagation()}>
                 <CloseButton
                   onClick={() => {
                     setConflictInfo(undefined)
-                    setFixed(undefined)
+                    setFixed(false)
                   }}
                 >
                   <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -167,9 +166,9 @@ function OngoingConflictView() {
                 </CloseButton>
                 {conflictGroups.map((e) => getTooltipContent(year, ...e))}
               </div>
-            )
-          }
-        </ReactTooltip>
+            </Tooltip>
+          )
+        }
       </MapWrapper>
       <Right>
         <Slider

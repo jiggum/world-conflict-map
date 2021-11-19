@@ -8,7 +8,7 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps'
 import { scaleLinear } from 'd3-scale'
-import { TConflictInfo, TPosition, TYear } from './OngoingConflictView'
+import { TConflictInfo, TYear } from './OngoingConflictView'
 import geography from '../data/geography.json'
 import ongoingArmedConflicts from '../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../data/geographyCountryNameMap'
@@ -32,15 +32,15 @@ const maxDeaths = Object.values(ongoingArmedConflictsDeaths).flat().map(e => e.D
 const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1, 7 / 6], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
 
 type TMapChartProps = {
-  conflictInfo: TConflictInfo | undefined,
+  fixedItem: string | undefined,
   setConflictInfo: (value: TConflictInfo | undefined) => void,
   year: TYear,
-  fixed: TPosition | undefined,
-  setFixed: (value: TPosition | undefined) => void,
+  fixed: boolean,
+  setFixed: (value: boolean) => void,
 }
 
 const OngoingConflictMap = ({
-  conflictInfo,
+  fixedItem,
   setConflictInfo,
   year,
   fixed,
@@ -61,25 +61,22 @@ const OngoingConflictMap = ({
                 const onConflict = conflicts.length > 0
                 const deaths = ongoingArmedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
                 const colorPoint = deaths > 0 ? deaths / maxDeaths : -1 / 6
-                const fixedItem = fixed && [NAME, ...spareCoutries].includes(conflictInfo?.name)
+                const isFixedItem = fixed && [NAME, ...spareCoutries].includes(fixedItem)
                 return <Geography
                   key={geo.rsmKey}
                   geography={geo}
                   onClick={(e) => {
                     if (!fixed) {
-                      setFixed({left: e.clientX, top: e.clientY})
-                      setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
+                      setFixed(true)
+                      if (![NAME, ...spareCoutries].includes(fixedItem)) {
+                        setConflictInfo(onConflict ? {name: NAME, conflicts, position: {left: e.clientX, top: e.clientY}} : undefined)
+                      }
                       e.stopPropagation()
                     }
                   }}
-                  onMouseEnter={() => {
+                  onMouseEnter={(e) => {
                     if (fixed) return
-                    setConflictInfo(onConflict ? {name: NAME, conflicts} : undefined)
-                  }}
-                  onMouseMove={() => {
-                    if (!fixed && !conflictInfo) {
-                      setConflictInfo({name: NAME, conflicts})
-                    }
+                    setConflictInfo(onConflict ? {name: NAME, conflicts, position: {left: e.clientX, top: e.clientY}} : undefined)
                   }}
                   onMouseLeave={() => {
                     if (fixed) return
@@ -88,11 +85,11 @@ const OngoingConflictMap = ({
                   style={{
                     default: {
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
-                      fill: onConflict ? colorScale(fixedItem ? 7 / 6 : colorPoint) : '#FFFFFF',
+                      fill: onConflict ? colorScale(isFixedItem ? 7 / 6 : colorPoint) : '#FFFFFF',
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: onConflict ? colorScale(fixedItem ? 7 / 6 : fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
+                      fill: onConflict ? colorScale(isFixedItem ? 7 / 6 : fixed ? colorPoint : colorPoint + 2 / 6) : '#FFFFFF',
                       stroke: onConflict ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
                       cursor: onConflict && !fixed ? 'pointer' : 'default',
