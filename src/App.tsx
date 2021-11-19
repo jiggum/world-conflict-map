@@ -7,10 +7,11 @@ import ArmedConflictsView from './view/ArmedConflictsView'
 function App() {
   return (
     <BrowserRouter>
-      <Header/>
       <Routes>
         <Route path="/" element={<ArmedConflictsView/>}/>
+        <Route path="/territorial-disputes" element={<ArmedConflictsView/>}/>
       </Routes>
+      <Header/>
     </BrowserRouter>
   )
 }
