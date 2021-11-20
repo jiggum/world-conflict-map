@@ -1,9 +1,96 @@
-import React, { useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { Slider } from 'antd'
 import ArmedConflictMap, { TBorderConflict } from './BorderConflictsMap'
-import { TTooltipProps } from '../../component/Tooltip'
+import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
+import DetailDialog from '../../component/DetailDialog'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
+
+const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
+
+const parseDescription = (description: string) =>
+  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
+    .replaceAll('<a href', '<a target="_blank" href')
+
+const getToolTipRow = (conflict: TBorderConflict, index: number) => {
+  // const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
+  const combatants = conflict.COMBATANTS
+    .map(e =>
+        e
+        .map(e => <b>{e}</b>)
+        .reduce((acc: ReactNode[], val) => acc.length ? [...acc, <>, </>, val] : [val], [])
+    )
+    .reduce((acc: ReactNode[], val) => acc.length ? [...acc, <>&nbsp;vs&nbsp;</>, val] : [val], [])
+  return (
+    <ConflictWrapper key={index}>
+      <Title dangerouslySetInnerHTML={{__html: parseDescription(conflict.CONFLICT).toString()}}/>
+      <div>
+        <Row>Period:&nbsp;{conflict.START}-{conflict.FINISH ?? 'Ongoing'}</Row>
+        <Row>Combatants:&nbsp;{combatants}</Row>
+        <Row>Disputed Territory:&nbsp;{<div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DISPUTED_TERRITORIES).toString().trim()}}/>}</Row>
+        {conflict.FATALITIES && <Row>Fatalities:&nbsp;{conflict.FATALITIES}</Row>}
+      </div>
+    </ConflictWrapper>
+  )
+}
+
+const StyledTooltipTitle = styled(TooltipTitle)`
+  font-size: 24px;
+`
+
+const ConflictWrapper = styled(TooltipRow)`
+  margin-top: 6px;
+  flex-direction: column;
+`
+
+const Title = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+`
+
+const Row = styled.div`
+  display: flex;
+`
+
+const TooltipGroup = styled.div`
+  &:not(:first-child) {
+    margin-top: 24px;
+  }
+`
+
+const getTooltipContent = (key: string, disputes: TBorderConflict[]) => {
+  return (
+    <TooltipGroup key={key}>
+      <StyledTooltipTitle>{key}</StyledTooltipTitle>
+      {disputes.sort((a, b) => b.START - a.START).map(getToolTipRow)}
+    </TooltipGroup>
+  )
+}
+
+type TDetailViewProps = {
+  info: TConflictInfo,
+  hide: () => void,
+}
+
+function DetailView({
+  info,
+  hide,
+}: TDetailViewProps) {
+  const infoGroups = useMemo(
+    () => Object.entries(info.conflictsMap).sort(([a], [b]) => b < a ? 1 : -1),
+    [info],
+  )
+
+  return (
+    <DetailDialog hide={hide}>
+      {infoGroups.map((e) => getTooltipContent(...e))}
+    </DetailDialog>
+  )
+}
 
 const Wrapper = styled.div`
   display: flex;
@@ -52,7 +139,8 @@ function BorderConflictsView({
   setTooltipProps,
 }: TArmedConflictsViewProps) {
   const [info, setInfo] = useState<TConflictInfo | undefined>()
-  const [yearRange, setYearRange] = useState<TYearRange>([2021, 2021])
+  const [detailInfo, setDetailInfo] = useState<TConflictInfo | undefined>()
+  const [yearRange, setYearRange] = useState<TYearRange>([2001, 2021])
 
   useEffect(() => {
     setInfo(undefined)
@@ -77,6 +165,7 @@ function BorderConflictsView({
           setInfo={setInfo}
           setTooltipProps={setTooltipProps}
           yearRange={yearRange}
+          setDetailInfo={setDetailInfo}
         />
       </MapWrapper>
       <Right>
@@ -94,6 +183,7 @@ function BorderConflictsView({
           }}
         />
       </Right>
+      {detailInfo && <DetailView info={detailInfo} hide={() => setDetailInfo(undefined)}/>}
     </Wrapper>
   )
 }

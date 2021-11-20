@@ -3,11 +3,7 @@ import { TConflictInfo, TYearRange } from './BorderConflictsView'
 import borderConflicts from '../../data/borderConflicts.json'
 import ConflictMap from '../../component/ConflictMap'
 import { getCountriesFormName } from '../../util'
-import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
+import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import styled from 'styled-components'
 
 const countries = Array.from(new Set(borderConflicts.map(e => e.COMBATANTS.flat(2)).flat()))
@@ -16,34 +12,24 @@ const borderConflictsMap: { [key: string]: TBorderConflict[] } = countries.reduc
   return acc
 }, {})
 
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
-
-const DescriptionWrapper = styled(TooltipRow)`
-  flex-direction: column;
-`
-
-const getToolTipRow = (conflict: TBorderConflict, index: number) => (
-  <TooltipRow key={index}>
-    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.CONFLICT).toString()}}/>
-    &nbsp;{`${conflict.START}-${conflict.FINISH ?? 'Ongoing'}`}
-    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DISPUTED_TERRITORIES).toString()}}/>
-  </TooltipRow>
-)
-
-const getTooltipContent = (key: string, conflicts: TBorderConflict[]) => {
-  // const deaths = armedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
+const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRage: TYearRange) => {
+  const deaths = conflicts.map(e => e.DEATHS ?? 0).reduce((a, b) => a + b, 0)
+  const deathsEl = deaths > 0 ? <>and <b>{deaths}</b> deaths </> : null
+  const description =
+    yearRage[1] < 2021 ?
+      <div><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRage[0]}-{yearRage[1]}</div> :
+      <div><b>{conflicts.length}</b> conflicts {deathsEl}after {yearRage[0]}</div>
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      {/*{deaths !== undefined && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}*/}
-      {conflicts.sort((a, b) => b.START - a.START).map(getToolTipRow)}
+      {description}
     </div>
   )
 }
+
+const ToolBarFooter = styled.div`
+  text-align: center;
+`
 
 export type TBorderConflict = {
   START: number;
@@ -60,6 +46,7 @@ type TMapChartProps = {
   setTooltipProps: (props?: TTooltipProps) => void,
   info?: TConflictInfo,
   setInfo: (value?: TConflictInfo) => void,
+  setDetailInfo: (value?: TConflictInfo) => void,
   yearRange: TYearRange,
 }
 
@@ -68,6 +55,7 @@ const BorderConflictsMap = ({
   setTooltipProps,
   info,
   setInfo,
+  setDetailInfo,
   yearRange
 }: TMapChartProps) => {
   const getYearFilteredConflicts = (key: string) =>
@@ -123,11 +111,17 @@ const BorderConflictsMap = ({
           setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: Object
-              .entries(conflictsMap)
-              .sort(([a], [b]) => a > b ? 1 : -1)
-              .map((e) => getTooltipContent(...e))
-            ,
+            children: (
+              <>
+                {
+                  Object
+                    .entries(conflictsMap)
+                    .sort(([a], [b]) => a > b ? 1 : -1)
+                    .map((e) => getTooltipContent(...e, yearRange))
+                }
+                <ToolBarFooter>(Click to see details)</ToolBarFooter>
+              </>
+            ),
             fixed: tooltipProps?.fixed ?? false,
             onClose: () => {
               setInfo(undefined)
@@ -136,7 +130,28 @@ const BorderConflictsMap = ({
           })
         }
       }}
-      fixed={tooltipProps?.fixed ?? false}
+      onClick={(geo) => {
+        setInfo(undefined)
+        setTooltipProps(undefined)
+        const name = geo.properties.NAME
+        const countries = getCountriesFormName(name)
+        const conflictsMap = Object.keys(borderConflictsMap)
+          .filter(key => countries.includes(key))
+          .reduce((acc, val) => {
+            const value = getYearFilteredConflicts(val)
+            if (value.length > 0) {
+              acc[val] = value
+            }
+            return acc
+          }, {} as { [key: string]: TBorderConflict[] })
+        const info = {
+          name,
+          conflictsMap,
+          position: geo.position,
+        }
+        setDetailInfo(info)
+      }}
+      fixed={false}
       setFixed={(fixed) => setTooltipProps({
         ...tooltipProps!,
         fixed,
