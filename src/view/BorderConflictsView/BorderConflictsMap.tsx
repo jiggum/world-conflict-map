@@ -3,13 +3,20 @@ import { TConflictInfo, TYear } from './BorderConflictsView'
 import armedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
+import borderConflicts from '../../data/borderConflicts.json'
 import ConflictMap from '../../component/ConflictMap'
-import { groupBy } from '../../util'
+import { getCountriesFormName, groupBy } from '../../util'
 import { TooltipDeaths, TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
+
+const countries = Array.from(new Set(borderConflicts.map(e => e.COMBATANTS.flat(2)).flat()))
+const borderConflictsMap: { [key: string]: TBorderConflict[] } = countries.reduce((acc: any, val) => {
+  acc[val] = borderConflicts.filter(e => e.COMBATANTS.flat().includes(val))
+  return acc
+}, {})
 
 const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
 
@@ -19,7 +26,7 @@ const parseDescription = (description: string) =>
 
 
 const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
-  <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
+  <TooltipRow key={index}>??:&nbsp;
     <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
@@ -37,65 +44,68 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[
 
 export type TArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
 
-const armedConflictMap = groupBy(armedConflicts, (e) => e.COUNTRY)
+export type TBorderConflict = {
+  START: number;
+  FINISH?: number;
+  CONFLICT: string;
+  DISPUTED_TERRITORIES: string;
+  FATALITIES: string;
+  DEATHS?: number;
+  COMBATANTS: string[][];
+}
+
+// const armedConflictMap = groupBy(armedConflicts, (e) => e.COUNTRY)
 
 const maxDeaths = Object.values(armedConflictsDeaths).flat().map(e => e.DEATHS).reduce((acc, val) => acc > val ? acc : val, 0)
 
 type TMapChartProps = {
   tooltipProps?: TTooltipProps,
   setTooltipProps: (props?: TTooltipProps) => void,
-  year: TYear,
-  conflictInfo?: TConflictInfo,
-  setConflictInfo: (value?: TConflictInfo) => void,
+  info?: TConflictInfo,
+  setInfo: (value?: TConflictInfo) => void,
 }
 
 const BorderConflictsMap = ({
   tooltipProps,
   setTooltipProps,
-  year,
-  conflictInfo,
-  setConflictInfo,
+  info,
+  setInfo,
 }: TMapChartProps) => {
   return (
     <ConflictMap
-      isSelectedItem={geo => {
-        const {NAME} = geo.properties
-        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-        return [NAME, ...spareCoutries].includes(conflictInfo?.name)
-      }}
-      isActive={geo => {
-        const {NAME} = geo.properties
-        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-        return [NAME, ...spareCoutries].findIndex(key => armedConflictMap[key]) >= 0
-      }}
+      isSelectedItem={geo => info ? getCountriesFormName(geo.properties.NAME).includes(info.name) : false}
+      isActive={geo => getCountriesFormName(geo.properties.NAME).findIndex(key => borderConflictsMap[key]) >= 0}
       getColorPoint={(geo) => {
-        const {NAME} = geo.properties
-        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-        const deaths = armedConflictsDeaths[year].filter(e => [NAME, ...spareCoutries].includes(e.COUNTRY)).map((e => e.DEATHS)).reduce((acc, val) => acc + val, 0)
+        const countries = getCountriesFormName(geo.properties.NAME)
+        const deaths = countries.map(e => borderConflictsMap[e]?.map(e => e.DEATHS ?? 0)).flat(2).reduce((acc, val) => acc + val, 0)
         return deaths > 0 ? deaths / maxDeaths : -1 / 6
       }}
       select={(value) => {
         if (!value) {
-          setConflictInfo(undefined)
+          setInfo(undefined)
           setTooltipProps(undefined)
         } else {
-          const {NAME} = value.geo.properties
-          const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
-          const conflicts = [NAME, ...spareCoutries].map(key => armedConflictMap[key]).filter(e => e).flat()
-          const conflictInfo = {
-            name: NAME,
-            conflicts,
+          const name = value.geo.properties.NAME
+          const countries = getCountriesFormName(name)
+          const conflictsMap = Object.keys(borderConflictsMap)
+            .filter(key => countries.includes(key))
+            .reduce((acc: any, val) => {
+              acc[val] = borderConflictsMap[val]
+              return acc
+            }, {})
+          const info = {
+            name,
+            conflictsMap,
             position: value.position,
           }
-          const conflictGroups = Object.entries(groupBy(conflictInfo?.conflicts, (e) => e.COUNTRY)).sort(([a], [b]) => b < a ? 1 : -1)
 
-          setConflictInfo(conflictInfo)
+          setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: conflictGroups?.map((e) => getTooltipContent(year, ...e)),
+            children: 'todo',
             fixed: tooltipProps?.fixed ?? false,
             onClose: () => {
-              setConflictInfo(undefined)
+              setInfo(undefined)
               setTooltipProps(undefined)
             },
           })

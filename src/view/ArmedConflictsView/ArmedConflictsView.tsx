@@ -47,11 +47,11 @@ function ArmedConflictsView({
   tooltipProps,
   setTooltipProps,
 }: TArmedConflictsViewProps) {
-  const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
+  const [info, setInfo] = useState<TConflictInfo | undefined>()
   const [year, setYear] = useState<TYear>('2020')
 
   useEffect(() => {
-    setConflictInfo(undefined)
+    setInfo(undefined)
     setTooltipProps(undefined)
   }, [year, setTooltipProps])
 
@@ -69,8 +69,8 @@ function ArmedConflictsView({
       <MapWrapper>
         <ArmedConflictMap
           tooltipProps={tooltipProps}
-          conflictInfo={conflictInfo}
-          setConflictInfo={setConflictInfo}
+          info={info}
+          setInfo={setInfo}
           setTooltipProps={setTooltipProps}
           year={year}
         />

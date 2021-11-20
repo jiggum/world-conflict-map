@@ -101,7 +101,7 @@
     "FINISH": 1939,
     "CONFLICT": "[Slovak--Hungarian War](https://en.wikipedia.org/wiki/Slovak%E2%80%93Hungarian_War \"Slovak--Hungarian War\")",
     "DISPUTED_TERRITORIES": "Eastern Slovakia",
-    "FATALITIES": 69,
+    "FATALITIES": "69",
     "DEATHS": 69,
     "COMBATANTS": [
       [
@@ -151,7 +151,7 @@
     "FINISH": 1954,
     "CONFLICT": "[Annexation of Dadra and Nagar Haveli](https://en.wikipedia.org/wiki/Annexation_of_Dadra_and_Nagar_Haveli \"Annexation of Dadra and Nagar Haveli\")",
     "DISPUTED_TERRITORIES": "[Dadra and Nagar Haveli](https://en.wikipedia.org/wiki/Dadra_and_Nagar_Haveli \"Dadra and Nagar Haveli\")",
-    "FATALITIES": 46,
+    "FATALITIES": "46",
     "DEATHS": 46,
     "COMBATANTS": [
       [
@@ -183,7 +183,7 @@
     "FINISH": 1958,
     "CONFLICT": "[Ifni War](https://en.wikipedia.org/wiki/Ifni_War \"Ifni War\")",
     "DISPUTED_TERRITORIES": "[Spanish Ifni](https://en.wikipedia.org/wiki/Ifni \"Ifni\")",
-    "FATALITIES": null,
+    "FATALITIES": "",
     "DEATHS": null,
     "COMBATANTS": [
       [
@@ -232,7 +232,7 @@
     "FINISH": 1969,
     "CONFLICT": "[Sino-Soviet border conflict](https://en.wikipedia.org/wiki/Sino-Soviet_border_conflict \"Sino-Soviet border conflict\")",
     "DISPUTED_TERRITORIES": "[Zhenbao Island](https://en.wikipedia.org/wiki/Zhenbao_Island \"Zhenbao Island\")\n[Ussuri River](https://en.wikipedia.org/wiki/Ussuri \"Ussuri\")",
-    "FATALITIES": null,
+    "FATALITIES": "",
     "DEATHS": null,
     "COMBATANTS": [
       [
@@ -296,7 +296,7 @@
     "FINISH": null,
     "CONFLICT": "[Whisky War](https://en.wikipedia.org/wiki/Whisky_War \"Whisky War\")",
     "DISPUTED_TERRITORIES": "[Hans Island](https://en.wikipedia.org/wiki/Hans_Island \"Hans Island\")",
-    "FATALITIES": 0,
+    "FATALITIES": "0",
     "DEATHS": null,
     "COMBATANTS": [
       [
@@ -328,7 +328,7 @@
     "FINISH": 1985,
     "CONFLICT": "[Agacher Strip War](https://en.wikipedia.org/wiki/Agacher_Strip_War \"Agacher Strip War\")",
     "DISPUTED_TERRITORIES": "Agacher Strip",
-    "FATALITIES": null,
+    "FATALITIES": "",
     "DEATHS": null,
     "COMBATANTS": [
       [
@@ -344,7 +344,7 @@
     "FINISH": 1987,
     "CONFLICT": "[Sumdorong Chu standoff](https://en.wikipedia.org/wiki/Sumdorong_Chu_standoff \"Sumdorong Chu standoff\")",
     "DISPUTED_TERRITORIES": "[Sumdorong Chu](https://en.wikipedia.org/wiki/Sumdorong_Chu \"Sumdorong Chu\")",
-    "FATALITIES": null,
+    "FATALITIES": "",
     "DEATHS": null,
     "COMBATANTS": [
       [
@@ -392,7 +392,7 @@
     "FINISH": 2006,
     "CONFLICT": "[2000--2006 Shebaa Farms conflict](https://en.wikipedia.org/wiki/2000%E2%80%932006_Shebaa_Farms_conflict \"2000--2006 Shebaa Farms conflict\")",
     "DISPUTED_TERRITORIES": "[Shebaa farms](https://en.wikipedia.org/wiki/Shebaa_farms \"Shebaa farms\")",
-    "FATALITIES": 30,
+    "FATALITIES": "30",
     "DEATHS": 30,
     "COMBATANTS": [
       [
@@ -408,7 +408,7 @@
     "FINISH": 2001,
     "CONFLICT": "[2001 Bangladesh--India border clashes](https://en.wikipedia.org/wiki/2001_Bangladesh%E2%80%93India_border_clashes \"2001 Bangladesh--India border clashes\")",
     "DISPUTED_TERRITORIES": "[Bangladesh--India border](https://en.wikipedia.org/wiki/Bangladesh%E2%80%93India_border \"Bangladesh--India border\") region",
-    "FATALITIES": 20,
+    "FATALITIES": "20",
     "DEATHS": 20,
     "COMBATANTS": [
       [
@@ -440,7 +440,7 @@
     "FINISH": 2002,
     "CONFLICT": "[Perejil Island crisis](https://en.wikipedia.org/wiki/Perejil_Island_crisis \"Perejil Island crisis\")",
     "DISPUTED_TERRITORIES": "[Perejil Island](https://en.wikipedia.org/wiki/Perejil_Island \"Perejil Island\")",
-    "FATALITIES": 0,
+    "FATALITIES": "0",
     "DEATHS": 0,
     "COMBATANTS": [
       [
@@ -456,7 +456,7 @@
     "FINISH": 2005,
     "CONFLICT": "[Conflict in Tuzla Island](https://en.wikipedia.org/wiki/2003_Tuzla_Island_conflict \"2003 Tuzla Island conflict\")",
     "DISPUTED_TERRITORIES": "[Tuzla Island](https://en.wikipedia.org/wiki/Tuzla_Island \"Tuzla Island\")",
-    "FATALITIES": 0,
+    "FATALITIES": "0",
     "DEATHS": 0,
     "COMBATANTS": [
       [
@@ -488,7 +488,7 @@
     "FINISH": 2008,
     "CONFLICT": "[Djiboutian--Eritrean border conflict](https://en.wikipedia.org/wiki/Djiboutian%E2%80%93Eritrean_border_conflict \"Djiboutian--Eritrean border conflict\")",
     "DISPUTED_TERRITORIES": "[Ras Doumeira](https://en.wikipedia.org/wiki/Ras_Doumeira \"Ras Doumeira\")",
-    "FATALITIES": 144,
+    "FATALITIES": "144",
     "DEATHS": 144,
     "COMBATANTS": [
       [
@@ -520,7 +520,7 @@
     "FINISH": 2012,
     "CONFLICT": "[Cambodian--Thai border dispute](https://en.wikipedia.org/wiki/Cambodian%E2%80%93Thai_border_dispute \"Cambodian--Thai border dispute\")",
     "DISPUTED_TERRITORIES": "[Preah Vihear Temple](https://en.wikipedia.org/wiki/Preah_Vihear_Temple \"Preah Vihear Temple\")",
-    "FATALITIES": 42,
+    "FATALITIES": "42",
     "DEATHS": 42,
     "COMBATANTS": [
       [
@@ -617,7 +617,7 @@
     "FINISH": 2010,
     "CONFLICT": "[Costa Rica--Nicaragua San Juan River border dispute](https://en.wikipedia.org/wiki/Costa_Rica%E2%80%93Nicaragua_San_Juan_River_border_dispute#2010_Isla_Calero_dispute \"Costa Rica--Nicaragua San Juan River border dispute\")",
     "DISPUTED_TERRITORIES": "[San Juan River](https://en.wikipedia.org/wiki/San_Juan_River_(Nicaragua) \"San Juan River (Nicaragua)\")",
-    "FATALITIES": 0,
+    "FATALITIES": "0",
     "DEATHS": 0,
     "COMBATANTS": [
       [
@@ -649,7 +649,7 @@
     "FINISH": 2011,
     "CONFLICT": "[2011 India--Pakistan border skirmish](https://en.wikipedia.org/wiki/2011_India%E2%80%93Pakistan_border_skirmish \"2011 India--Pakistan border skirmish\")",
     "DISPUTED_TERRITORIES": "[Kashmir](https://en.wikipedia.org/wiki/Kashmir \"Kashmir\") ([Kupwara District](https://en.wikipedia.org/wiki/Kupwara_district \"Kupwara district\") and [Neelum Valley](https://en.wikipedia.org/wiki/Neelum_District \"Neelum District\"))",
-    "FATALITIES": 8,
+    "FATALITIES": "8",
     "DEATHS": 8,
     "COMBATANTS": [
       [
@@ -681,7 +681,7 @@
     "FINISH": 2014,
     "CONFLICT": "[Syrian--Turkish border clashes during the Syrian civil war](https://en.wikipedia.org/wiki/Syrian%E2%80%93Turkish_border_clashes_during_the_Syrian_civil_war \"Syrian--Turkish border clashes during the Syrian civil war\")",
     "DISPUTED_TERRITORIES": "[Akçakale](https://en.wikipedia.org/wiki/Ak%C3%A7akale \"Akçakale\")",
-    "FATALITIES": 17,
+    "FATALITIES": "17",
     "DEATHS": 17,
     "COMBATANTS": [
       [
@@ -713,7 +713,7 @@
     "FINISH": 2012,
     "CONFLICT": "[2012 Armenian--Azerbaijani border clashes](https://en.wikipedia.org/wiki/2012_Armenian%E2%80%93Azerbaijani_border_clashes \"2012 Armenian--Azerbaijani border clashes\")",
     "DISPUTED_TERRITORIES": "[Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\")\n[Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")\n[Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\")",
-    "FATALITIES": 9,
+    "FATALITIES": "9",
     "DEATHS": 9,
     "COMBATANTS": [
       [
@@ -730,7 +730,7 @@
     "FINISH": 2013,
     "CONFLICT": "[2013 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2013_India%E2%80%93Pakistan_border_skirmishes \"2013 India--Pakistan border skirmishes\")",
     "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\")",
-    "FATALITIES": 28,
+    "FATALITIES": "28",
     "DEATHS": 28,
     "COMBATANTS": [
       [
@@ -762,7 +762,7 @@
     "FINISH": 2014,
     "CONFLICT": "[2014 Armenian--Azerbaijani clashes](https://en.wikipedia.org/wiki/2014_Armenian%E2%80%93Azerbaijani_clashes \"2014 Armenian--Azerbaijani clashes\")",
     "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\"))\n[Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
-    "FATALITIES": 19,
+    "FATALITIES": "19",
     "DEATHS": 19,
     "COMBATANTS": [
       [
@@ -812,7 +812,7 @@
     "FINISH": 2016,
     "CONFLICT": "[Battle of Tsorona](https://en.wikipedia.org/wiki/Battle_of_Tsorona \"Battle of Tsorona\")",
     "DISPUTED_TERRITORIES": "[Tserona Subregion](https://en.wikipedia.org/wiki/Tserona_Subregion \"Tserona Subregion\")",
-    "FATALITIES": 218,
+    "FATALITIES": "218",
     "DEATHS": 218,
     "COMBATANTS": [
       [
@@ -828,7 +828,7 @@
     "FINISH": 2016,
     "CONFLICT": "[2016 Belize--Guatemala border standoff](https://en.wikipedia.org/wiki/2016_Belize%E2%80%93Guatemala_border_standoff \"2016 Belize--Guatemala border standoff\")",
     "DISPUTED_TERRITORIES": "[Sarstoon River](https://en.wikipedia.org/wiki/Sarstoon_River \"Sarstoon River\")",
-    "FATALITIES": 1,
+    "FATALITIES": "1",
     "DEATHS": 1,
     "COMBATANTS": [
       [
@@ -876,7 +876,7 @@
     "FINISH": 2017,
     "CONFLICT": "[2017 China--India border standoff](https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff \"2017 China--India border standoff\")",
     "DISPUTED_TERRITORIES": "[Doklam](https://en.wikipedia.org/wiki/Doklam \"Doklam\")",
-    "FATALITIES": 0,
+    "FATALITIES": "0",
     "DEATHS": 0,
     "COMBATANTS": [
       [
@@ -973,7 +973,7 @@
     "FINISH": 2021,
     "CONFLICT": "[2021 Kyrgyzstan--Tajikistan conflict](https://en.wikipedia.org/wiki/2021_Kyrgyzstan%E2%80%93Tajikistan_conflict \"2021 Kyrgyzstan--Tajikistan conflict\")",
     "DISPUTED_TERRITORIES": "[Leilek District](https://en.wikipedia.org/wiki/Leilek_District \"Leilek District\")",
-    "FATALITIES": 55,
+    "FATALITIES": "55",
     "DEATHS": 55,
     "COMBATANTS": [
       [

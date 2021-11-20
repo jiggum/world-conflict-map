@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Slider } from 'antd'
-import ArmedConflictMap, { TArmedConflicts } from './BorderConflictsMap'
+import ArmedConflictMap, { TBorderConflict } from './BorderConflictsMap'
 import { TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 
@@ -36,7 +36,11 @@ const SliderMark = styled.span`
 
 export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
 
-export type TConflictInfo = { name: string, conflicts: TArmedConflicts[], position: TPosition }
+export type TConflictInfo = {
+  name: string,
+  conflictsMap: { [key: string]: TBorderConflict[] },
+  position: TPosition,
+}
 
 type TArmedConflictsViewProps = {
   tooltipProps?: TTooltipProps,
@@ -47,11 +51,11 @@ function BorderConflictsView({
   tooltipProps,
   setTooltipProps,
 }: TArmedConflictsViewProps) {
-  const [conflictInfo, setConflictInfo] = useState<TConflictInfo | undefined>()
+  const [info, setInfo] = useState<TConflictInfo | undefined>()
   const [year, setYear] = useState<TYear>('2020')
 
   useEffect(() => {
-    setConflictInfo(undefined)
+    setInfo(undefined)
     setTooltipProps(undefined)
   }, [year, setTooltipProps])
 
@@ -69,10 +73,9 @@ function BorderConflictsView({
       <MapWrapper>
         <ArmedConflictMap
           tooltipProps={tooltipProps}
-          conflictInfo={conflictInfo}
-          setConflictInfo={setConflictInfo}
+          info={info}
+          setInfo={setInfo}
           setTooltipProps={setTooltipProps}
-          year={year}
         />
       </MapWrapper>
       <Right>

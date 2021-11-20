@@ -46,19 +46,19 @@ const TerritorialDisputesMap = ({
     <ConflictMap
       isSelectedItem={geo => {
         const {NAME} = geo.properties
-        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+        const spareCoutries = geographyCountryNameMap[NAME] ?? []
         return [NAME, ...spareCoutries].includes(info?.country)
       }}
       isActive={geo => {
         const {NAME} = geo.properties
-        const spares: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+        const spares: string[] = geographyCountryNameMap[NAME] ?? []
         return [NAME, ...spares].findIndex(key => territorialDisputeMapByCountry[key]) >= 0
       }}
       getColorPoint={(geo) => {
         const {NAME} = geo.properties
-        const spares: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+        const spares: string[] = geographyCountryNameMap[NAME] ?? []
         const num = [NAME, ...spares].map(e => territorialDisputeMapByCountry[e]?.length ?? 0).reduce((a, b) => a + b, 0)
-        return (-1.4 / 6) + ((1.4 + 6) / 6 * (num - 1) / max)
+        return Math.min((-1.4 / 6) + ((1.4 + 6) / 6 * (num - 1) / max), 1)
       }}
       select={(value) => {
         if (!value) {
@@ -66,7 +66,7 @@ const TerritorialDisputesMap = ({
           setTooltipProps(undefined)
         } else {
           const {NAME} = value.geo.properties
-          const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+          const spareCoutries = geographyCountryNameMap[NAME] ?? []
           const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
           const info = {
             country: NAME,
@@ -95,7 +95,7 @@ const TerritorialDisputesMap = ({
         setInfo(undefined)
         setTooltipProps(undefined)
         const {NAME} = geo.properties
-        const spareCoutries: string[] = (geographyCountryNameMap as any)[NAME] ?? []
+        const spareCoutries = geographyCountryNameMap[NAME] ?? []
         const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
         if (!disputes.length) return
         const info = {

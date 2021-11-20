@@ -1,4 +1,4 @@
-const geographyCountryNameMap = {
+const geographyCountryNameMap: { [key: string]: string[] } = {
   Azerbaijan: ['Artsakh'],
   Israel: ['Gaza Strip'],
   Madagascar: ['Comoros', 'Mauritius', 'Maldives', 'Seychelles'],
