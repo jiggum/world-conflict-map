@@ -2,451 +2,686 @@
   {
     "COUNTRY": "Afghanistan",
     "YEAR": 1978,
-    "DESCRIPTION": "[Afghanistan conflict](https://en.wikipedia.org/wiki/Afghanistan_conflict_(1978%E2%80%93present))\n- [Islamic State–Taliban conflict](https://en.wikipedia.org/wiki/Islamic_State%E2%80%93Taliban_conflict)\n- [Anti-Taliban conflict](https://en.wikipedia.org/wiki/Panjshir_conflict)"
+    "NAME": "[Afghanistan conflict](https://en.wikipedia.org/wiki/Afghanistan_conflict_(1978%E2%80%93present))",
+    "CONFLICTS": [
+      "[Islamic State–Taliban conflict](https://en.wikipedia.org/wiki/Islamic_State%E2%80%93Taliban_conflict)",
+      "[Anti-Taliban conflict](https://en.wikipedia.org/wiki/Panjshir_conflict)"
+    ]
   },
   {
     "COUNTRY": "Mexico",
     "YEAR": 2006,
-    "DESCRIPTION": "[Mexican drug war](https://en.wikipedia.org/wiki/Mexican_drug_war)\n- [Infighting in the Gulf Cartel](https://en.wikipedia.org/wiki/Infighting_in_the_Gulf_Cartel)\n- [Infighting in Los Zetas](https://en.wikipedia.org/wiki/Infighting_in_Los_Zetas)\n- [Piracy on Falcon Lake](https://en.wikipedia.org/wiki/Piracy_on_Falcon_Lake)"
+    "NAME": "[Mexican drug war](https://en.wikipedia.org/wiki/Mexican_drug_war)",
+    "CONFLICTS": [
+      "[Infighting in the Gulf Cartel](https://en.wikipedia.org/wiki/Infighting_in_the_Gulf_Cartel)",
+      "[Infighting in Los Zetas](https://en.wikipedia.org/wiki/Infighting_in_Los_Zetas)",
+      "[Piracy on Falcon Lake](https://en.wikipedia.org/wiki/Piracy_on_Falcon_Lake)"
+    ]
   },
   {
     "COUNTRY": "Yemen",
     "YEAR": 2011,
-    "DESCRIPTION": "[Yemeni Crisis](https://en.wikipedia.org/wiki/Yemeni_Crisis_(2011%E2%80%93present))\n- [Yemeni Civil War (2014–present)](https://en.wikipedia.org/wiki/Yemeni_Civil_War_(2014%E2%80%93present))\n- [Al-Qaeda insurgency in Yemen](https://en.wikipedia.org/wiki/Al-Qaeda_insurgency_in_Yemen)\n- [Houthi–Saudi Arabian conflict](https://en.wikipedia.org/wiki/Houthi%E2%80%93Saudi_Arabian_conflict)\n- [Saudi Arabian-led intervention in Yemen](https://en.wikipedia.org/wiki/Saudi_Arabian-led_intervention_in_Yemen)"
+    "NAME": "[Yemeni Crisis](https://en.wikipedia.org/wiki/Yemeni_Crisis_(2011%E2%80%93present))",
+    "CONFLICTS": [
+      "[Yemeni Civil War (2014–present)](https://en.wikipedia.org/wiki/Yemeni_Civil_War_(2014%E2%80%93present))",
+      "[Al-Qaeda insurgency in Yemen](https://en.wikipedia.org/wiki/Al-Qaeda_insurgency_in_Yemen)",
+      "[Houthi–Saudi Arabian conflict](https://en.wikipedia.org/wiki/Houthi%E2%80%93Saudi_Arabian_conflict)",
+      "[Saudi Arabian-led intervention in Yemen](https://en.wikipedia.org/wiki/Saudi_Arabian-led_intervention_in_Yemen)"
+    ]
   },
   {
     "COUNTRY": "Saudi Arabia",
     "YEAR": 2011,
-    "DESCRIPTION": "[Yemeni Crisis](https://en.wikipedia.org/wiki/Yemeni_Crisis_(2011%E2%80%93present))\n- [Yemeni Civil War (2014–present)](https://en.wikipedia.org/wiki/Yemeni_Civil_War_(2014%E2%80%93present))\n- [Al-Qaeda insurgency in Yemen](https://en.wikipedia.org/wiki/Al-Qaeda_insurgency_in_Yemen)\n- [Houthi–Saudi Arabian conflict](https://en.wikipedia.org/wiki/Houthi%E2%80%93Saudi_Arabian_conflict)\n- [Saudi Arabian-led intervention in Yemen](https://en.wikipedia.org/wiki/Saudi_Arabian-led_intervention_in_Yemen)"
+    "NAME": "[Yemeni Crisis](https://en.wikipedia.org/wiki/Yemeni_Crisis_(2011%E2%80%93present))",
+    "CONFLICTS": [
+      "[Yemeni Civil War (2014–present)](https://en.wikipedia.org/wiki/Yemeni_Civil_War_(2014%E2%80%93present))",
+      "[Al-Qaeda insurgency in Yemen](https://en.wikipedia.org/wiki/Al-Qaeda_insurgency_in_Yemen)",
+      "[Houthi–Saudi Arabian conflict](https://en.wikipedia.org/wiki/Houthi%E2%80%93Saudi_Arabian_conflict)",
+      "[Saudi Arabian-led intervention in Yemen](https://en.wikipedia.org/wiki/Saudi_Arabian-led_intervention_in_Yemen)"
+    ]
   },
   {
     "COUNTRY": "Eritrea",
     "YEAR": 2020,
-    "DESCRIPTION": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)\n- [2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    "NAME": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)",
+    "CONFLICTS": [
+      "[2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    ]
   },
   {
     "COUNTRY": "Ethiopia",
     "YEAR": 2020,
-    "DESCRIPTION": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)\n- [2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    "NAME": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)",
+    "CONFLICTS": [
+      "[2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    ]
   },
   {
     "COUNTRY": "Sudan",
     "YEAR": 2020,
-    "DESCRIPTION": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)\n- [2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    "NAME": "[Tigray War](https://en.wikipedia.org/wiki/Tigray_War)",
+    "CONFLICTS": [
+      "[2020–2021 Ethiopian–Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes)"
+    ]
   },
   {
     "COUNTRY": "Myanmar",
     "YEAR": 1948,
-    "DESCRIPTION": "[Internal conflict in Myanmar](https://en.wikipedia.org/wiki/Internal_conflict_in_Myanmar)\n- [Kachin conflict](https://en.wikipedia.org/wiki/Kachin_conflict)\n- [Karen conflict](https://en.wikipedia.org/wiki/Karen_conflict)\n- [Rohingya conflict](https://en.wikipedia.org/wiki/Rohingya_conflict)\n- [Conflict in Rakhine State](https://en.wikipedia.org/wiki/Conflict_in_Rakhine_State_(2016%E2%80%93present))"
+    "NAME": "[Internal conflict in Myanmar](https://en.wikipedia.org/wiki/Internal_conflict_in_Myanmar)",
+    "CONFLICTS": [
+      "[Kachin conflict](https://en.wikipedia.org/wiki/Kachin_conflict)",
+      "[Karen conflict](https://en.wikipedia.org/wiki/Karen_conflict)",
+      "[Rohingya conflict](https://en.wikipedia.org/wiki/Rohingya_conflict)",
+      "[Conflict in Rakhine State](https://en.wikipedia.org/wiki/Conflict_in_Rakhine_State_(2016%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "Colombia",
     "YEAR": 1964,
-    "DESCRIPTION": "[Colombian conflict](https://en.wikipedia.org/wiki/Colombian_conflict)\n- [Catatumbo campaign (2018–present)](https://en.wikipedia.org/wiki/Catatumbo_campaign)\n- [2021 Apure clashes](https://en.wikipedia.org/wiki/2021_Apure_clashes)"
+    "NAME": "[Colombian conflict](https://en.wikipedia.org/wiki/Colombian_conflict)",
+    "CONFLICTS": [
+      "[Catatumbo campaign (2018–present)](https://en.wikipedia.org/wiki/Catatumbo_campaign)",
+      "[2021 Apure clashes](https://en.wikipedia.org/wiki/2021_Apure_clashes)"
+    ]
   },
   {
     "COUNTRY": "Venezuela",
     "YEAR": 1964,
-    "DESCRIPTION": "[Colombian conflict](https://en.wikipedia.org/wiki/Colombian_conflict)\n- [Catatumbo campaign (2018–present)](https://en.wikipedia.org/wiki/Catatumbo_campaign)\n- [2021 Apure clashes](https://en.wikipedia.org/wiki/2021_Apure_clashes)"
+    "NAME": "[Colombian conflict](https://en.wikipedia.org/wiki/Colombian_conflict)",
+    "CONFLICTS": [
+      "[Catatumbo campaign (2018–present)](https://en.wikipedia.org/wiki/Catatumbo_campaign)",
+      "[2021 Apure clashes](https://en.wikipedia.org/wiki/2021_Apure_clashes)"
+    ]
   },
   {
     "COUNTRY": "Ethiopia",
     "YEAR": 1973,
-    "DESCRIPTION": "[Oromo conflict](https://en.wikipedia.org/wiki/Oromo_conflict)"
+    "NAME": "[Oromo conflict](https://en.wikipedia.org/wiki/Oromo_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Artsakh",
     "YEAR": 1988,
-    "DESCRIPTION": "[Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/Nagorno-Karabakh_conflict)\n- [2021 Armenia–Azerbaijan border crisis](https://en.wikipedia.org/wiki/2021_Armenia%E2%80%93Azerbaijan_border_crisis)"
+    "NAME": "[Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/Nagorno-Karabakh_conflict)",
+    "CONFLICTS": [
+      "[2021 Armenia–Azerbaijan border crisis](https://en.wikipedia.org/wiki/2021_Armenia%E2%80%93Azerbaijan_border_crisis)"
+    ]
   },
   {
     "COUNTRY": "Azerbaijan",
     "YEAR": 1988,
-    "DESCRIPTION": "[Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/Nagorno-Karabakh_conflict)\n- [2021 Armenia–Azerbaijan border crisis](https://en.wikipedia.org/wiki/2021_Armenia%E2%80%93Azerbaijan_border_crisis)"
+    "NAME": "[Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/Nagorno-Karabakh_conflict)",
+    "CONFLICTS": [
+      "[2021 Armenia–Azerbaijan border crisis](https://en.wikipedia.org/wiki/2021_Armenia%E2%80%93Azerbaijan_border_crisis)"
+    ]
   },
   {
     "COUNTRY": "Somalia",
     "YEAR": 1991,
-    "DESCRIPTION": "[Somali Civil War](https://en.wikipedia.org/wiki/Somali_Civil_War)\n- [Current phase](https://en.wikipedia.org/wiki/Somali_Civil_War_(2009%E2%80%93present))\n- [Operation Atalanta](https://en.wikipedia.org/wiki/Operation_Atalanta)"
+    "NAME": "[Somali Civil War](https://en.wikipedia.org/wiki/Somali_Civil_War)",
+    "CONFLICTS": [
+      "[Current phase](https://en.wikipedia.org/wiki/Somali_Civil_War_(2009%E2%80%93present))",
+      "[Operation Atalanta](https://en.wikipedia.org/wiki/Operation_Atalanta)"
+    ]
   },
   {
     "COUNTRY": "Kenya",
     "YEAR": 1991,
-    "DESCRIPTION": "[Somali Civil War](https://en.wikipedia.org/wiki/Somali_Civil_War)\n- [Current phase](https://en.wikipedia.org/wiki/Somali_Civil_War_(2009%E2%80%93present))\n- [Operation Atalanta](https://en.wikipedia.org/wiki/Operation_Atalanta)"
+    "NAME": "[Somali Civil War](https://en.wikipedia.org/wiki/Somali_Civil_War)",
+    "CONFLICTS": [
+      "[Current phase](https://en.wikipedia.org/wiki/Somali_Civil_War_(2009%E2%80%93present))",
+      "[Operation Atalanta](https://en.wikipedia.org/wiki/Operation_Atalanta)"
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 1996,
-    "DESCRIPTION": "[Allied Democratic Forces insurgency](https://en.wikipedia.org/wiki/Allied_Democratic_Forces_insurgency)"
+    "NAME": "[Allied Democratic Forces insurgency](https://en.wikipedia.org/wiki/Allied_Democratic_Forces_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Uganda",
     "YEAR": 1996,
-    "DESCRIPTION": "[Allied Democratic Forces insurgency](https://en.wikipedia.org/wiki/Allied_Democratic_Forces_insurgency)"
+    "NAME": "[Allied Democratic Forces insurgency](https://en.wikipedia.org/wiki/Allied_Democratic_Forces_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Nigeria",
     "YEAR": 1998,
-    "DESCRIPTION": "[Communal conflicts in Nigeria](https://en.wikipedia.org/wiki/Communal_conflicts_in_Nigeria)"
+    "NAME": "[Communal conflicts in Nigeria](https://en.wikipedia.org/wiki/Communal_conflicts_in_Nigeria)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 1991,
-    "DESCRIPTION": "[Ituri conflict](https://en.wikipedia.org/wiki/Ituri_conflict)"
+    "NAME": "[Ituri conflict](https://en.wikipedia.org/wiki/Ituri_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Algeria",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Burkina Faso",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Chad",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Libya",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Mali",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Niger",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Tunisia",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Togo",
     "YEAR": 2002,
-    "DESCRIPTION": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))"
+    "NAME": "[Insurgency in the Maghreb (2002–present)](https://en.wikipedia.org/wiki/Insurgency_in_the_Maghreb_(2002%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Sudan",
     "YEAR": 2003,
-    "DESCRIPTION": "[War in Darfur](https://en.wikipedia.org/wiki/War_in_Darfur)"
+    "NAME": "[War in Darfur](https://en.wikipedia.org/wiki/War_in_Darfur)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Iraq",
     "YEAR": 2003,
-    "DESCRIPTION": "[Iraq conflict](https://en.wikipedia.org/wiki/Iraqi_conflict_(2003%E2%80%93present))\n- [Islamic State insurgency in Iraq (2017–present)](https://en.wikipedia.org/wiki/Islamic_State_insurgency_in_Iraq_(2017%E2%80%93present))"
+    "NAME": "[Iraq conflict](https://en.wikipedia.org/wiki/Iraqi_conflict_(2003%E2%80%93present))",
+    "CONFLICTS": [
+      "[Islamic State insurgency in Iraq (2017–present)](https://en.wikipedia.org/wiki/Islamic_State_insurgency_in_Iraq_(2017%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 2004,
-    "DESCRIPTION": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)"
+    "NAME": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Rwanda",
     "YEAR": 2004,
-    "DESCRIPTION": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)"
+    "NAME": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Burundi",
     "YEAR": 2004,
-    "DESCRIPTION": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)"
+    "NAME": "[Kivu conflict](https://en.wikipedia.org/wiki/Kivu_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Nigeria",
     "YEAR": 2009,
-    "DESCRIPTION": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)"
+    "NAME": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Cameroon",
     "YEAR": 2009,
-    "DESCRIPTION": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)"
+    "NAME": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Niger",
     "YEAR": 2009,
-    "DESCRIPTION": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)"
+    "NAME": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Chad",
     "YEAR": 2009,
-    "DESCRIPTION": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)"
+    "NAME": "[Boko Haram insurgency](https://en.wikipedia.org/wiki/Boko_Haram_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Syria",
     "YEAR": 2011,
-    "DESCRIPTION": "[Syrian Civil War](https://en.wikipedia.org/wiki/Syrian_civil_war)\n- [Inter-rebel conflict during the Syrian Civil War](https://en.wikipedia.org/wiki/Inter-rebel_conflict_during_the_Syrian_civil_war)\n- [Syrian–Turkish border clashes during the Syrian civil war](https://en.wikipedia.org/wiki/Syrian%E2%80%93Turkish_border_clashes_during_the_Syrian_civil_war)\n- [Rojava conflict](https://en.wikipedia.org/wiki/Rojava_conflict)\n- [Rojava–Islamist conflict](https://en.wikipedia.org/wiki/Rojava%E2%80%93Islamist_conflict)\n- [Daraa insurgency](https://en.wikipedia.org/wiki/Daraa_insurgency)"
+    "NAME": "[Syrian Civil War](https://en.wikipedia.org/wiki/Syrian_civil_war)",
+    "CONFLICTS": [
+      "[Inter-rebel conflict during the Syrian Civil War](https://en.wikipedia.org/wiki/Inter-rebel_conflict_during_the_Syrian_civil_war)",
+      "[Syrian–Turkish border clashes during the Syrian civil war](https://en.wikipedia.org/wiki/Syrian%E2%80%93Turkish_border_clashes_during_the_Syrian_civil_war)",
+      "[Rojava conflict](https://en.wikipedia.org/wiki/Rojava_conflict)",
+      "[Rojava–Islamist conflict](https://en.wikipedia.org/wiki/Rojava%E2%80%93Islamist_conflict)",
+      "[Daraa insurgency](https://en.wikipedia.org/wiki/Daraa_insurgency)"
+    ]
   },
   {
     "COUNTRY": "Libya",
     "YEAR": 2011,
-    "DESCRIPTION": "[Libyan crisis](https://en.wikipedia.org/wiki/Libyan_Crisis_(2011%E2%80%93present))"
+    "NAME": "[Libyan crisis](https://en.wikipedia.org/wiki/Libyan_Crisis_(2011%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "S. Sudan",
     "YEAR": 2011,
-    "DESCRIPTION": "[Ethnic violence in South Sudan](https://en.wikipedia.org/wiki/Ethnic_violence_in_South_Sudan)"
+    "NAME": "[Ethnic violence in South Sudan](https://en.wikipedia.org/wiki/Ethnic_violence_in_South_Sudan)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Mali",
     "YEAR": 2012,
-    "DESCRIPTION": "[Mali War](https://en.wikipedia.org/wiki/Mali_War)"
+    "NAME": "[Mali War](https://en.wikipedia.org/wiki/Mali_War)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Central African Rep.",
     "YEAR": 2012,
-    "DESCRIPTION": "[Central African Republic Civil War](https://en.wikipedia.org/wiki/Central_African_Republic_Civil_War)"
+    "NAME": "[Central African Republic Civil War](https://en.wikipedia.org/wiki/Central_African_Republic_Civil_War)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Mozambique",
     "YEAR": 2017,
-    "DESCRIPTION": "[Insurgency in Cabo Delgado](https://en.wikipedia.org/wiki/Insurgency_in_Cabo_Delgado)"
+    "NAME": "[Insurgency in Cabo Delgado](https://en.wikipedia.org/wiki/Insurgency_in_Cabo_Delgado)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Tanzania",
     "YEAR": 2017,
-    "DESCRIPTION": "[Insurgency in Cabo Delgado](https://en.wikipedia.org/wiki/Insurgency_in_Cabo_Delgado)"
+    "NAME": "[Insurgency in Cabo Delgado](https://en.wikipedia.org/wiki/Insurgency_in_Cabo_Delgado)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "India",
     "YEAR": 1947,
-    "DESCRIPTION": "[Indo-Pakistani Wars](https://en.wikipedia.org/wiki/Indo-Pakistani_wars_and_conflicts)\n- [Insurgency in Kashmir](https://en.wikipedia.org/wiki/Insurgency_in_Jammu_and_Kashmir)"
+    "NAME": "[Indo-Pakistani Wars](https://en.wikipedia.org/wiki/Indo-Pakistani_wars_and_conflicts)",
+    "CONFLICTS": [
+      "[Insurgency in Kashmir](https://en.wikipedia.org/wiki/Insurgency_in_Jammu_and_Kashmir)"
+    ]
   },
   {
     "COUNTRY": "Pakistan",
     "YEAR": 1947,
-    "DESCRIPTION": "[Indo-Pakistani Wars](https://en.wikipedia.org/wiki/Indo-Pakistani_wars_and_conflicts)\n- [Insurgency in Kashmir](https://en.wikipedia.org/wiki/Insurgency_in_Jammu_and_Kashmir)"
+    "NAME": "[Indo-Pakistani Wars](https://en.wikipedia.org/wiki/Indo-Pakistani_wars_and_conflicts)",
+    "CONFLICTS": [
+      "[Insurgency in Kashmir](https://en.wikipedia.org/wiki/Insurgency_in_Jammu_and_Kashmir)"
+    ]
   },
   {
     "COUNTRY": "Pakistan",
     "YEAR": 1948,
-    "DESCRIPTION": "[Insurgency in Balochistan](https://en.wikipedia.org/wiki/Insurgency_in_Balochistan)\n- [Sistan and Baluchestan insurgency](https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_insurgency)"
+    "NAME": "[Insurgency in Balochistan](https://en.wikipedia.org/wiki/Insurgency_in_Balochistan)",
+    "CONFLICTS": [
+      "[Sistan and Baluchestan insurgency](https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_insurgency)"
+    ]
   },
   {
     "COUNTRY": "Iran",
     "YEAR": 1948,
-    "DESCRIPTION": "[Insurgency in Balochistan](https://en.wikipedia.org/wiki/Insurgency_in_Balochistan)\n- [Sistan and Baluchestan insurgency](https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_insurgency)"
+    "NAME": "[Insurgency in Balochistan](https://en.wikipedia.org/wiki/Insurgency_in_Balochistan)",
+    "CONFLICTS": [
+      "[Sistan and Baluchestan insurgency](https://en.wikipedia.org/wiki/Sistan_and_Baluchestan_insurgency)"
+    ]
   },
   {
     "COUNTRY": "Gaza Strip",
     "YEAR": 1948,
-    "DESCRIPTION": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)\n- [Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    "NAME": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)",
+    "CONFLICTS": [
+      "[Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    ]
   },
   {
     "COUNTRY": "Israel",
     "YEAR": 1948,
-    "DESCRIPTION": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)\n- [Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    "NAME": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)",
+    "CONFLICTS": [
+      "[Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    ]
   },
   {
     "COUNTRY": "Lebanon",
     "YEAR": 1948,
-    "DESCRIPTION": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)\n- [Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    "NAME": "[Israeli–Palestinian conflict](https://en.wikipedia.org/wiki/Israeli%E2%80%93Palestinian_conflict)",
+    "CONFLICTS": [
+      "[Gaza–Israel conflict](https://en.wikipedia.org/wiki/Gaza%E2%80%93Israel_conflict)"
+    ]
   },
   {
     "COUNTRY": "India",
     "YEAR": 1954,
-    "DESCRIPTION": "[Insurgency in Northeast India](https://en.wikipedia.org/wiki/Insurgency_in_Northeast_India)\n- [Assam separatist movements](https://en.wikipedia.org/wiki/Assam_separatist_movements)\n- [Insurgency in Manipur](https://en.wikipedia.org/wiki/Insurgency_in_Manipur)\n- [Ethnic conflict in Nagaland](https://en.wikipedia.org/wiki/Ethnic_conflict_in_Nagaland)"
+    "NAME": "[Insurgency in Northeast India](https://en.wikipedia.org/wiki/Insurgency_in_Northeast_India)",
+    "CONFLICTS": [
+      "[Assam separatist movements](https://en.wikipedia.org/wiki/Assam_separatist_movements)",
+      "[Insurgency in Manipur](https://en.wikipedia.org/wiki/Insurgency_in_Manipur)",
+      "[Ethnic conflict in Nagaland](https://en.wikipedia.org/wiki/Ethnic_conflict_in_Nagaland)"
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 1960,
-    "DESCRIPTION": "[Katanga insurgency](https://en.wikipedia.org/wiki/Katanga_insurgency)"
+    "NAME": "[Katanga insurgency](https://en.wikipedia.org/wiki/Katanga_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Thailand",
     "YEAR": 1960,
-    "DESCRIPTION": "[South Thailand insurgency](https://en.wikipedia.org/wiki/South_Thailand_insurgency)"
+    "NAME": "[South Thailand insurgency](https://en.wikipedia.org/wiki/South_Thailand_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Indonesia",
     "YEAR": 1962,
-    "DESCRIPTION": "[Papua conflict](https://en.wikipedia.org/wiki/Papua_conflict)"
+    "NAME": "[Papua conflict](https://en.wikipedia.org/wiki/Papua_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "India",
     "YEAR": 1967,
-    "DESCRIPTION": "[Naxalite–Maoist insurgency](https://en.wikipedia.org/wiki/Naxalite%E2%80%93Maoist_insurgency)"
+    "NAME": "[Naxalite–Maoist insurgency](https://en.wikipedia.org/wiki/Naxalite%E2%80%93Maoist_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Philippines",
     "YEAR": 1969,
-    "DESCRIPTION": "[Moro conflict](https://en.wikipedia.org/wiki/Moro_conflict)"
+    "NAME": "[Moro conflict](https://en.wikipedia.org/wiki/Moro_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Philippines",
     "YEAR": 1969,
-    "DESCRIPTION": "[Communist rebellion in the Philippines](https://en.wikipedia.org/wiki/Communist_rebellion_in_the_Philippines)"
+    "NAME": "[Communist rebellion in the Philippines](https://en.wikipedia.org/wiki/Communist_rebellion_in_the_Philippines)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Turkey",
     "YEAR": 1984,
-    "DESCRIPTION": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))\n- [Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    "NAME": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))",
+    "CONFLICTS": [
+      "[Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "Iraq",
     "YEAR": 1984,
-    "DESCRIPTION": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))\n- [Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    "NAME": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))",
+    "CONFLICTS": [
+      "[Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "Syria",
     "YEAR": 1984,
-    "DESCRIPTION": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))\n- [Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    "NAME": "[Kurdish–Turkish conflict](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(1978%E2%80%93present))",
+    "CONFLICTS": [
+      "[Kurdish–Turkish conflict (2015–present)](https://en.wikipedia.org/wiki/Kurdish%E2%80%93Turkish_conflict_(2015%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "Pakistan",
     "YEAR": 2004,
-    "DESCRIPTION": "[Insurgency in Khyber Pakhtunkhwa](https://en.wikipedia.org/wiki/Insurgency_in_Khyber_Pakhtunkhwa)"
+    "NAME": "[Insurgency in Khyber Pakhtunkhwa](https://en.wikipedia.org/wiki/Insurgency_in_Khyber_Pakhtunkhwa)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Sudan",
     "YEAR": 2011,
-    "DESCRIPTION": "[Sudanese conflict in South Kordofan and Blue Nile](https://en.wikipedia.org/wiki/Sudanese_conflict_in_South_Kordofan_and_Blue_Nile)"
+    "NAME": "[Sudanese conflict in South Kordofan and Blue Nile](https://en.wikipedia.org/wiki/Sudanese_conflict_in_South_Kordofan_and_Blue_Nile)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Egypt",
     "YEAR": 2011,
-    "DESCRIPTION": "[Sinai insurgency](https://en.wikipedia.org/wiki/Sinai_insurgency)"
+    "NAME": "[Sinai insurgency](https://en.wikipedia.org/wiki/Sinai_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Nigeria",
     "YEAR": 2011,
-    "DESCRIPTION": "[Nigerian bandit conflict](https://en.wikipedia.org/wiki/Nigerian_bandit_conflict)"
+    "NAME": "[Nigerian bandit conflict](https://en.wikipedia.org/wiki/Nigerian_bandit_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Egypt",
     "YEAR": 2013,
-    "DESCRIPTION": "[Insurgency in Egypt](https://en.wikipedia.org/wiki/Timeline_of_terrorism_in_Egypt_(2013%E2%80%93present))"
+    "NAME": "[Insurgency in Egypt](https://en.wikipedia.org/wiki/Timeline_of_terrorism_in_Egypt_(2013%E2%80%93present))",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Ukraine",
     "YEAR": 2014,
-    "DESCRIPTION": "[Russo-Ukrainian War](https://en.wikipedia.org/wiki/Russo-Ukrainian_War)\n- [War in Donbas](https://en.wikipedia.org/wiki/War_in_Donbas)"
+    "NAME": "[Russo-Ukrainian War](https://en.wikipedia.org/wiki/Russo-Ukrainian_War)",
+    "CONFLICTS": [
+      "[War in Donbas](https://en.wikipedia.org/wiki/War_in_Donbas)"
+    ]
   },
   {
     "COUNTRY": "Philippines",
     "YEAR": 2016,
-    "DESCRIPTION": "[Philippine drug war](https://en.wikipedia.org/wiki/Philippine_drug_war)"
+    "NAME": "[Philippine drug war](https://en.wikipedia.org/wiki/Philippine_drug_war)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Cameroon",
     "YEAR": 2017,
-    "DESCRIPTION": "[Anglophone Crisis](https://en.wikipedia.org/wiki/Anglophone_Crisis)"
+    "NAME": "[Anglophone Crisis](https://en.wikipedia.org/wiki/Anglophone_Crisis)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Bangladesh",
     "YEAR": 2018,
-    "DESCRIPTION": "[Bangladesh drug war](https://en.wikipedia.org/wiki/Bangladesh_drug_war)"
+    "NAME": "[Bangladesh drug war](https://en.wikipedia.org/wiki/Bangladesh_drug_war)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Iran",
     "YEAR": 2019,
-    "DESCRIPTION": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)"
+    "NAME": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Iraq",
     "YEAR": 2019,
-    "DESCRIPTION": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)"
+    "NAME": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Saudi Arabia",
     "YEAR": 2019,
-    "DESCRIPTION": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)"
+    "NAME": "[2019–2021 Persian Gulf crisis](https://en.wikipedia.org/wiki/2019%E2%80%932021_Persian_Gulf_crisis)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Ethiopia",
     "YEAR": 2019,
-    "DESCRIPTION": "[Benishangul-Gumuz conflict](https://en.wikipedia.org/wiki/Benishangul-Gumuz_conflict)"
+    "NAME": "[Benishangul-Gumuz conflict](https://en.wikipedia.org/wiki/Benishangul-Gumuz_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Ethiopia",
     "YEAR": 2020,
-    "DESCRIPTION": "[Afar–Somali clashes](https://en.wikipedia.org/wiki/Afar%E2%80%93Somali_clashes)"
+    "NAME": "[Afar–Somali clashes](https://en.wikipedia.org/wiki/Afar%E2%80%93Somali_clashes)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Nigeria",
     "YEAR": 2021,
-    "DESCRIPTION": "[Conflict in the Niger Delta](https://en.wikipedia.org/wiki/Conflict_in_the_Niger_Delta)\n- [Insurgency in Southeastern Nigeria](https://en.wikipedia.org/wiki/Insurgency_in_Southeastern_Nigeria)"
+    "NAME": "[Conflict in the Niger Delta](https://en.wikipedia.org/wiki/Conflict_in_the_Niger_Delta)",
+    "CONFLICTS": [
+      "[Insurgency in Southeastern Nigeria](https://en.wikipedia.org/wiki/Insurgency_in_Southeastern_Nigeria)"
+    ]
   },
   {
     "COUNTRY": "Chad",
     "YEAR": 2021,
-    "DESCRIPTION": "[Insurgency in Northern Chad](https://en.wikipedia.org/wiki/Insurgency_in_Northern_Chad)"
+    "NAME": "[Insurgency in Northern Chad](https://en.wikipedia.org/wiki/Insurgency_in_Northern_Chad)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Iran",
     "YEAR": 1922,
-    "DESCRIPTION": "[Arab separatism in Khuzestan](https://en.wikipedia.org/wiki/Arab_separatism_in_Khuzestan)"
+    "NAME": "[Arab separatism in Khuzestan](https://en.wikipedia.org/wiki/Arab_separatism_in_Khuzestan)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Iran",
     "YEAR": 1946,
-    "DESCRIPTION": "[Kurdish separatism in Iran](https://en.wikipedia.org/wiki/Kurdish_separatism_in_Iran)\n- [Iran–PJAK conflict](https://en.wikipedia.org/wiki/Iran%E2%80%93PJAK_conflict)\n- [Western Iran clashes (2016–present)](https://en.wikipedia.org/wiki/Western_Iran_clashes_(2016%E2%80%93present))"
+    "NAME": "[Kurdish separatism in Iran](https://en.wikipedia.org/wiki/Kurdish_separatism_in_Iran)",
+    "CONFLICTS": [
+      "[Iran–PJAK conflict](https://en.wikipedia.org/wiki/Iran%E2%80%93PJAK_conflict)",
+      "[Western Iran clashes (2016–present)](https://en.wikipedia.org/wiki/Western_Iran_clashes_(2016%E2%80%93present))"
+    ]
   },
   {
     "COUNTRY": "North Korea",
     "YEAR": 1950,
-    "DESCRIPTION": "[Korean conflict](https://en.wikipedia.org/wiki/Korean_conflict)"
+    "NAME": "[Korean conflict](https://en.wikipedia.org/wiki/Korean_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "South Korea",
     "YEAR": 1950,
-    "DESCRIPTION": "[Korean conflict](https://en.wikipedia.org/wiki/Korean_conflict)"
+    "NAME": "[Korean conflict](https://en.wikipedia.org/wiki/Korean_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Morocco",
     "YEAR": 1970,
-    "DESCRIPTION": "[Western Sahara conflict](https://en.wikipedia.org/wiki/Western_Sahara_conflict)\n- [2020–2021 Western Saharan clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Western_Saharan_clashes)"
+    "NAME": "[Western Sahara conflict](https://en.wikipedia.org/wiki/Western_Sahara_conflict)",
+    "CONFLICTS": [
+      "[2020–2021 Western Saharan clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Western_Saharan_clashes)"
+    ]
   },
   {
     "COUNTRY": "W. Sahara",
     "YEAR": 1970,
-    "DESCRIPTION": "[Western Sahara conflict](https://en.wikipedia.org/wiki/Western_Sahara_conflict)\n- [2020–2021 Western Saharan clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Western_Saharan_clashes)"
+    "NAME": "[Western Sahara conflict](https://en.wikipedia.org/wiki/Western_Sahara_conflict)",
+    "CONFLICTS": [
+      "[2020–2021 Western Saharan clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Western_Saharan_clashes)"
+    ]
   },
   {
     "COUNTRY": "Angola",
     "YEAR": 1975,
-    "DESCRIPTION": "[Cabinda War](https://en.wikipedia.org/wiki/Cabinda_War)"
+    "NAME": "[Cabinda War](https://en.wikipedia.org/wiki/Cabinda_War)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Peru",
     "YEAR": 1980,
-    "DESCRIPTION": "[Internal conflict in Peru](https://en.wikipedia.org/wiki/Internal_conflict_in_Peru)"
+    "NAME": "[Internal conflict in Peru](https://en.wikipedia.org/wiki/Internal_conflict_in_Peru)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Senegal",
     "YEAR": 1982,
-    "DESCRIPTION": "[Casamance conflict](https://en.wikipedia.org/wiki/Casamance_conflict)"
+    "NAME": "[Casamance conflict](https://en.wikipedia.org/wiki/Casamance_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 1987,
-    "DESCRIPTION": "[Lord's Resistance Army insurgency](https://en.wikipedia.org/wiki/Lord%27s_Resistance_Army_insurgency)"
+    "NAME": "[Lord's Resistance Army insurgency](https://en.wikipedia.org/wiki/Lord%27s_Resistance_Army_insurgency)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Mexico",
     "YEAR": 1994,
-    "DESCRIPTION": "[Chiapas conflict](https://en.wikipedia.org/wiki/Chiapas_conflict)"
+    "NAME": "[Chiapas conflict](https://en.wikipedia.org/wiki/Chiapas_conflict)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Paraguay",
     "YEAR": 2005,
-    "DESCRIPTION": "[Insurgency in Paraguay](https://en.wikipedia.org/wiki/Insurgency_in_Paraguay)"
+    "NAME": "[Insurgency in Paraguay](https://en.wikipedia.org/wiki/Insurgency_in_Paraguay)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Tunisia",
     "YEAR": 2015,
-    "DESCRIPTION": "[ISIL insurgency in Tunisia](https://en.wikipedia.org/wiki/ISIL_insurgency_in_Tunisia)"
+    "NAME": "[ISIL insurgency in Tunisia](https://en.wikipedia.org/wiki/ISIL_insurgency_in_Tunisia)",
+    "CONFLICTS": [
+    ]
   },
   {
     "COUNTRY": "Dem. Rep. Congo",
     "YEAR": 2016,
-    "DESCRIPTION": "[Kamwina Nsapu rebellion](https://en.wikipedia.org/wiki/Kamwina_Nsapu_rebellion)"
+    "NAME": "[Kamwina Nsapu rebellion](https://en.wikipedia.org/wiki/Kamwina_Nsapu_rebellion)",
+    "CONFLICTS": [
+    ]
   }
 ]

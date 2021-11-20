@@ -1,7 +1,7 @@
 import React, { ReactNode, useEffect, useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { Slider } from 'antd'
-import ArmedConflictMap, { TBorderConflict } from './BorderConflictsMap'
+import BorderConflictsMap, { TBorderConflict } from './BorderConflictsMap'
 import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 import DetailDialog from '../../component/DetailDialog'
@@ -131,7 +131,7 @@ export type TConflictInfo = {
   position: TPosition,
 }
 
-type TArmedConflictsViewProps = {
+type TBorderConflictsViewProps = {
   tooltipProps?: TTooltipProps,
   setTooltipProps: (props?: TTooltipProps) => void,
 }
@@ -139,7 +139,7 @@ type TArmedConflictsViewProps = {
 function BorderConflictsView({
   tooltipProps,
   setTooltipProps,
-}: TArmedConflictsViewProps) {
+}: TBorderConflictsViewProps) {
   const [info, setInfo] = useState<TConflictInfo | undefined>()
   const [detailInfo, setDetailInfo] = useState<TConflictInfo | undefined>()
   const [yearRange, setYearRange] = useState<TYearRange>([2001, 2021])
@@ -161,7 +161,7 @@ function BorderConflictsView({
       }}
     >
       <MapWrapper>
-        <ArmedConflictMap
+        <BorderConflictsMap
           tooltipProps={tooltipProps}
           info={info}
           setInfo={setInfo}

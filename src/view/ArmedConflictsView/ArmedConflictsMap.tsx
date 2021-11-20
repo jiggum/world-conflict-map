@@ -8,8 +8,18 @@ import { getCountriesFormName, groupBy, parseRemark } from '../../util'
 import { TooltipDeaths, TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 
 const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
-  <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
-    <div dangerouslySetInnerHTML={{__html: parseRemark(conflict.DESCRIPTION).toString()}}/>
+  <TooltipRow key={index}>
+    {conflict.YEAR}:&nbsp;
+    <div>
+      <b>
+        <div dangerouslySetInnerHTML={{__html: parseRemark(conflict.NAME)}}/>
+      </b>
+      {
+        conflict.CONFLICTS.map((e, i) =>
+          <div key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
+        )
+      }
+    </div>
   </TooltipRow>
 )
 
@@ -24,7 +34,12 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[
   )
 }
 
-export type TArmedConflicts = { COUNTRY: string; YEAR: number; DESCRIPTION: string; }
+export type TArmedConflicts = {
+  COUNTRY: string;
+  YEAR: number;
+  NAME: string;
+  CONFLICTS: string[];
+}
 
 const armedConflictMap = groupBy(armedConflicts, (e) => e.COUNTRY)
 

@@ -6,6 +6,7 @@ import ArmedConflictsView from './view/ArmedConflictsView'
 import TerritorialDisputesView from './view/TerritorialDisputesView'
 import BorderConflictsView from './view/BorderConflictsView'
 import Tooltip, { TTooltipProps } from './component/Tooltip'
+import WarsView from './view/WarsView/WarsView'
 
 function App() {
   const [tooltipProps, setTooltipProps] = useState<TTooltipProps | undefined>(undefined)
@@ -25,7 +26,7 @@ function App() {
         />
         <Route
           path="/wars"
-          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+          element={<WarsView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
         />
         <Route
           path="/massacres"

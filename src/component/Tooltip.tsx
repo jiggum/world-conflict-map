@@ -37,15 +37,6 @@ export const TooltipRow = styled.div`
   p {
     display: inline-block;
   }
-  
-  ul {
-    font-size: 0;
-    list-style-position: inside;
-  }
-  
-  li {
-    font-size: 14px;
-  }
 `
 
 export const CloseButton = styled.div`
