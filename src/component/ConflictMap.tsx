@@ -11,13 +11,13 @@ import { scaleLinear } from 'd3-scale'
 import geography from '../data/geography.json'
 import { TPosition } from '../type'
 
-const colorScale = scaleLinear([-1.4 / 6, 0, 1 / 6, 2 / 6, 3 / 6, 4 / 6, 5 / 6, 1, 7 / 6], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014', '#5C0011'])
+const colorScale = scaleLinear([-1.4 / 5, 0, 1 / 5, 2 / 5, 3 / 5, 4 / 5, 1, 6 / 5], ['#FFF1F0', '#FFA39E', '#FF7875', '#FF4D4F', '#F5222D', '#CF1322', '#A8071A', '#820014'])
 
 type TMapChartProps = {
   isSelectedItem: (geo: any) => boolean,
   isActive: (geo: any) => boolean,
   getColorPoint: (geo: any) => number,
-  select: (value: undefined | { geo: any, position: TPosition}) => void,
+  select: (value: undefined | { geo: any, position: TPosition }) => void,
   fixed: boolean,
   setFixed: (value: boolean) => void,
   onClick?: (geo: any) => void,
@@ -77,11 +77,11 @@ function ConflictMap({
                   style={{
                     default: {
                       stroke: active ? '#FFFFFF' : '#DADFE8',
-                      fill: active ? colorScale(isFixedItem ? 7 / 6 : colorPoint) : '#FFFFFF',
+                      fill: active ? colorScale(isFixedItem ? 6 / 5 : colorPoint) : '#FFFFFF',
                       strokeWidth: 0.5,
                     },
                     hover: {
-                      fill: active ? colorScale(isFixedItem ? 7 / 6 : colorPoint + 2 / 6) : '#FFFFFF',
+                      fill: active ? colorScale(isFixedItem ? 6 / 5 : colorPoint + 1.5 / 5) : '#FFFFFF',
                       stroke: active ? '#FFFFFF' : '#DADFE8',
                       strokeWidth: 0.5,
                       cursor: active ? 'pointer' : 'default',

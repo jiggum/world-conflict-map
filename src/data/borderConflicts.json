@@ -3,7 +3,7 @@
     "START": 1846,
     "FINISH": 1848,
     "CONFLICT": "[Mexican--American War](https://en.wikipedia.org/wiki/Mexican%E2%80%93American_War \"Mexican--American War\")",
-    "DISPUTED_TERRITORIES": "[Texas](https://en.wikipedia.org/wiki/Republic_of_Texas \"Republic of Texas\")\n[Santa Fe de Nuevo México](https://en.wikipedia.org/wiki/Santa_Fe_de_Nuevo_M%C3%A9xico \"Santa Fe de Nuevo México\")\n[Alta California](https://en.wikipedia.org/wiki/Alta_California \"Alta California\")",
+    "DISPUTED_TERRITORIES": "[Texas](https://en.wikipedia.org/wiki/Republic_of_Texas \"Republic of Texas\"), [Santa Fe de Nuevo México](https://en.wikipedia.org/wiki/Santa_Fe_de_Nuevo_M%C3%A9xico \"Santa Fe de Nuevo México\"), [Alta California](https://en.wikipedia.org/wiki/Alta_California \"Alta California\")",
     "FATALITIES": "~29,000",
     "DEATHS": 29000,
     "COMBATANTS": [
@@ -166,7 +166,7 @@
     "START": 1956,
     "FINISH": 1956,
     "CONFLICT": "[Suez Crisis](https://en.wikipedia.org/wiki/Suez_Crisis \"Suez Crisis\")",
-    "DISPUTED_TERRITORIES": "[Sinai Peninsula](https://en.wikipedia.org/wiki/Sinai_Peninsula \"Sinai Peninsula\")\n[Suez Canal Zone](https://en.wikipedia.org/wiki/Suez_Canal \"Suez Canal\")",
+    "DISPUTED_TERRITORIES": "[Sinai Peninsula](https://en.wikipedia.org/wiki/Sinai_Peninsula \"Sinai Peninsula\"), [Suez Canal Zone](https://en.wikipedia.org/wiki/Suez_Canal \"Suez Canal\")",
     "FATALITIES": "2,848-4,198",
     "DEATHS": 4198,
     "COMBATANTS": [
@@ -231,7 +231,7 @@
     "START": 1969,
     "FINISH": 1969,
     "CONFLICT": "[Sino-Soviet border conflict](https://en.wikipedia.org/wiki/Sino-Soviet_border_conflict \"Sino-Soviet border conflict\")",
-    "DISPUTED_TERRITORIES": "[Zhenbao Island](https://en.wikipedia.org/wiki/Zhenbao_Island \"Zhenbao Island\")\n[Ussuri River](https://en.wikipedia.org/wiki/Ussuri \"Ussuri\")",
+    "DISPUTED_TERRITORIES": "[Zhenbao Island](https://en.wikipedia.org/wiki/Zhenbao_Island \"Zhenbao Island\"), [Ussuri River](https://en.wikipedia.org/wiki/Ussuri \"Ussuri\")",
     "FATALITIES": "",
     "DEATHS": null,
     "COMBATANTS": [
@@ -247,7 +247,7 @@
     "START": 1971,
     "FINISH": 1971,
     "CONFLICT": "[Indo-Pakistani War of 1971](https://en.wikipedia.org/wiki/Indo-Pakistani_War_of_1971 \"Indo-Pakistani War of 1971\")",
-    "DISPUTED_TERRITORIES": "[Kashmir](https://en.wikipedia.org/wiki/Kashmir \"Kashmir\")\n[East Pakistan](https://en.wikipedia.org/wiki/East_Pakistan \"East Pakistan\")",
+    "DISPUTED_TERRITORIES": "[Kashmir](https://en.wikipedia.org/wiki/Kashmir \"Kashmir\"), [East Pakistan](https://en.wikipedia.org/wiki/East_Pakistan \"East Pakistan\")",
     "FATALITIES": "~4,000+",
     "DEATHS": 4000,
     "COMBATANTS": [
@@ -279,7 +279,7 @@
     "START": 1979,
     "FINISH": 1979,
     "CONFLICT": "[Sino-Vietnamese War](https://en.wikipedia.org/wiki/Sino-Vietnamese_War \"Sino-Vietnamese War\")",
-    "DISPUTED_TERRITORIES": "[Cao Bằng](https://en.wikipedia.org/wiki/Cao_B%E1%BA%B1ng_Province \"Cao Bằng Province\")\n[Lạng Sơn](https://en.wikipedia.org/wiki/L%E1%BA%A1ng_S%C6%A1n_Province \"Lạng Sơn Province\")\n[Spratly Islands](https://en.wikipedia.org/wiki/Spratly_Islands \"Spratly Islands\")",
+    "DISPUTED_TERRITORIES": "[Cao Bằng](https://en.wikipedia.org/wiki/Cao_B%E1%BA%B1ng_Province \"Cao Bằng Province\"), [Lạng Sơn](https://en.wikipedia.org/wiki/L%E1%BA%A1ng_S%C6%A1n_Province \"Lạng Sơn Province\"), [Spratly Islands](https://en.wikipedia.org/wiki/Spratly_Islands \"Spratly Islands\")",
     "FATALITIES": "~56,000",
     "DEATHS": 56000,
     "COMBATANTS": [
@@ -567,7 +567,7 @@
     "START": 2010,
     "FINISH": 2010,
     "CONFLICT": "[2010 Nagorno-Karabakh clashes](https://en.wikipedia.org/wiki/2010_Nagorno-Karabakh_clashes \"2010 Nagorno-Karabakh clashes\")",
-    "DISPUTED_TERRITORIES": "[Goranboy](https://en.wikipedia.org/wiki/Goranboy_District \"Goranboy District\")\n[Tartar](https://en.wikipedia.org/wiki/Tartar_District \"Tartar District\")\n[Agdam](https://en.wikipedia.org/wiki/Agdam_District \"Agdam District\")",
+    "DISPUTED_TERRITORIES": "[Goranboy](https://en.wikipedia.org/wiki/Goranboy_District \"Goranboy District\"), [Tartar](https://en.wikipedia.org/wiki/Tartar_District \"Tartar District\"), [Agdam](https://en.wikipedia.org/wiki/Agdam_District \"Agdam District\")",
     "FATALITIES": "3-6",
     "DEATHS": 6,
     "COMBATANTS": [
@@ -583,7 +583,7 @@
     "START": 2010,
     "FINISH": 2010,
     "CONFLICT": "[2010 Mardakert clashes](https://en.wikipedia.org/wiki/2010_Mardakert_clashes \"2010 Mardakert clashes\")",
-    "DISPUTED_TERRITORIES": "[Fuzuli District](https://en.wikipedia.org/wiki/Fuzuli_District \"Fuzuli District\")\n[Çaylı](https://en.wikipedia.org/wiki/%C3%87ayl%C4%B1,_Tartar \"Çaylı, Tartar\")\n[Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\") ([Jraberd](https://en.wikipedia.org/wiki/Jraberd \"Jraberd\"))",
+    "DISPUTED_TERRITORIES": "[Fuzuli District](https://en.wikipedia.org/wiki/Fuzuli_District \"Fuzuli District\"), [Çaylı](https://en.wikipedia.org/wiki/%C3%87ayl%C4%B1,_Tartar \"Çaylı, Tartar\"), [Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\") ([Jraberd](https://en.wikipedia.org/wiki/Jraberd \"Jraberd\"))",
     "FATALITIES": "8-62",
     "DEATHS": 62,
     "COMBATANTS": [
@@ -664,7 +664,7 @@
     "START": 2012,
     "FINISH": 2012,
     "CONFLICT": "[Heglig Crisis](https://en.wikipedia.org/wiki/Heglig_Crisis \"Heglig Crisis\")",
-    "DISPUTED_TERRITORIES": "[Unity State](https://en.wikipedia.org/wiki/Unity_(state) \"Unity (state)\")\n[South Kordofan](https://en.wikipedia.org/wiki/South_Kordofan \"South Kordofan\")",
+    "DISPUTED_TERRITORIES": "[Unity State](https://en.wikipedia.org/wiki/Unity_(state) \"Unity (state)\"), [South Kordofan](https://en.wikipedia.org/wiki/South_Kordofan \"South Kordofan\")",
     "FATALITIES": "262–322",
     "DEATHS": 322,
     "COMBATANTS": [
@@ -696,7 +696,7 @@
     "START": 2012,
     "FINISH": null,
     "CONFLICT": "[Israeli--Syrian ceasefire line incidents during the Syrian civil war](https://en.wikipedia.org/wiki/Israeli%E2%80%93Syrian_ceasefire_line_incidents_during_the_Syrian_civil_war \"Israeli--Syrian ceasefire line incidents during the Syrian civil war\")",
-    "DISPUTED_TERRITORIES": "[Quneitra Governorate](https://en.wikipedia.org/wiki/Quneitra_Governorate \"Quneitra Governorate\")\n[Golan Heights](https://en.wikipedia.org/wiki/Golan_Heights \"Golan Heights\")",
+    "DISPUTED_TERRITORIES": "[Quneitra Governorate](https://en.wikipedia.org/wiki/Quneitra_Governorate \"Quneitra Governorate\"), [Golan Heights](https://en.wikipedia.org/wiki/Golan_Heights \"Golan Heights\")",
     "FATALITIES": "44 (only Israeli and Syrian casualties)",
     "DEATHS": 44,
     "COMBATANTS": [
@@ -712,7 +712,7 @@
     "START": 2012,
     "FINISH": 2012,
     "CONFLICT": "[2012 Armenian--Azerbaijani border clashes](https://en.wikipedia.org/wiki/2012_Armenian%E2%80%93Azerbaijani_border_clashes \"2012 Armenian--Azerbaijani border clashes\")",
-    "DISPUTED_TERRITORIES": "[Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\")\n[Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")\n[Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\")",
+    "DISPUTED_TERRITORIES": "[Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\"), [Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\")",
     "FATALITIES": "9",
     "DEATHS": 9,
     "COMBATANTS": [
@@ -745,7 +745,7 @@
     "START": 2014,
     "FINISH": null,
     "CONFLICT": "[Russo-Ukrainian War](https://en.wikipedia.org/wiki/Russo-Ukrainian_War \"Russo-Ukrainian War\")",
-    "DISPUTED_TERRITORIES": "[Crimea](https://en.wikipedia.org/wiki/Crimea \"Crimea\")\n[Donbass](https://en.wikipedia.org/wiki/Donbass \"Donbass\")",
+    "DISPUTED_TERRITORIES": "[Crimea](https://en.wikipedia.org/wiki/Crimea \"Crimea\"), [Donbass](https://en.wikipedia.org/wiki/Donbass \"Donbass\")",
     "FATALITIES": "2,824-2,924+ (only Russian and Ukrainian casualties)",
     "DEATHS": 2924,
     "COMBATANTS": [
@@ -761,7 +761,7 @@
     "START": 2014,
     "FINISH": 2014,
     "CONFLICT": "[2014 Armenian--Azerbaijani clashes](https://en.wikipedia.org/wiki/2014_Armenian%E2%80%93Azerbaijani_clashes \"2014 Armenian--Azerbaijani clashes\")",
-    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\"))\n[Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
+    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
     "FATALITIES": "19",
     "DEATHS": 19,
     "COMBATANTS": [
@@ -778,7 +778,7 @@
     "START": 2014,
     "FINISH": 2015,
     "CONFLICT": "[2014--2015 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2014%E2%80%932015_India%E2%80%93Pakistan_border_skirmishes \"2014--2015 India--Pakistan border skirmishes\")",
-    "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\")\n[Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India--Pakistan border\") region",
+    "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\"), [Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India--Pakistan border\") region",
     "FATALITIES": "58-185",
     "DEATHS": 185,
     "COMBATANTS": [
@@ -794,7 +794,7 @@
     "START": 2016,
     "FINISH": 2016,
     "CONFLICT": "[2016 Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/2016_Nagorno-Karabakh_conflict \"2016 Nagorno-Karabakh conflict\")",
-    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\"))\n[Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
+    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
     "FATALITIES": "199-1,820",
     "DEATHS": 1820,
     "COMBATANTS": [
