@@ -27,7 +27,7 @@ const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRage: 
   )
 }
 
-const ToolBarFooter = styled.div`
+const TooltipFooter = styled.div`
   text-align: center;
 `
 
@@ -119,7 +119,7 @@ const BorderConflictsMap = ({
                     .sort(([a], [b]) => a > b ? 1 : -1)
                     .map((e) => getTooltipContent(...e, yearRange))
                 }
-                <ToolBarFooter>(Click to see details)</ToolBarFooter>
+                <TooltipFooter>(Click to see details)</TooltipFooter>
               </>
             ),
             fixed: tooltipProps?.fixed ?? false,

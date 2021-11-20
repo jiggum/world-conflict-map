@@ -1,9 +1,9 @@
-import React, { memo, useState } from 'react'
-import { TWarInfo, TYear } from './WarsView'
+import React, { memo } from 'react'
+import { TWarInfo, TYearRange } from './WarsView'
 import wars from '../../data/wars.json'
 import ConflictMap from '../../component/ConflictMap'
-import { getCountriesFormName, groupBy, parseRemark } from '../../util'
-import { TooltipDeaths, TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import { getCountriesFormName, parseRemark } from '../../util'
+import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import styled from 'styled-components'
 
 const countries = Array.from(new Set(wars.map(e => e.COUNTRIES).flat()))
@@ -29,16 +29,19 @@ const getToolTipRow = (war: TWar, index: number) => (
   </ConflictWrapper>
 )
 
-const getTooltipContent = (year: TYear, key: string, wars: TWar[]) => {
+const getTooltipContent = (key: string, wars: TWar[]) => {
+  const _wars = wars.sort((a, b) => b.START - a.START)
+  const remainNum = Math.max(wars.length - 5, 0)
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      {wars.sort((a, b) => b.START - a.START).map(getToolTipRow)}
+      {_wars.slice(0, 5).map(getToolTipRow)}
+      { remainNum > 0 ? <div>({remainNum} more wars)</div> : null}
     </div>
   )
 }
 
-const max = 10
+const max = 5
 
 export type TWar = {
   COUNTRIES: string[];
@@ -50,25 +53,29 @@ export type TWar = {
 type TMapChartProps = {
   tooltipProps?: TTooltipProps,
   setTooltipProps: (props?: TTooltipProps) => void,
-  year: TYear,
   info?: TWarInfo,
   setInfo: (value?: TWarInfo) => void,
+  yearRange: TYearRange,
 }
 
 const WarsMap = ({
   tooltipProps,
   setTooltipProps,
-  year,
+  yearRange,
   info,
   setInfo,
 }: TMapChartProps) => {
+  const getYearFilteredWars = (key: string) =>
+    warsMap[key]
+      ?.filter(e => e.START <= yearRange[1] && yearRange[0] <= (e.FINISHED ?? 2021))
+    ?? []
   return (
     <ConflictMap
       isSelectedItem={geo => info ? getCountriesFormName(geo.properties.NAME).includes(info.name) : false}
-      isActive={geo => getCountriesFormName(geo.properties.NAME).findIndex(key => warsMap[key]) >= 0}
+      isActive={geo => getCountriesFormName(geo.properties.NAME).findIndex(key => getYearFilteredWars(key).length) >= 0}
       getColorPoint={(geo) => {
         const countries = getCountriesFormName(geo.properties.NAME)
-        const num = countries.map(e => warsMap[e]?.length ?? 0).reduce((acc, val) => acc + val, 0)
+        const num = countries.map(e => getYearFilteredWars(e)?.length ?? 0).reduce((acc, val) => acc + val, 0)
         return Math.min((-1.4 / 6) + ((1.4 + 6) / 6 * (num - 1) / max), 1)
       }}
       select={(value) => {
@@ -80,8 +87,9 @@ const WarsMap = ({
           const countries = getCountriesFormName(NAME)
           const wars = countries
             .reduce((acc, val) => {
-              if (warsMap[val]) {
-                acc[val] = warsMap[val]
+              const _wars = getYearFilteredWars(val)
+              if (_wars.length > 0) {
+                acc[val] = _wars
               }
               return acc
             }, {} as {[key: string]: TWar[]})
@@ -93,7 +101,13 @@ const WarsMap = ({
           setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: Object.entries(wars).map((e) => getTooltipContent(year, ...e)),
+            children: (
+              <>
+                {
+                  Object.entries(wars).map((e) => getTooltipContent(...e))
+                }
+              </>
+            ),
             fixed: tooltipProps?.fixed ?? false,
             onClose: () => {
               setInfo(undefined)

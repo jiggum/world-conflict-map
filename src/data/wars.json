@@ -230,13 +230,13 @@
     "COUNTRIES": [
       "Algeria",
       "Morocco",
-      "Mauritania Mauritania",
-      "Tunisia Tunisia",
-      "Burkina Faso Burkina Faso",
+      "Mauritania",
+      "Tunisia",
+      "Burkina Faso",
       "Chad",
       "Mali",
       "Niger",
-      "Nigeria Nigeria",
+      "Nigeria",
       "Senegal"
     ],
     "START": 2007,
@@ -279,8 +279,7 @@
   },
   {
     "COUNTRIES": [
-      "Russia",
-      "Ingushetia"
+      "Russia"
     ],
     "START": 2007,
     "FINISHED": 2015,
@@ -343,7 +342,7 @@
   {
     "COUNTRIES": [
       "Cambodia",
-      "Thai"
+      "Thailand"
     ],
     "START": 2008,
     "FINISHED": 2012,
@@ -385,9 +384,8 @@
   },
   {
     "COUNTRIES": [
-      "Darfur",
-      "West Kordofan",
-      "South Sudan"
+      "Sudan",
+      "S. Sudan"
     ],
     "START": 2009,
     "FINISHED": null,
@@ -397,12 +395,7 @@
   },
   {
     "COUNTRIES": [
-      "Russia",
-      "Chechnya",
-      "Dagestan",
-      "Ingushetia",
-      "Kabardino-Balkaria",
-      "North Ossetia–Alania"
+      "Russia"
     ],
     "START": 2009,
     "FINISHED": 2017,
@@ -479,7 +472,7 @@
   },
   {
     "COUNTRIES": [
-      "Democratic Republic of the Congo"
+      "Dem. Rep. Congo"
     ],
     "START": 2009,
     "FINISHED": 2009,
@@ -519,7 +512,7 @@
   },
   {
     "COUNTRIES": [
-      "Ivory Coast"
+      "Côte d'Ivoire"
     ],
     "START": 2010,
     "FINISHED": 2011,
@@ -666,7 +659,7 @@
   },
   {
     "COUNTRIES": [
-      "Democratic Republic of the Congo"
+      "Dem. Rep. Congo"
     ],
     "START": 2012,
     "FINISHED": 2013,
@@ -686,7 +679,7 @@
   },
   {
     "COUNTRIES": [
-      "Central African Republic"
+      "Central African Rep."
     ],
     "START": 2012,
     "FINISHED": null,
@@ -696,7 +689,7 @@
   },
   {
     "COUNTRIES": [
-      "South Sudan"
+      "S. Sudan"
     ],
     "START": 2013,
     "FINISHED": 2020,
@@ -707,7 +700,6 @@
   },
   {
     "COUNTRIES": [
-      "Sultanate of Sulu",
       "Malaysia"
     ],
     "START": 2013,
@@ -718,7 +710,7 @@
   },
   {
     "COUNTRIES": [
-      "Democratic Republic of the Congo"
+      "Dem. Rep. Congo"
     ],
     "START": 2013,
     "FINISHED": 2019,
@@ -871,7 +863,7 @@
     "COUNTRIES": [
       "Azerbaijan",
       "Armenia",
-      "Republic of Artsakh"
+      "Artsakh"
     ],
     "START": 2016,
     "FINISHED": 2016,
@@ -912,7 +904,7 @@
   },
   {
     "COUNTRIES": [
-      "Democratic Republic of the Congo"
+      "Dem. Rep. Congo"
     ],
     "START": 2016,
     "FINISHED": null,
@@ -1139,7 +1131,7 @@
   {
     "COUNTRIES": [
       "Morocco",
-      "Sahrawi Arab Democratic Republic"
+      "W. Sahara"
     ],
     "START": 2020,
     "FINISHED": null,

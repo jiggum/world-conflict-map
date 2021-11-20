@@ -22,7 +22,7 @@ const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   )
 }
 
-const ToolBarFooter = styled.div`
+const TooltipFooter = styled.div`
   text-align: center;
 `
 
@@ -80,7 +80,7 @@ const TerritorialDisputesMap = ({
             children: (
               <>
                 {infoGroups.map((e) => getTooltipContent(...e))}
-                <ToolBarFooter>(Click to see details)</ToolBarFooter>
+                <TooltipFooter>(Click to see details)</TooltipFooter>
               </>
             ),
             fixed: tooltipProps?.fixed ?? false,

@@ -45,7 +45,7 @@ const SliderMark = styled.span`
   font-size: 16px;
 `
 
-export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
+export type TYearRange = [number, number]
 
 export type TWarInfo = {
   name: string,
@@ -63,12 +63,12 @@ function WarsView({
   setTooltipProps,
 }: TWarsConflictsViewProps) {
   const [info, setInfo] = useState<TWarInfo | undefined>()
-  const [year, setYear] = useState<TYear>('2020')
+  const [yearRange, setYearRange] = useState<TYearRange>([2020, 2021])
 
   useEffect(() => {
     setInfo(undefined)
     setTooltipProps(undefined)
-  }, [year, setTooltipProps])
+  }, [yearRange, setTooltipProps])
 
   useEffect(() => () => {
     setTooltipProps(undefined)
@@ -87,27 +87,22 @@ function WarsView({
           info={info}
           setInfo={setInfo}
           setTooltipProps={setTooltipProps}
-          year={year}
+          yearRange={yearRange}
         />
       </MapWrapper>
       <Right>
         <SliderHeader>Deaths by Year</SliderHeader>
         <Slider
           vertical
-          defaultValue={parseInt(year)}
-          included={false}
-          step={null}
-          tooltipVisible={false}
-          max={2020}
-          min={2015}
-          onChange={(value) => setYear(value.toString() as TYear)}
+          defaultValue={yearRange}
+          step={1}
+          max={2021}
+          min={2003}
+          onChange={(value) => setYearRange(typeof value === 'number' ? [value, value] : value)}
+          range
           marks={{
-            2020: <SliderMark>2020</SliderMark>,
-            2019: <SliderMark>2019</SliderMark>,
-            2018: <SliderMark>2018</SliderMark>,
-            2017: <SliderMark>2017</SliderMark>,
-            2016: <SliderMark>2016</SliderMark>,
-            2015: <SliderMark>2015</SliderMark>,
+            2021: <SliderMark>2021</SliderMark>,
+            2003: <SliderMark>2003</SliderMark>,
           }}
         />
       </Right>
