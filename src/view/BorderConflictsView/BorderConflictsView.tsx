@@ -108,13 +108,25 @@ const Wrapper = styled.div`
 const MapWrapper = styled.div`
   width: 100%;
   max-width: 1600px;
-  padding: 0 64px;
+  padding-left: 64px;
 `
 
 const Right = styled.div`
-  width: 120px;
-  height: 400px;
   font-size: 16px;
+  margin-left: 32px;
+  margin-right: 64px;
+  height: 400px;
+  position: relative;
+`
+
+const SliderHeader = styled.div`
+  position: absolute;
+  top: -48px;
+  left: 12px;
+  transform: translateX(-50%);
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 18px;
 `
 
 const SliderMark = styled.span`
@@ -169,6 +181,7 @@ function BorderConflictsView({
         />
       </MapWrapper>
       <Right>
+        <SliderHeader>Period</SliderHeader>
         <Slider
           vertical
           defaultValue={yearRange}
