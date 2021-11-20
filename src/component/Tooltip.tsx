@@ -39,6 +39,10 @@ export const TooltipRow = styled.div`
   }
 `
 
+export const TooltipFooter = styled.div`
+  text-align: center;
+`
+
 export const CloseButton = styled.div`
   position: absolute;
   width: 24px;
@@ -54,6 +58,7 @@ export type TTooltipProps = {
   position: TPosition,
   fixed: boolean,
   onClose: () => void,
+  pinLabel?: string,
 }
 
 function Tooltip({
@@ -61,20 +66,26 @@ function Tooltip({
   position,
   fixed,
   onClose,
+  pinLabel,
 }: TTooltipProps) {
   return (
     <Wrapper position={position} fixed={fixed} onClick={e => e.stopPropagation()}>
-      <CloseButton
-        onClick={onClose}
-      >
-        <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-          <polygon
-            fill="#FFFFFF"
-            points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
-          />
-        </svg>
-      </CloseButton>
+      {
+        fixed && (
+          <CloseButton
+            onClick={onClose}
+          >
+            <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <polygon
+                fill="#FFFFFF"
+                points="24 9.4 22.6 8 16 14.6 9.4 8 8 9.4 14.6 16 8 22.6 9.4 24 16 17.4 22.6 24 24 22.6 17.4 16 24 9.4"
+              />
+            </svg>
+          </CloseButton>
+        )
+      }
       {children}
+      {!fixed && <TooltipFooter>{pinLabel ?? '(Click to pin)'}</TooltipFooter>}
     </Wrapper>
   )
 }

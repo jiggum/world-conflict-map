@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Slider } from 'antd'
-import Wars, { TWar } from './WarsMap'
+import Wars, { TWar, getTooltipContent } from './WarsMap'
 import { TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
+import DetailDialog from '../../component/DetailDialog'
 
 const Wrapper = styled.div`
   display: flex;
@@ -39,6 +40,7 @@ const SliderHeader = styled.div`
   transform: translateX(-50%);
   font-weight: bold;
   white-space: nowrap;
+  font-size: 18px;
 `
 
 const SliderMark = styled.span`
@@ -50,7 +52,23 @@ export type TYearRange = [number, number]
 export type TWarInfo = {
   name: string,
   wars: {[key: string]: TWar[]},
-  position: TPosition,
+  position?: TPosition,
+}
+
+type TDetailViewProps = {
+  info: TWarInfo,
+  hide: () => void,
+}
+
+function DetailView({
+  info,
+  hide,
+}: TDetailViewProps) {
+  return (
+    <DetailDialog hide={hide}>
+      {Object.entries(info.wars).map((e) => getTooltipContent(...e, e[1].length, true))}
+    </DetailDialog>
+  )
 }
 
 type TWarsConflictsViewProps = {
@@ -63,6 +81,7 @@ function WarsView({
   setTooltipProps,
 }: TWarsConflictsViewProps) {
   const [info, setInfo] = useState<TWarInfo | undefined>()
+  const [detailInfo, setDetailInfo] = useState<TWarInfo | undefined>()
   const [yearRange, setYearRange] = useState<TYearRange>([2020, 2021])
 
   useEffect(() => {
@@ -87,11 +106,12 @@ function WarsView({
           info={info}
           setInfo={setInfo}
           setTooltipProps={setTooltipProps}
+          setDetailInfo={setDetailInfo}
           yearRange={yearRange}
         />
       </MapWrapper>
       <Right>
-        <SliderHeader>Deaths by Year</SliderHeader>
+        <SliderHeader>Period</SliderHeader>
         <Slider
           vertical
           defaultValue={yearRange}
@@ -106,6 +126,7 @@ function WarsView({
           }}
         />
       </Right>
+      {detailInfo && <DetailView info={detailInfo} hide={() => setDetailInfo(undefined)}/>}
     </Wrapper>
   )
 }

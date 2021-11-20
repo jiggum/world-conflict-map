@@ -10,18 +10,19 @@ import { parseRemark } from '../../util'
 const getToolTipRow = (conflict: TBorderConflict, index: number) => {
   const combatants = conflict.COMBATANTS
     .map(e =>
-        e
-        .map(e => <b>{e}</b>)
-        .reduce((acc: ReactNode[], val) => acc.length ? [...acc, <>, </>, val] : [val], [])
+      e
+        .map((e, i) => <b key={i}>{e}</b>)
+        .reduce((acc: ReactNode[], val) => acc.length ? [...acc, ',', val] : [val], [])
     )
-    .reduce((acc: ReactNode[], val) => acc.length ? [...acc, <>&nbsp;vs&nbsp;</>, val] : [val], [])
+    .reduce((acc: ReactNode[], val, i) => acc.length ? [...acc, <span key={i}>&nbsp;vs&nbsp;</span>, val] : [val], [])
   return (
     <ConflictWrapper key={index}>
       <Title dangerouslySetInnerHTML={{__html: parseRemark(conflict.CONFLICT).toString()}}/>
       <div>
         <Row>Period:&nbsp;{conflict.START}-{conflict.FINISH ?? 'Ongoing'}</Row>
         <Row>Combatants:&nbsp;{combatants}</Row>
-        <Row>Disputed Territory:&nbsp;{<div dangerouslySetInnerHTML={{__html: parseRemark(conflict.DISPUTED_TERRITORIES).toString().trim()}}/>}</Row>
+        <Row>Disputed Territory:&nbsp;{<div
+          dangerouslySetInnerHTML={{__html: parseRemark(conflict.DISPUTED_TERRITORIES).toString().trim()}}/>}</Row>
         {conflict.FATALITIES && <Row>Fatalities:&nbsp;{conflict.FATALITIES}</Row>}
       </div>
     </ConflictWrapper>
@@ -128,7 +129,7 @@ export type TYearRange = [number, number]
 export type TConflictInfo = {
   name: string,
   conflictsMap: { [key: string]: TBorderConflict[] },
-  position: TPosition,
+  position?: TPosition,
 }
 
 type TBorderConflictsViewProps = {

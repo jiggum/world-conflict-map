@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import styled from 'styled-components'
 import { TTerritorialDisputeInfo } from './TerritorialDisputesView'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import territorialDisputes from '../../data/territorialDisputes.json'
@@ -21,10 +20,6 @@ const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
     </div>
   )
 }
-
-const TooltipFooter = styled.div`
-  text-align: center;
-`
 
 type TMapChartProps = {
   info?: TTerritorialDisputeInfo,
@@ -77,13 +72,9 @@ const TerritorialDisputesMap = ({
           setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: (
-              <>
-                {infoGroups.map((e) => getTooltipContent(...e))}
-                <TooltipFooter>(Click to see details)</TooltipFooter>
-              </>
-            ),
+            children: infoGroups.map((e) => getTooltipContent(...e)),
             fixed: tooltipProps?.fixed ?? false,
+            pinLabel: '(Click to see details)',
             onClose: () => {
               setInfo(undefined)
               setTooltipProps(undefined)
@@ -101,7 +92,6 @@ const TerritorialDisputesMap = ({
         const info = {
           country: NAME,
           disputes,
-          position: geo.position,
         }
         setDetailInfo(info)
       }}

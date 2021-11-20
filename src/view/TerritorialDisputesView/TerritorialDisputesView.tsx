@@ -48,7 +48,11 @@ const TooltipGroup = styled.div`
   }
 `
 
-export type TTerritorialDisputeInfo = { country: string, disputes: TTerritorialDispute[], position: TPosition }
+export type TTerritorialDisputeInfo = {
+  country: string,
+  disputes: TTerritorialDispute[],
+  position?: TPosition,
+}
 
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (

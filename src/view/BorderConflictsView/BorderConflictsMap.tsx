@@ -4,7 +4,6 @@ import borderConflicts from '../../data/borderConflicts.json'
 import ConflictMap from '../../component/ConflictMap'
 import { getCountriesFormName } from '../../util'
 import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
-import styled from 'styled-components'
 
 const countries = Array.from(new Set(borderConflicts.map(e => e.COMBATANTS.flat(2)).flat()))
 const borderConflictsMap: { [key: string]: TBorderConflict[] } = countries.reduce((acc: any, val) => {
@@ -26,10 +25,6 @@ const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRage: 
     </div>
   )
 }
-
-const TooltipFooter = styled.div`
-  text-align: center;
-`
 
 export type TBorderConflict = {
   START: number;
@@ -111,18 +106,12 @@ const BorderConflictsMap = ({
           setInfo(info)
           setTooltipProps({
             position: value.position,
-            children: (
-              <>
-                {
-                  Object
-                    .entries(conflictsMap)
-                    .sort(([a], [b]) => a > b ? 1 : -1)
-                    .map((e) => getTooltipContent(...e, yearRange))
-                }
-                <TooltipFooter>(Click to see details)</TooltipFooter>
-              </>
-            ),
+            children: Object
+              .entries(conflictsMap)
+              .sort(([a], [b]) => a > b ? 1 : -1)
+              .map((e) => getTooltipContent(...e, yearRange)),
             fixed: tooltipProps?.fixed ?? false,
+            pinLabel: '(Click to see details)',
             onClose: () => {
               setInfo(undefined)
               setTooltipProps(undefined)
@@ -147,7 +136,6 @@ const BorderConflictsMap = ({
         const info = {
           name,
           conflictsMap,
-          position: geo.position,
         }
         setDetailInfo(info)
       }}

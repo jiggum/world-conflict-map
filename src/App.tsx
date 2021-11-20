@@ -40,13 +40,7 @@ function App() {
       <Header/>
       {
         tooltipProps && tooltipProps.children && (
-          <Tooltip
-            position={tooltipProps!.position}
-            fixed={tooltipProps.fixed}
-            onClose={tooltipProps.onClose}
-          >
-            {tooltipProps.children}
-          </Tooltip>
+          <Tooltip {...tooltipProps} />
         )
       }
     </BrowserRouter>
