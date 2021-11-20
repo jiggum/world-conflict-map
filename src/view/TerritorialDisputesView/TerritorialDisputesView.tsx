@@ -1,14 +1,10 @@
 import React, { useEffect, useMemo, useState, memo } from 'react'
-import rehypeStringify from 'rehype-stringify'
-import remarkRehype from 'remark-rehype'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
 import styled from 'styled-components'
 import TerritorialDisputesMap, { TTerritorialDispute } from './TerritorialDisputesMap'
 import { TTooltipProps, TooltipTitle, TooltipRow } from '../../component/Tooltip'
 import territorialDisputes from '../../data/territorialDisputes.json'
 import { TPosition } from '../../type'
-import { groupBy } from '../../util'
+import { groupBy, parseRemark } from '../../util'
 import DetailDialog from '../../component/DetailDialog'
 
 export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
@@ -54,12 +50,6 @@ const TooltipGroup = styled.div`
 
 export type TTerritorialDisputeInfo = { country: string, disputes: TTerritorialDispute[], position: TPosition }
 
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
-
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (
     <TooltipGroup key={key}>
@@ -73,14 +63,14 @@ const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
   const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
   return (
     <DescriptionWrapper key={index}>
-      <TeritoryDescription dangerouslySetInnerHTML={{__html: parseDescription(dispute.TERRITORY).toString()}}/>
+      <TeritoryDescription dangerouslySetInnerHTML={{__html: parseRemark(dispute.TERRITORY).toString()}}/>
       {
         claimants.length && (
           <b>Claimants: {claimants.join(', ')}</b>
         )
       }
       <div
-        dangerouslySetInnerHTML={{__html: parseDescription(dispute.DESCRIPTION).toString().trim() || 'No description'}}
+        dangerouslySetInnerHTML={{__html: parseRemark(dispute.DESCRIPTION).toString().trim() || 'No description'}}
       />
     </DescriptionWrapper>
   )

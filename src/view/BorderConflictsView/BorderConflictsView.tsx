@@ -5,19 +5,9 @@ import ArmedConflictMap, { TBorderConflict } from './BorderConflictsMap'
 import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 import DetailDialog from '../../component/DetailDialog'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
-
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
+import { parseRemark } from '../../util'
 
 const getToolTipRow = (conflict: TBorderConflict, index: number) => {
-  // const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
   const combatants = conflict.COMBATANTS
     .map(e =>
         e
@@ -27,11 +17,11 @@ const getToolTipRow = (conflict: TBorderConflict, index: number) => {
     .reduce((acc: ReactNode[], val) => acc.length ? [...acc, <>&nbsp;vs&nbsp;</>, val] : [val], [])
   return (
     <ConflictWrapper key={index}>
-      <Title dangerouslySetInnerHTML={{__html: parseDescription(conflict.CONFLICT).toString()}}/>
+      <Title dangerouslySetInnerHTML={{__html: parseRemark(conflict.CONFLICT).toString()}}/>
       <div>
         <Row>Period:&nbsp;{conflict.START}-{conflict.FINISH ?? 'Ongoing'}</Row>
         <Row>Combatants:&nbsp;{combatants}</Row>
-        <Row>Disputed Territory:&nbsp;{<div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DISPUTED_TERRITORIES).toString().trim()}}/>}</Row>
+        <Row>Disputed Territory:&nbsp;{<div dangerouslySetInnerHTML={{__html: parseRemark(conflict.DISPUTED_TERRITORIES).toString().trim()}}/>}</Row>
         {conflict.FATALITIES && <Row>Fatalities:&nbsp;{conflict.FATALITIES}</Row>}
       </div>
     </ConflictWrapper>

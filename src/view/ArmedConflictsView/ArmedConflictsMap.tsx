@@ -4,23 +4,12 @@ import armedConflicts from '../../data/ongoingArmedConflicts.json'
 import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import ConflictMap from '../../component/ConflictMap'
-import { getCountriesFormName, groupBy } from '../../util'
+import { getCountriesFormName, groupBy, parseRemark } from '../../util'
 import { TooltipDeaths, TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
-
-const remarkProcessor = unified().use(remarkParse).use(remarkRehype).use(rehypeStringify)
-
-const parseDescription = (description: string) =>
-  remarkProcessor.processSync(description.replaceAll('\n\n', '\n')).value.toString()
-    .replaceAll('<a href', '<a target="_blank" href')
-
 
 const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
   <TooltipRow key={index}>{conflict.YEAR}:&nbsp;
-    <div dangerouslySetInnerHTML={{__html: parseDescription(conflict.DESCRIPTION).toString()}}/>
+    <div dangerouslySetInnerHTML={{__html: parseRemark(conflict.DESCRIPTION).toString()}}/>
   </TooltipRow>
 )
 
