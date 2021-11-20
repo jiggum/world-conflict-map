@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './Header'
 import ArmedConflictsView from './view/ArmedConflictsView'
 import TerritorialDisputesView from './view/TerritorialDisputesView'
+import BorderConflictsView from './view/BorderConflictsView'
 import Tooltip, { TTooltipProps } from './component/Tooltip'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         />
         <Route
           path="/border-conflicts"
-          element={<TerritorialDisputesView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
+          element={<BorderConflictsView setTooltipProps={setTooltipProps} tooltipProps={tooltipProps}/>}
         />
         <Route
           path="/wars"
