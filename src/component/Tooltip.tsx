@@ -20,10 +20,6 @@ export const TooltipTitle = styled.b`
   padding-right: 24px;
 `
 
-export const TooltipDeaths = styled.div`
-  font-size: 14px;
-`
-
 export const TooltipRow = styled.div`
   display: flex;
   line-break: auto;

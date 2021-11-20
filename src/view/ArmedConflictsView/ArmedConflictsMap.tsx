@@ -5,15 +5,20 @@ import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import armedConflictsDeaths from '../../data/ongoingArmedConflictsDeaths.json'
 import ConflictMap from '../../component/ConflictMap'
 import { getCountriesFormName, groupBy, parseRemark } from '../../util'
-import { TooltipDeaths, TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import styled from 'styled-components'
+
+const TitleDescription = styled.span`
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+`
 
 const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
   <TooltipRow key={index}>
     {conflict.YEAR}:&nbsp;
     <div>
-      <b>
-        <div dangerouslySetInnerHTML={{__html: parseRemark(conflict.NAME)}}/>
-      </b>
+      <b dangerouslySetInnerHTML={{__html: parseRemark(conflict.NAME)}}/>
       {
         conflict.CONFLICTS.map((e, i) =>
           <div key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
@@ -27,8 +32,11 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[
   const deaths = armedConflictsDeaths[year].find(e => e.COUNTRY === key)?.DEATHS
   return (
     <div key={key}>
-      <TooltipTitle>{key}</TooltipTitle>
-      {deaths !== undefined && <TooltipDeaths><b>{deaths}</b> deaths in 2020</TooltipDeaths>}
+      <TooltipTitle>
+        {key}
+        {deaths !== undefined && <TitleDescription>&nbsp;(<b>{deaths}</b> deaths in 2020)</TitleDescription>}
+      </TooltipTitle>
+      <div>{conflicts.length} ongoing conflicts</div>
       {conflicts.sort((a, b) => b.YEAR - a.YEAR).map(getToolTipRow)}
     </div>
   )
