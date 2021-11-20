@@ -8,7 +8,7 @@
     "DEATHS": 29000,
     "COMBATANTS": [
       [
-        "United States"
+        "United States of America"
       ],
       [
         "Mexico"
@@ -24,7 +24,7 @@
     "DEATHS": null,
     "COMBATANTS": [
       [
-        "United States"
+        "United States of America"
       ],
       [
         "United Kingdom"
@@ -57,7 +57,7 @@
     "DEATHS": 100,
     "COMBATANTS": [
       [
-        "United States"
+        "United States of America"
       ],
       [
         "Mexico"
@@ -672,7 +672,7 @@
         "Sudan"
       ],
       [
-        "South Sudan"
+        "S. Sudan"
       ]
     ]
   },
