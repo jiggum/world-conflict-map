@@ -2,7 +2,7 @@
   {
     "START": 1846,
     "FINISH": 1848,
-    "CONFLICT": "[Mexican--American War](https://en.wikipedia.org/wiki/Mexican%E2%80%93American_War \"Mexican--American War\")",
+    "CONFLICT": "[Mexican-American War](https://en.wikipedia.org/wiki/Mexican%E2%80%93American_War \"Mexican-American War\")",
     "DISPUTED_TERRITORIES": "[Texas](https://en.wikipedia.org/wiki/Republic_of_Texas \"Republic of Texas\"), [Santa Fe de Nuevo México](https://en.wikipedia.org/wiki/Santa_Fe_de_Nuevo_M%C3%A9xico \"Santa Fe de Nuevo México\"), [Alta California](https://en.wikipedia.org/wiki/Alta_California \"Alta California\")",
     "FATALITIES": "~29,000",
     "DEATHS": 29000,
@@ -51,8 +51,8 @@
   {
     "START": 1910,
     "FINISH": 1918,
-    "CONFLICT": "[Border War](https://en.wikipedia.org/wiki/Mexican_Border_War_(1910%E2%80%931919) \"Mexican Border War (1910--1919)\")",
-    "DISPUTED_TERRITORIES": "[Mexico-United States border](https://en.wikipedia.org/wiki/Mexico%E2%80%93United_States_border \"Mexico--United States border\") region",
+    "CONFLICT": "[Border War](https://en.wikipedia.org/wiki/Mexican_Border_War_(1910%E2%80%931919) \"Mexican Border War (1910-1919)\")",
+    "DISPUTED_TERRITORIES": "[Mexico-United States border](https://en.wikipedia.org/wiki/Mexico%E2%80%93United_States_border \"Mexico-United States border\") region",
     "FATALITIES": "100+",
     "DEATHS": 100,
     "COMBATANTS": [
@@ -84,7 +84,7 @@
     "START": 1938,
     "FINISH": 1938,
     "CONFLICT": "[Battle of Lake Khasan](https://en.wikipedia.org/wiki/Battle_of_Lake_Khasan \"Battle of Lake Khasan\")",
-    "DISPUTED_TERRITORIES": "[Manchukuo--Soviet Union border](https://en.wikipedia.org/wiki/China%E2%80%93Russia_border \"China--Russia border\") region",
+    "DISPUTED_TERRITORIES": "[Manchukuo-Soviet Union border](https://en.wikipedia.org/wiki/China%E2%80%93Russia_border \"China-Russia border\") region",
     "FATALITIES": "~1,300",
     "DEATHS": 1300,
     "COMBATANTS": [
@@ -99,7 +99,7 @@
   {
     "START": 1939,
     "FINISH": 1939,
-    "CONFLICT": "[Slovak--Hungarian War](https://en.wikipedia.org/wiki/Slovak%E2%80%93Hungarian_War \"Slovak--Hungarian War\")",
+    "CONFLICT": "[Slovak-Hungarian War](https://en.wikipedia.org/wiki/Slovak%E2%80%93Hungarian_War \"Slovak-Hungarian War\")",
     "DISPUTED_TERRITORIES": "Eastern Slovakia",
     "FATALITIES": "69",
     "DEATHS": 69,
@@ -116,7 +116,7 @@
     "START": 1939,
     "FINISH": 1939,
     "CONFLICT": "[Battles of Khalkhin Gol](https://en.wikipedia.org/wiki/Battles_of_Khalkhin_Gol \"Battles of Khalkhin Gol\")",
-    "DISPUTED_TERRITORIES": "[Manchukuo--Soviet Union border](https://en.wikipedia.org/wiki/China%E2%80%93Russia_border \"China--Russia border\") region",
+    "DISPUTED_TERRITORIES": "[Manchukuo-Soviet Union border](https://en.wikipedia.org/wiki/China%E2%80%93Russia_border \"China-Russia border\") region",
     "FATALITIES": "~48,000",
     "DEATHS": 48000,
     "COMBATANTS": [
@@ -133,7 +133,7 @@
   {
     "START": 1947,
     "FINISH": 1948,
-    "CONFLICT": "[Indo-Pakistani War of 1947--1948](https://en.wikipedia.org/wiki/Indo-Pakistani_War_of_1947%E2%80%931948 \"Indo-Pakistani War of 1947--1948\")",
+    "CONFLICT": "[Indo-Pakistani War of 1947-1948](https://en.wikipedia.org/wiki/Indo-Pakistani_War_of_1947%E2%80%931948 \"Indo-Pakistani War of 1947-1948\")",
     "DISPUTED_TERRITORIES": "[Jammu and Kashmir](https://en.wikipedia.org/wiki/Jammu_and_Kashmir_(princely_state) \"Jammu and Kashmir (princely state)\")",
     "FATALITIES": "~3,000",
     "DEATHS": 3000,
@@ -262,7 +262,7 @@
   {
     "START": 1978,
     "FINISH": 1979,
-    "CONFLICT": "[Uganda--Tanzania War](https://en.wikipedia.org/wiki/Uganda%E2%80%93Tanzania_War \"Uganda--Tanzania War\")",
+    "CONFLICT": "[Uganda-Tanzania War](https://en.wikipedia.org/wiki/Uganda%E2%80%93Tanzania_War \"Uganda-Tanzania War\")",
     "DISPUTED_TERRITORIES": "[Kagera Salient](https://en.wikipedia.org/wiki/Kagera_(region) \"Kagera (region)\")",
     "FATALITIES": "~4,500",
     "DEATHS": 4500,
@@ -374,7 +374,7 @@
   {
     "START": 1998,
     "FINISH": 2000,
-    "CONFLICT": "[Eritrean--Ethiopian War](https://en.wikipedia.org/wiki/Eritrean%E2%80%93Ethiopian_War \"Eritrean--Ethiopian War\")",
+    "CONFLICT": "[Eritrean-Ethiopian War](https://en.wikipedia.org/wiki/Eritrean%E2%80%93Ethiopian_War \"Eritrean-Ethiopian War\")",
     "DISPUTED_TERRITORIES": "[Badme](https://en.wikipedia.org/wiki/Badme \"Badme\")",
     "FATALITIES": "100,000",
     "DEATHS": 100000,
@@ -390,7 +390,7 @@
   {
     "START": 2000,
     "FINISH": 2006,
-    "CONFLICT": "[2000--2006 Shebaa Farms conflict](https://en.wikipedia.org/wiki/2000%E2%80%932006_Shebaa_Farms_conflict \"2000--2006 Shebaa Farms conflict\")",
+    "CONFLICT": "[2000-2006 Shebaa Farms conflict](https://en.wikipedia.org/wiki/2000%E2%80%932006_Shebaa_Farms_conflict \"2000-2006 Shebaa Farms conflict\")",
     "DISPUTED_TERRITORIES": "[Shebaa farms](https://en.wikipedia.org/wiki/Shebaa_farms \"Shebaa farms\")",
     "FATALITIES": "30",
     "DEATHS": 30,
@@ -406,8 +406,8 @@
   {
     "START": 2001,
     "FINISH": 2001,
-    "CONFLICT": "[2001 Bangladesh--India border clashes](https://en.wikipedia.org/wiki/2001_Bangladesh%E2%80%93India_border_clashes \"2001 Bangladesh--India border clashes\")",
-    "DISPUTED_TERRITORIES": "[Bangladesh--India border](https://en.wikipedia.org/wiki/Bangladesh%E2%80%93India_border \"Bangladesh--India border\") region",
+    "CONFLICT": "[2001 Bangladesh-India border clashes](https://en.wikipedia.org/wiki/2001_Bangladesh%E2%80%93India_border_clashes \"2001 Bangladesh-India border clashes\")",
+    "DISPUTED_TERRITORIES": "[Bangladesh-India border](https://en.wikipedia.org/wiki/Bangladesh%E2%80%93India_border \"Bangladesh-India border\") region",
     "FATALITIES": "20",
     "DEATHS": 20,
     "COMBATANTS": [
@@ -422,7 +422,7 @@
   {
     "START": 2001,
     "FINISH": 2002,
-    "CONFLICT": "[2001--2002 India--Pakistan standoff](https://en.wikipedia.org/wiki/2001%E2%80%932002_India%E2%80%93Pakistan_standoff \"2001--2002 India--Pakistan standoff\")",
+    "CONFLICT": "[2001-2002 India-Pakistan standoff](https://en.wikipedia.org/wiki/2001%E2%80%932002_India%E2%80%93Pakistan_standoff \"2001-2002 India-Pakistan standoff\")",
     "DISPUTED_TERRITORIES": "[Kashmir](https://en.wikipedia.org/wiki/Kashmir \"Kashmir\")",
     "FATALITIES": "789–1,874",
     "DEATHS": 1874,
@@ -486,7 +486,7 @@
   {
     "START": 2008,
     "FINISH": 2008,
-    "CONFLICT": "[Djiboutian--Eritrean border conflict](https://en.wikipedia.org/wiki/Djiboutian%E2%80%93Eritrean_border_conflict \"Djiboutian--Eritrean border conflict\")",
+    "CONFLICT": "[Djiboutian-Eritrean border conflict](https://en.wikipedia.org/wiki/Djiboutian%E2%80%93Eritrean_border_conflict \"Djiboutian-Eritrean border conflict\")",
     "DISPUTED_TERRITORIES": "[Ras Doumeira](https://en.wikipedia.org/wiki/Ras_Doumeira \"Ras Doumeira\")",
     "FATALITIES": "144",
     "DEATHS": 144,
@@ -518,7 +518,7 @@
   {
     "START": 2008,
     "FINISH": 2012,
-    "CONFLICT": "[Cambodian--Thai border dispute](https://en.wikipedia.org/wiki/Cambodian%E2%80%93Thai_border_dispute \"Cambodian--Thai border dispute\")",
+    "CONFLICT": "[Cambodian-Thai border dispute](https://en.wikipedia.org/wiki/Cambodian%E2%80%93Thai_border_dispute \"Cambodian-Thai border dispute\")",
     "DISPUTED_TERRITORIES": "[Preah Vihear Temple](https://en.wikipedia.org/wiki/Preah_Vihear_Temple \"Preah Vihear Temple\")",
     "FATALITIES": "42",
     "DEATHS": 42,
@@ -535,7 +535,7 @@
     "START": 2008,
     "FINISH": 2008,
     "CONFLICT": "[2008 Indo-Pakistani standoff](https://en.wikipedia.org/wiki/2008_Indo-Pakistani_standoff \"2008 Indo-Pakistani standoff\")",
-    "DISPUTED_TERRITORIES": "[Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India--Pakistan border\") region",
+    "DISPUTED_TERRITORIES": "[Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India-Pakistan border\") region",
     "FATALITIES": "Unknown",
     "DEATHS": null,
     "COMBATANTS": [
@@ -599,7 +599,7 @@
   {
     "START": 2010,
     "FINISH": 2010,
-    "CONFLICT": "[2010 Eritrean--Ethiopian border skirmish](https://en.wikipedia.org/wiki/2010_Eritrean%E2%80%93Ethiopian_border_skirmish \"2010 Eritrean--Ethiopian border skirmish\")",
+    "CONFLICT": "[2010 Eritrean-Ethiopian border skirmish](https://en.wikipedia.org/wiki/2010_Eritrean%E2%80%93Ethiopian_border_skirmish \"2010 Eritrean-Ethiopian border skirmish\")",
     "DISPUTED_TERRITORIES": "[Zalambessa](https://en.wikipedia.org/wiki/Zalambessa \"Zalambessa\")",
     "FATALITIES": "10-35",
     "DEATHS": 35,
@@ -615,7 +615,7 @@
   {
     "START": 2010,
     "FINISH": 2010,
-    "CONFLICT": "[Costa Rica--Nicaragua San Juan River border dispute](https://en.wikipedia.org/wiki/Costa_Rica%E2%80%93Nicaragua_San_Juan_River_border_dispute#2010_Isla_Calero_dispute \"Costa Rica--Nicaragua San Juan River border dispute\")",
+    "CONFLICT": "[Costa Rica-Nicaragua San Juan River border dispute](https://en.wikipedia.org/wiki/Costa_Rica%E2%80%93Nicaragua_San_Juan_River_border_dispute#2010_Isla_Calero_dispute \"Costa Rica-Nicaragua San Juan River border dispute\")",
     "DISPUTED_TERRITORIES": "[San Juan River](https://en.wikipedia.org/wiki/San_Juan_River_(Nicaragua) \"San Juan River (Nicaragua)\")",
     "FATALITIES": "0",
     "DEATHS": 0,
@@ -647,7 +647,7 @@
   {
     "START": 2011,
     "FINISH": 2011,
-    "CONFLICT": "[2011 India--Pakistan border skirmish](https://en.wikipedia.org/wiki/2011_India%E2%80%93Pakistan_border_skirmish \"2011 India--Pakistan border skirmish\")",
+    "CONFLICT": "[2011 India-Pakistan border skirmish](https://en.wikipedia.org/wiki/2011_India%E2%80%93Pakistan_border_skirmish \"2011 India-Pakistan border skirmish\")",
     "DISPUTED_TERRITORIES": "[Kashmir](https://en.wikipedia.org/wiki/Kashmir \"Kashmir\") ([Kupwara District](https://en.wikipedia.org/wiki/Kupwara_district \"Kupwara district\") and [Neelum Valley](https://en.wikipedia.org/wiki/Neelum_District \"Neelum District\"))",
     "FATALITIES": "8",
     "DEATHS": 8,
@@ -679,7 +679,7 @@
   {
     "START": 2012,
     "FINISH": 2014,
-    "CONFLICT": "[Syrian--Turkish border clashes during the Syrian civil war](https://en.wikipedia.org/wiki/Syrian%E2%80%93Turkish_border_clashes_during_the_Syrian_civil_war \"Syrian--Turkish border clashes during the Syrian civil war\")",
+    "CONFLICT": "[Syrian-Turkish border clashes during the Syrian civil war](https://en.wikipedia.org/wiki/Syrian%E2%80%93Turkish_border_clashes_during_the_Syrian_civil_war \"Syrian-Turkish border clashes during the Syrian civil war\")",
     "DISPUTED_TERRITORIES": "[Akçakale](https://en.wikipedia.org/wiki/Ak%C3%A7akale \"Akçakale\")",
     "FATALITIES": "17",
     "DEATHS": 17,
@@ -695,7 +695,7 @@
   {
     "START": 2012,
     "FINISH": null,
-    "CONFLICT": "[Israeli--Syrian ceasefire line incidents during the Syrian civil war](https://en.wikipedia.org/wiki/Israeli%E2%80%93Syrian_ceasefire_line_incidents_during_the_Syrian_civil_war \"Israeli--Syrian ceasefire line incidents during the Syrian civil war\")",
+    "CONFLICT": "[Israeli-Syrian ceasefire line incidents during the Syrian civil war](https://en.wikipedia.org/wiki/Israeli%E2%80%93Syrian_ceasefire_line_incidents_during_the_Syrian_civil_war \"Israeli-Syrian ceasefire line incidents during the Syrian civil war\")",
     "DISPUTED_TERRITORIES": "[Quneitra Governorate](https://en.wikipedia.org/wiki/Quneitra_Governorate \"Quneitra Governorate\"), [Golan Heights](https://en.wikipedia.org/wiki/Golan_Heights \"Golan Heights\")",
     "FATALITIES": "44 (only Israeli and Syrian casualties)",
     "DEATHS": 44,
@@ -711,7 +711,7 @@
   {
     "START": 2012,
     "FINISH": 2012,
-    "CONFLICT": "[2012 Armenian--Azerbaijani border clashes](https://en.wikipedia.org/wiki/2012_Armenian%E2%80%93Azerbaijani_border_clashes \"2012 Armenian--Azerbaijani border clashes\")",
+    "CONFLICT": "[2012 Armenian-Azerbaijani border clashes](https://en.wikipedia.org/wiki/2012_Armenian%E2%80%93Azerbaijani_border_clashes \"2012 Armenian-Azerbaijani border clashes\")",
     "DISPUTED_TERRITORIES": "[Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\"), [Nagorno-Karabakh](https://en.wikipedia.org/wiki/Nagorno-Karabakh \"Nagorno-Karabakh\")",
     "FATALITIES": "9",
     "DEATHS": 9,
@@ -728,7 +728,7 @@
   {
     "START": 2013,
     "FINISH": 2013,
-    "CONFLICT": "[2013 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2013_India%E2%80%93Pakistan_border_skirmishes \"2013 India--Pakistan border skirmishes\")",
+    "CONFLICT": "[2013 India-Pakistan border skirmishes](https://en.wikipedia.org/wiki/2013_India%E2%80%93Pakistan_border_skirmishes \"2013 India-Pakistan border skirmishes\")",
     "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\")",
     "FATALITIES": "28",
     "DEATHS": 28,
@@ -760,8 +760,8 @@
   {
     "START": 2014,
     "FINISH": 2014,
-    "CONFLICT": "[2014 Armenian--Azerbaijani clashes](https://en.wikipedia.org/wiki/2014_Armenian%E2%80%93Azerbaijani_clashes \"2014 Armenian--Azerbaijani clashes\")",
-    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
+    "CONFLICT": "[2014 Armenian-Azerbaijani clashes](https://en.wikipedia.org/wiki/2014_Armenian%E2%80%93Azerbaijani_clashes \"2014 Armenian-Azerbaijani clashes\")",
+    "DISPUTED_TERRITORIES": "[Armenia-Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia-Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
     "FATALITIES": "19",
     "DEATHS": 19,
     "COMBATANTS": [
@@ -777,8 +777,8 @@
   {
     "START": 2014,
     "FINISH": 2015,
-    "CONFLICT": "[2014--2015 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2014%E2%80%932015_India%E2%80%93Pakistan_border_skirmishes \"2014--2015 India--Pakistan border skirmishes\")",
-    "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\"), [Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India--Pakistan border\") region",
+    "CONFLICT": "[2014-2015 India-Pakistan border skirmishes](https://en.wikipedia.org/wiki/2014%E2%80%932015_India%E2%80%93Pakistan_border_skirmishes \"2014-2015 India-Pakistan border skirmishes\")",
+    "DISPUTED_TERRITORIES": "[Kashmir Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\"), [Indo-Pakistani border](https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_border \"India-Pakistan border\") region",
     "FATALITIES": "58-185",
     "DEATHS": 185,
     "COMBATANTS": [
@@ -794,7 +794,7 @@
     "START": 2016,
     "FINISH": 2016,
     "CONFLICT": "[2016 Nagorno-Karabakh conflict](https://en.wikipedia.org/wiki/2016_Nagorno-Karabakh_conflict \"2016 Nagorno-Karabakh conflict\")",
-    "DISPUTED_TERRITORIES": "[Armenia--Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia--Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
+    "DISPUTED_TERRITORIES": "[Armenia-Azerbaijan border](https://en.wikipedia.org/wiki/Armenia%E2%80%93Azerbaijan_border \"Armenia-Azerbaijan border\") region ([Tavush](https://en.wikipedia.org/wiki/Tavush_Province \"Tavush Province\"), [Qazakh](https://en.wikipedia.org/wiki/Qazakh_District \"Qazakh District\")), [Nagorno-Karabakh Line of Contact](https://en.wikipedia.org/wiki/Nagorno-Karabakh_Line_of_Contact \"Nagorno-Karabakh Line of Contact\")",
     "FATALITIES": "199-1,820",
     "DEATHS": 1820,
     "COMBATANTS": [
@@ -826,7 +826,7 @@
   {
     "START": 2016,
     "FINISH": 2016,
-    "CONFLICT": "[2016 Belize--Guatemala border standoff](https://en.wikipedia.org/wiki/2016_Belize%E2%80%93Guatemala_border_standoff \"2016 Belize--Guatemala border standoff\")",
+    "CONFLICT": "[2016 Belize-Guatemala border standoff](https://en.wikipedia.org/wiki/2016_Belize%E2%80%93Guatemala_border_standoff \"2016 Belize-Guatemala border standoff\")",
     "DISPUTED_TERRITORIES": "[Sarstoon River](https://en.wikipedia.org/wiki/Sarstoon_River \"Sarstoon River\")",
     "FATALITIES": "1",
     "DEATHS": 1,
@@ -842,7 +842,7 @@
   {
     "START": 2016,
     "FINISH": null,
-    "CONFLICT": "[2016--2018 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2016%E2%80%932018_India%E2%80%93Pakistan_border_skirmishes \"2016--2018 India--Pakistan border skirmishes\")",
+    "CONFLICT": "[2016-2018 India-Pakistan border skirmishes](https://en.wikipedia.org/wiki/2016%E2%80%932018_India%E2%80%93Pakistan_border_skirmishes \"2016-2018 India-Pakistan border skirmishes\")",
     "DISPUTED_TERRITORIES": "[Azad Kashmir](https://en.wikipedia.org/wiki/Azad_Kashmir \"Azad Kashmir\")",
     "FATALITIES": "165-232 (only Indian and Pakistani casualties)",
     "DEATHS": 232,
@@ -858,7 +858,7 @@
   {
     "START": 2017,
     "FINISH": 2017,
-    "CONFLICT": "[2017 Afghanistan--Pakistan border skirmish](https://en.wikipedia.org/wiki/2017_Afghanistan%E2%80%93Pakistan_border_skirmish \"2017 Afghanistan--Pakistan border skirmish\")",
+    "CONFLICT": "[2017 Afghanistan-Pakistan border skirmish](https://en.wikipedia.org/wiki/2017_Afghanistan%E2%80%93Pakistan_border_skirmish \"2017 Afghanistan-Pakistan border skirmish\")",
     "DISPUTED_TERRITORIES": "[Chaman](https://en.wikipedia.org/wiki/Chaman \"Chaman\")",
     "FATALITIES": "8-68",
     "DEATHS": 68,
@@ -874,7 +874,7 @@
   {
     "START": 2017,
     "FINISH": 2017,
-    "CONFLICT": "[2017 China--India border standoff](https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff \"2017 China--India border standoff\")",
+    "CONFLICT": "[2017 China-India border standoff](https://en.wikipedia.org/wiki/2017_China%E2%80%93India_border_standoff \"2017 China-India border standoff\")",
     "DISPUTED_TERRITORIES": "[Doklam](https://en.wikipedia.org/wiki/Doklam \"Doklam\")",
     "FATALITIES": "0",
     "DEATHS": 0,
@@ -891,7 +891,7 @@
   {
     "START": 2018,
     "FINISH": 2018,
-    "CONFLICT": "[2018 Armenian--Azerbaijani clashes](https://en.wikipedia.org/wiki/2018_Armenian%E2%80%93Azerbaijani_clashes \"2018 Armenian--Azerbaijani clashes\")",
+    "CONFLICT": "[2018 Armenian-Azerbaijani clashes](https://en.wikipedia.org/wiki/2018_Armenian%E2%80%93Azerbaijani_clashes \"2018 Armenian-Azerbaijani clashes\")",
     "DISPUTED_TERRITORIES": "[Nakhchivan Autonomous Republic](https://en.wikipedia.org/wiki/Nakhchivan_Autonomous_Republic \"Nakhchivan Autonomous Republic\") ([Sharur District](https://en.wikipedia.org/wiki/Sharur_District \"Sharur District\") and [Sadarak District](https://en.wikipedia.org/wiki/Sadarak_District \"Sadarak District\"))",
     "FATALITIES": "2–3",
     "DEATHS": 3,
@@ -907,7 +907,7 @@
   {
     "START": 2019,
     "FINISH": 2019,
-    "CONFLICT": "[2019 India--Pakistan border skirmishes](https://en.wikipedia.org/wiki/2019_India%E2%80%93Pakistan_border_skirmishes \"2019 India--Pakistan border skirmishes\")",
+    "CONFLICT": "[2019 India-Pakistan border skirmishes](https://en.wikipedia.org/wiki/2019_India%E2%80%93Pakistan_border_skirmishes \"2019 India-Pakistan border skirmishes\")",
     "DISPUTED_TERRITORIES": "[Line of Control](https://en.wikipedia.org/wiki/Line_of_Control \"Line of Control\")",
     "FATALITIES": "50-62",
     "DEATHS": 62,
@@ -923,7 +923,7 @@
   {
     "START": 2020,
     "FINISH": 2020,
-    "CONFLICT": "[July 2020 Armenian--Azerbaijani clashes](https://en.wikipedia.org/wiki/July_2020_Armenian%E2%80%93Azerbaijani_clashes \"July 2020 Armenian--Azerbaijani clashes\")",
+    "CONFLICT": "[July 2020 Armenian-Azerbaijani clashes](https://en.wikipedia.org/wiki/July_2020_Armenian%E2%80%93Azerbaijani_clashes \"July 2020 Armenian-Azerbaijani clashes\")",
     "DISPUTED_TERRITORIES": "[Movses, Armenia](https://en.wikipedia.org/wiki/Movses,_Armenia \"Movses, Armenia\") and [Ağdam, Azerbaijan](https://en.wikipedia.org/wiki/A%C4%9Fdam,_Tovuz \"Ağdam, Tovuz\")",
     "FATALITIES": "17-141",
     "DEATHS": 141,
@@ -939,7 +939,7 @@
   {
     "START": 2020,
     "FINISH": null,
-    "CONFLICT": "[2020--2021 China--India skirmishes](https://en.wikipedia.org/wiki/2020%E2%80%932021_China%E2%80%93India_skirmishes \"2020--2021 China--India skirmishes\")",
+    "CONFLICT": "[2020-2021 China-India skirmishes](https://en.wikipedia.org/wiki/2020%E2%80%932021_China%E2%80%93India_skirmishes \"2020-2021 China-India skirmishes\")",
     "DISPUTED_TERRITORIES": "[Sikkim](https://en.wikipedia.org/wiki/Sikkim \"Sikkim\"), [Ladakh](https://en.wikipedia.org/wiki/Ladakh \"Ladakh\") and [Line of Actual Control](https://en.wikipedia.org/wiki/Line_of_Actual_Control \"Line of Actual Control\")",
     "FATALITIES": "50+ on both sides",
     "DEATHS": 50,
@@ -955,8 +955,8 @@
   {
     "START": 2020,
     "FINISH": null,
-    "CONFLICT": "[2020--2021 Ethiopian--Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes \"2020--2021 Ethiopian--Sudanese clashes\")",
-    "DISPUTED_TERRITORIES": "[Ethiopian--Sudanese border](https://en.wikipedia.org/wiki/Ethiopia%E2%80%93Sudan_border \"Ethiopia--Sudan border\")",
+    "CONFLICT": "[2020-2021 Ethiopian-Sudanese clashes](https://en.wikipedia.org/wiki/2020%E2%80%932021_Ethiopian%E2%80%93Sudanese_clashes \"2020-2021 Ethiopian-Sudanese clashes\")",
+    "DISPUTED_TERRITORIES": "[Ethiopian-Sudanese border](https://en.wikipedia.org/wiki/Ethiopia%E2%80%93Sudan_border \"Ethiopia-Sudan border\")",
     "FATALITIES": "4 (only Sudanese casualties)",
     "DEATHS": 4,
     "COMBATANTS": [
@@ -971,7 +971,7 @@
   {
     "START": 2021,
     "FINISH": 2021,
-    "CONFLICT": "[2021 Kyrgyzstan--Tajikistan conflict](https://en.wikipedia.org/wiki/2021_Kyrgyzstan%E2%80%93Tajikistan_conflict \"2021 Kyrgyzstan--Tajikistan conflict\")",
+    "CONFLICT": "[2021 Kyrgyzstan-Tajikistan conflict](https://en.wikipedia.org/wiki/2021_Kyrgyzstan%E2%80%93Tajikistan_conflict \"2021 Kyrgyzstan-Tajikistan conflict\")",
     "DISPUTED_TERRITORIES": "[Leilek District](https://en.wikipedia.org/wiki/Leilek_District \"Leilek District\")",
     "FATALITIES": "55",
     "DEATHS": 55,
