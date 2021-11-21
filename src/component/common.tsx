@@ -23,17 +23,15 @@ export const MapWrapper = styled.div`
   padding: 0 64px;
 
   @media (max-width: 900px) {
-    padding: 0 32px;
+    padding: 0 32px 0 32px;
   }
 `
 
 export const MapWrapperWithSlide = styled(MapWrapper)`
-  width: 100%;
-  max-width: 1600px;
-  padding-right: 0px;
+  padding-right: 0;
 
   @media (max-width: 900px) {
-    padding: 0 32px;
+    padding: 98px 32px 0 32px;
   }
 `
 
