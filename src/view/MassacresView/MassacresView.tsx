@@ -2,14 +2,11 @@ import React, { useEffect, useMemo, useState, memo } from 'react'
 import styled from 'styled-components'
 import TerritorialDisputesMap, { TMassacre } from './MassacresMap'
 import { TTooltipProps, TooltipTitle, TooltipRow } from '../../component/Tooltip'
-import territorialDisputes from '../../data/territorialDisputes.json'
 import { TPosition } from '../../type'
-import { groupBy, parseRemark, useWindowDimensions } from '../../util'
+import { parseRemark, useWindowDimensions } from '../../util'
 import DetailDialog from '../../component/DetailDialog'
-import { Wrapper, MapWrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
+import { Wrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
 import { Slider } from 'antd'
-
-export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
 const StyledTooltipTitle = styled(TooltipTitle)`
   font-size: 24px;
@@ -113,7 +110,7 @@ function MassacresView({
         setTooltipProps(undefined)
       }}
     >
-      <MapWrapper>
+      <MapWrapperWithSlide>
         <TerritorialDisputesMap
           tooltipProps={tooltipProps}
           setTooltipProps={setTooltipProps}
@@ -122,7 +119,7 @@ function MassacresView({
           setDetailInfo={setDetailInfo}
           yearRange={yearRange}
         />
-      </MapWrapper>
+      </MapWrapperWithSlide>
       <Right>
         <SliderHeader>Period</SliderHeader>
         <Slider
