@@ -6,30 +6,12 @@ import territorialDisputes from '../../data/territorialDisputes.json'
 import { TPosition } from '../../type'
 import { groupBy, parseRemark } from '../../util'
 import DetailDialog from '../../component/DetailDialog'
+import { Wrapper, MapWrapper } from '../../component/common'
 
 export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
-const Wrapper = styled.div`
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 64px;
-`
-
 const StyledTooltipTitle = styled(TooltipTitle)`
   font-size: 24px;
-`
-
-const MapWrapper = styled.div`
-  width: 100%;
-  max-width: 1600px;
-  padding: 0 64px;
 `
 
 const DescriptionWrapper = styled(TooltipRow)`

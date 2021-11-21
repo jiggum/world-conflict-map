@@ -1,49 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import { Slider } from 'antd'
 import ArmedConflictMap, { TArmedConflicts } from './ArmedConflictsMap'
 import { TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
-
-const Wrapper = styled.div`
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 64px;
-`
-
-const MapWrapper = styled.div`
-  width: 100%;
-  max-width: 1600px;
-  padding-left: 64px;
-`
-
-const Right = styled.div`
-  font-size: 16px;
-  margin-left: 32px;
-  margin-right: 64px;
-  height: 400px;
-  position: relative;
-`
-
-const SliderHeader = styled.div`
-  position: absolute;
-  top: -48px;
-  left: 12px;
-  transform: translateX(-50%);
-  font-weight: bold;
-  white-space: nowrap;
-`
-
-const SliderMark = styled.span`
-  font-size: 16px;
-`
+import { useWindowDimensions } from '../../util'
+import { Wrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
 
 export type TYear = '2020' | '2019' | '2018' | '2017' | '2016' | '2015'
 
@@ -60,6 +21,7 @@ function ArmedConflictsView({
 }: TArmedConflictsViewProps) {
   const [info, setInfo] = useState<TConflictInfo | undefined>()
   const [year, setYear] = useState<TYear>('2020')
+  const dimension = useWindowDimensions()
 
   useEffect(() => {
     setInfo(undefined)
@@ -77,7 +39,7 @@ function ArmedConflictsView({
         setTooltipProps(undefined)
       }}
     >
-      <MapWrapper>
+      <MapWrapperWithSlide>
         <ArmedConflictMap
           tooltipProps={tooltipProps}
           info={info}
@@ -85,11 +47,11 @@ function ArmedConflictsView({
           setTooltipProps={setTooltipProps}
           year={year}
         />
-      </MapWrapper>
+      </MapWrapperWithSlide>
       <Right>
         <SliderHeader>Deaths by Year</SliderHeader>
         <Slider
-          vertical
+          vertical={dimension.width > 900}
           defaultValue={parseInt(year)}
           included={false}
           step={null}

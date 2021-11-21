@@ -6,10 +6,10 @@ import { Link, useLocation } from 'react-router-dom'
 
 const Wrapper = styled.div`
   height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  white-space: nowrap;
   color: #CAD0DB;
+  padding-top: 24px;
+  text-align: center;
 `
 
 const StyledButton = styled(

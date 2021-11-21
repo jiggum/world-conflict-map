@@ -5,7 +5,8 @@ import BorderConflictsMap, { TBorderConflict } from './BorderConflictsMap'
 import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 import DetailDialog from '../../component/DetailDialog'
-import { parseRemark } from '../../util'
+import { parseRemark, useWindowDimensions } from '../../util'
+import { Wrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
 
 const getToolTipRow = (conflict: TBorderConflict, index: number) => {
   const combatants = conflict.COMBATANTS
@@ -83,47 +84,6 @@ function DetailView({
   )
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 64px;
-`
-
-const MapWrapper = styled.div`
-  width: 100%;
-  max-width: 1600px;
-  padding-left: 64px;
-`
-
-const Right = styled.div`
-  font-size: 16px;
-  margin-left: 32px;
-  margin-right: 64px;
-  height: 400px;
-  position: relative;
-`
-
-const SliderHeader = styled.div`
-  position: absolute;
-  top: -48px;
-  left: 12px;
-  transform: translateX(-50%);
-  font-weight: bold;
-  white-space: nowrap;
-  font-size: 18px;
-`
-
-const SliderMark = styled.span`
-  font-size: 16px;
-`
-
 export type TYearRange = [number, number]
 
 export type TConflictInfo = {
@@ -144,6 +104,7 @@ function BorderConflictsView({
   const [info, setInfo] = useState<TConflictInfo | undefined>()
   const [detailInfo, setDetailInfo] = useState<TConflictInfo | undefined>()
   const [yearRange, setYearRange] = useState<TYearRange>([2001, 2021])
+  const dimension = useWindowDimensions()
 
   useEffect(() => {
     setInfo(undefined)
@@ -161,7 +122,7 @@ function BorderConflictsView({
         setTooltipProps(undefined)
       }}
     >
-      <MapWrapper>
+      <MapWrapperWithSlide>
         <BorderConflictsMap
           tooltipProps={tooltipProps}
           info={info}
@@ -170,11 +131,11 @@ function BorderConflictsView({
           yearRange={yearRange}
           setDetailInfo={setDetailInfo}
         />
-      </MapWrapper>
+      </MapWrapperWithSlide>
       <Right>
         <SliderHeader>Period</SliderHeader>
         <Slider
-          vertical
+          vertical={dimension.width > 900}
           defaultValue={yearRange}
           step={1}
           max={2021}

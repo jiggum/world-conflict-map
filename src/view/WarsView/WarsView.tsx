@@ -5,47 +5,8 @@ import Wars, { TWar, getTooltipContent } from './WarsMap'
 import { TTooltipProps } from '../../component/Tooltip'
 import { TPosition } from '../../type'
 import DetailDialog from '../../component/DetailDialog'
-
-const Wrapper = styled.div`
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 64px;
-`
-
-const MapWrapper = styled.div`
-  width: 100%;
-  max-width: 1600px;
-  padding-left: 64px;
-`
-
-const Right = styled.div`
-  font-size: 16px;
-  margin-left: 32px;
-  margin-right: 64px;
-  height: 400px;
-  position: relative;
-`
-
-const SliderHeader = styled.div`
-  position: absolute;
-  top: -48px;
-  left: 12px;
-  transform: translateX(-50%);
-  font-weight: bold;
-  white-space: nowrap;
-  font-size: 18px;
-`
-
-const SliderMark = styled.span`
-  font-size: 16px;
-`
+import { useWindowDimensions } from '../..//util'
+import { Wrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
 
 export type TYearRange = [number, number]
 
@@ -83,6 +44,7 @@ function WarsView({
   const [info, setInfo] = useState<TWarInfo | undefined>()
   const [detailInfo, setDetailInfo] = useState<TWarInfo | undefined>()
   const [yearRange, setYearRange] = useState<TYearRange>([2020, 2021])
+  const dimension = useWindowDimensions()
 
   useEffect(() => {
     setInfo(undefined)
@@ -100,7 +62,7 @@ function WarsView({
         setTooltipProps(undefined)
       }}
     >
-      <MapWrapper>
+      <MapWrapperWithSlide>
         <Wars
           tooltipProps={tooltipProps}
           info={info}
@@ -109,11 +71,11 @@ function WarsView({
           setDetailInfo={setDetailInfo}
           yearRange={yearRange}
         />
-      </MapWrapper>
+      </MapWrapperWithSlide>
       <Right>
         <SliderHeader>Period</SliderHeader>
         <Slider
-          vertical
+          vertical={dimension.width > 900}
           defaultValue={yearRange}
           step={1}
           max={2021}
