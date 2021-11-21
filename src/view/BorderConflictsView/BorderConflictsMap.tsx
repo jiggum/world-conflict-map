@@ -16,13 +16,13 @@ const Description = styled.div`
   white-space: nowrap;
 `
 
-const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRage: TYearRange) => {
+const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRange: TYearRange) => {
   const deaths = conflicts.map(e => e.DEATHS ?? 0).reduce((a, b) => a + b, 0)
   const deathsEl = deaths > 0 ? <>and <b>{deaths}</b> deaths </> : null
   const description =
-    yearRage[1] < 2021 ?
-      <Description><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRage[0]}-{yearRage[1]}</Description> :
-      <Description><b>{conflicts.length}</b> conflicts {deathsEl}after {yearRage[0]}</Description>
+    yearRange[1] < 2021 ?
+      <Description><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRange[0]}-{yearRange[1]}</Description> :
+      <Description><b>{conflicts.length}</b> conflicts {deathsEl}after {yearRange[0]}</Description>
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
@@ -56,7 +56,7 @@ const BorderConflictsMap = ({
   info,
   setInfo,
   setDetailInfo,
-  yearRange
+  yearRange,
 }: TMapChartProps) => {
   const getYearFilteredConflicts = (key: string) =>
     borderConflictsMap[key]

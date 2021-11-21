@@ -1,10 +1,9 @@
 import React, { memo } from 'react'
 import { TTerritorialDisputeInfo } from './TerritorialDisputesView'
-import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import territorialDisputes from '../../data/territorialDisputes.json'
 import ConflictMap from '../../component/ConflictMap'
-import { groupBy } from '../../util'
-import { TooltipTitle, TooltipRow, TTooltipProps } from '../../component/Tooltip'
+import { groupBy, getCountriesFormName } from '../../util'
+import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import styled from 'styled-components'
 
 export type TTerritorialDispute = { TERRITORY: string; COUNTRY: string; DESCRIPTION: string; }
@@ -44,20 +43,10 @@ const TerritorialDisputesMap = ({
 
   return (
     <ConflictMap
-      isSelectedItem={geo => {
-        const {NAME} = geo.properties
-        const spareCoutries = geographyCountryNameMap[NAME] ?? []
-        return [NAME, ...spareCoutries].includes(info?.country)
-      }}
-      isActive={geo => {
-        const {NAME} = geo.properties
-        const spares: string[] = geographyCountryNameMap[NAME] ?? []
-        return [NAME, ...spares].findIndex(key => territorialDisputeMapByCountry[key]) >= 0
-      }}
+      isSelectedItem={geo => info ? getCountriesFormName(geo.properties.NAME).includes(info.country) : false}
+      isActive={geo => getCountriesFormName(geo.properties.NAME).findIndex(key => territorialDisputeMapByCountry[key]) >= 0}
       getColorPoint={(geo) => {
-        const {NAME} = geo.properties
-        const spares: string[] = geographyCountryNameMap[NAME] ?? []
-        const num = [NAME, ...spares].map(e => territorialDisputeMapByCountry[e]?.length ?? 0).reduce((a, b) => a + b, 0)
+        const num = getCountriesFormName(geo.properties.NAME).map(e => territorialDisputeMapByCountry[e]?.length ?? 0).reduce((a, b) => a + b, 0)
         return Math.min((-1.4 / 6) + ((1.4 + 6) / 6 * (num - 1) / max), 1)
       }}
       select={(value) => {
@@ -66,8 +55,7 @@ const TerritorialDisputesMap = ({
           setTooltipProps(undefined)
         } else {
           const {NAME} = value.geo.properties
-          const spareCoutries = geographyCountryNameMap[NAME] ?? []
-          const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
+          const disputes = getCountriesFormName(NAME).map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
           const info = {
             country: NAME,
             disputes,
@@ -91,8 +79,7 @@ const TerritorialDisputesMap = ({
         setInfo(undefined)
         setTooltipProps(undefined)
         const {NAME} = geo.properties
-        const spareCoutries = geographyCountryNameMap[NAME] ?? []
-        const disputes = [NAME, ...spareCoutries].map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
+        const disputes = getCountriesFormName(NAME).map(key => territorialDisputeMapByCountry[key]).filter(e => e).flat()
         if (!disputes.length) return
         const info = {
           country: NAME,

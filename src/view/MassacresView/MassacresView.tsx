@@ -1,12 +1,13 @@
 import React, { useEffect, useMemo, useState, memo } from 'react'
 import styled from 'styled-components'
-import TerritorialDisputesMap, { TTerritorialDispute } from './MassacresMap'
+import TerritorialDisputesMap, { TMassacre } from './MassacresMap'
 import { TTooltipProps, TooltipTitle, TooltipRow } from '../../component/Tooltip'
 import territorialDisputes from '../../data/territorialDisputes.json'
 import { TPosition } from '../../type'
-import { groupBy, parseRemark } from '../../util'
+import { groupBy, parseRemark, useWindowDimensions } from '../../util'
 import DetailDialog from '../../component/DetailDialog'
-import { Wrapper, MapWrapper } from '../../component/common'
+import { Wrapper, MapWrapper, MapWrapperWithSlide, Right, SliderHeader, SliderMark } from '../../component/common'
+import { Slider } from 'antd'
 
 export const territorialDisputeMapByTerritory = groupBy(territorialDisputes, (e) => e.TERRITORY)
 
@@ -30,31 +31,31 @@ const TooltipGroup = styled.div`
   }
 `
 
-export type TTerritorialDisputeInfo = {
-  country: string,
-  disputes: TTerritorialDispute[],
+export type TMassacresInfo = {
+  name: string,
+  map: { [key: string]: TMassacre[] },
   position?: TPosition,
 }
 
-const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
+const getTooltipContent = (key: string, massacres: TMassacre[]) => {
   return (
     <TooltipGroup key={key}>
       <StyledTooltipTitle>{key}</StyledTooltipTitle>
-      {disputes.map(getToolTipRow)}
+      {massacres.map(getToolTipRow)}
     </TooltipGroup>
   )
 }
 
-const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
-  const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
+const getToolTipRow = (dispute: TMassacre, index: number) => {
+  // const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
   return (
     <DescriptionWrapper key={index}>
-      <TeritoryDescription dangerouslySetInnerHTML={{__html: parseRemark(dispute.TERRITORY).toString()}}/>
-      {
-        claimants.length && (
-          <b>Claimants: {claimants.join(', ')}</b>
-        )
-      }
+      {/*<TeritoryDescription dangerouslySetInnerHTML={{__html: parseRemark(dispute.TERRITORY).toString()}}/>*/}
+      {/*{*/}
+      {/*  claimants.length && (*/}
+      {/*    <b>Claimants: {claimants.join(', ')}</b>*/}
+      {/*  )*/}
+      {/*}*/}
       <div
         dangerouslySetInnerHTML={{__html: parseRemark(dispute.DESCRIPTION).toString().trim() || 'No description'}}
       />
@@ -63,7 +64,7 @@ const getToolTipRow = (dispute: TTerritorialDispute, index: number) => {
 }
 
 type TDetailViewProps = {
-  info: TTerritorialDisputeInfo,
+  info: TMassacresInfo,
   hide: () => void,
 }
 
@@ -72,7 +73,7 @@ function DetailView({
   hide,
 }: TDetailViewProps) {
   const infoGroups = useMemo(
-    () => Object.entries(groupBy(info?.disputes, (e) => e.COUNTRY)).sort(([a], [b]) => b < a ? 1 : -1),
+    () => Object.entries(info.map).sort(([a], [b]) => b < a ? 1 : -1),
     [info],
   )
 
@@ -83,6 +84,8 @@ function DetailView({
   )
 }
 
+export type TYearRange = [number, number]
+
 type TTerritorialDisputesViewProps = {
   tooltipProps?: TTooltipProps,
   setTooltipProps: (props?: TTooltipProps) => void,
@@ -92,8 +95,10 @@ function MassacresView({
   tooltipProps,
   setTooltipProps,
 }: TTerritorialDisputesViewProps) {
-  const [info, setInfo] = useState<TTerritorialDisputeInfo | undefined>()
-  const [detailInfo, setDetailInfo] = useState<TTerritorialDisputeInfo | undefined>()
+  const [info, setInfo] = useState<TMassacresInfo | undefined>()
+  const [detailInfo, setDetailInfo] = useState<TMassacresInfo | undefined>()
+  const [yearRange, setYearRange] = useState<TYearRange>([1000, 2021])
+  const dimension = useWindowDimensions()
 
   useEffect(() => () => {
     setTooltipProps(undefined)
@@ -113,8 +118,25 @@ function MassacresView({
           info={info}
           setInfo={setInfo}
           setDetailInfo={setDetailInfo}
+          yearRange={yearRange}
         />
       </MapWrapper>
+      <Right>
+        <SliderHeader>Period</SliderHeader>
+        <Slider
+          vertical={dimension.width > 900}
+          defaultValue={yearRange}
+          step={1}
+          max={2021}
+          min={1000}
+          onChange={(value) => setYearRange(typeof value === 'number' ? [value, value] : value)}
+          range
+          marks={{
+            2021: <SliderMark>2021</SliderMark>,
+            1000: <SliderMark>1000</SliderMark>,
+          }}
+        />
+      </Right>
       {detailInfo && <DetailView info={detailInfo} hide={() => setDetailInfo(undefined)}/>}
     </Wrapper>
   )
