@@ -19,7 +19,7 @@ const geographyCountryNameMap: { [key: string]: string[] } = {
     'State of Zhao',
     'Eastern Han dynasty',
   ],
-  Russia: ['Soviet Union'],
+  Russia: ['Soviet Union', 'Tsardom of Russia'],
   Unknown: ['Kingdom of Pontus'],
   'United Kingdom': ['Britannia', 'England', 'Scotland'],
   Spain: ['Al-Andalus'],

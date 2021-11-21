@@ -20,7 +20,7 @@ const DescriptionWrapper = styled(TooltipRow)`
   flex-direction: column;
 `
 
-const TeritoryDescription = styled.div`
+const MassacreDescription = styled.div`
   font-size: 18px;
   font-weight: bold;
 `
@@ -29,6 +29,10 @@ const TooltipGroup = styled.div`
   &:not(:first-child) {
     margin-top: 24px;
   }
+`
+
+const Row = styled.div`
+  display: flex;
 `
 
 export type TMassacresInfo = {
@@ -41,7 +45,7 @@ const getTooltipContent = (key: string, massacres: TMassacre[]) => {
   return (
     <TooltipGroup key={key}>
       <StyledTooltipTitle>{key}</StyledTooltipTitle>
-      {massacres.map(getToolTipRow)}
+      {massacres.sort((a, b) => b.START_YEAR - a.START_YEAR).map(getToolTipRow)}
     </TooltipGroup>
   )
 }
@@ -50,15 +54,13 @@ const getToolTipRow = (dispute: TMassacre, index: number) => {
   // const claimants = territorialDisputeMapByTerritory[dispute.TERRITORY]?.map(e => e.COUNTRY).filter(e => e !== dispute.COUNTRY) ?? []
   return (
     <DescriptionWrapper key={index}>
-      {/*<TeritoryDescription dangerouslySetInnerHTML={{__html: parseRemark(dispute.TERRITORY).toString()}}/>*/}
-      {/*{*/}
-      {/*  claimants.length && (*/}
-      {/*    <b>Claimants: {claimants.join(', ')}</b>*/}
-      {/*  )*/}
-      {/*}*/}
-      <div
-        dangerouslySetInnerHTML={{__html: parseRemark(dispute.DESCRIPTION).toString().trim() || 'No description'}}
-      />
+      <MassacreDescription dangerouslySetInnerHTML={{__html: parseRemark(dispute.NAME).toString()}}/>
+      <div>
+        <Row>Date:&nbsp;{dispute.DATE}</Row>
+        <Row>Location:&nbsp;<div dangerouslySetInnerHTML={{__html: parseRemark(dispute.LOCATION).toString()}} /></Row>
+        {dispute.FATALITIES && <Row>Fatalities:&nbsp;<b>{dispute.FATALITIES}</b></Row>}
+        <div dangerouslySetInnerHTML={{__html: parseRemark(dispute.DESCRIPTION).toString().trim() || 'No description'}} />
+      </div>
     </DescriptionWrapper>
   )
 }
@@ -97,7 +99,7 @@ function MassacresView({
 }: TTerritorialDisputesViewProps) {
   const [info, setInfo] = useState<TMassacresInfo | undefined>()
   const [detailInfo, setDetailInfo] = useState<TMassacresInfo | undefined>()
-  const [yearRange, setYearRange] = useState<TYearRange>([1000, 2021])
+  const [yearRange, setYearRange] = useState<TYearRange>([2000, 2021])
   const dimension = useWindowDimensions()
 
   useEffect(() => () => {

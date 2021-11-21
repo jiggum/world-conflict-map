@@ -18,7 +18,7 @@ const Description = styled.div`
 
 const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRange: TYearRange) => {
   const deaths = conflicts.map(e => e.DEATHS ?? 0).reduce((a, b) => a + b, 0)
-  const deathsEl = deaths > 0 ? <>and <b>{deaths}</b> deaths </> : null
+  const deathsEl = deaths > 0 ? <>and <b>~{deaths}</b> deaths </> : null
   const description =
     yearRange[1] < 2021 ?
       <Description><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRange[0]}-{yearRange[1]}</Description> :

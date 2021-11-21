@@ -30,7 +30,7 @@ export const Description = styled.div`
 
 const getTooltipContent = (key: string, massacres: TMassacre[], yearRange: TYearRange) => {
   const deaths = massacres.map(e => e.DEATHS ?? 0).reduce((a, b) => a + b, 0)
-  const deathsEl = deaths > 0 ? <>and <b>{deaths}</b> deaths </> : null
+  const deathsEl = deaths > 0 ? <>and <b>~{deaths}</b> deaths </> : null
   const description =
     yearRange[1] < 2021 ?
       <Description><b>{massacres.length}</b> massacres {deathsEl}between {yearRange[0]}-{yearRange[1]}</Description> :
