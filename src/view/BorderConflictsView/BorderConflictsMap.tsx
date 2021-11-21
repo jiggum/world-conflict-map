@@ -4,6 +4,7 @@ import borderConflicts from '../../data/borderConflicts.json'
 import ConflictMap from '../../component/ConflictMap'
 import { getCountriesFormName } from '../../util'
 import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import styled from 'styled-components'
 
 const countries = Array.from(new Set(borderConflicts.map(e => e.COMBATANTS.flat(2)).flat()))
 const borderConflictsMap: { [key: string]: TBorderConflict[] } = countries.reduce((acc: any, val) => {
@@ -11,13 +12,17 @@ const borderConflictsMap: { [key: string]: TBorderConflict[] } = countries.reduc
   return acc
 }, {})
 
+const Description = styled.div`
+  white-space: nowrap;
+`
+
 const getTooltipContent = (key: string, conflicts: TBorderConflict[], yearRage: TYearRange) => {
   const deaths = conflicts.map(e => e.DEATHS ?? 0).reduce((a, b) => a + b, 0)
   const deathsEl = deaths > 0 ? <>and <b>{deaths}</b> deaths </> : null
   const description =
     yearRage[1] < 2021 ?
-      <div><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRage[0]}-{yearRage[1]}</div> :
-      <div><b>{conflicts.length}</b> conflicts {deathsEl}after {yearRage[0]}</div>
+      <Description><b>{conflicts.length}</b> conflicts {deathsEl}between {yearRage[0]}-{yearRage[1]}</Description> :
+      <Description><b>{conflicts.length}</b> conflicts {deathsEl}after {yearRage[0]}</Description>
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>

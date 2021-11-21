@@ -60,7 +60,9 @@ function ConflictMap({
                         position: {left: e.clientX, top: e.clientY}
                       } : undefined)
                     }
-                    onClick && onClick(geo)
+                    if (active && onClick) {
+                      onClick(geo)
+                    }
                     e.stopPropagation()
                   }}
                   onMouseEnter={(e) => {

@@ -37,6 +37,7 @@ export const TooltipRow = styled.div`
 
 export const TooltipFooter = styled.div`
   text-align: center;
+  white-space: nowrap;
 `
 
 export const CloseButton = styled.div`

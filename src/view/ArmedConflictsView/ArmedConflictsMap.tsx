@@ -8,9 +8,17 @@ import { getCountriesFormName, groupBy, parseRemark } from '../../util'
 import { TooltipRow, TooltipTitle, TTooltipProps } from '../../component/Tooltip'
 import styled from 'styled-components'
 
-const TitleDescription = styled.span`
+const SpanDescription = styled.span`
   font-size: 14px;
   font-weight: normal;
+  white-space: nowrap;
+`
+
+const DivDescription = styled.div`
+  white-space: nowrap;
+`
+
+const BDescription = styled.b`
   white-space: nowrap;
 `
 
@@ -18,10 +26,10 @@ const getToolTipRow = (conflict: TArmedConflicts, index: number) => (
   <TooltipRow key={index}>
     {conflict.YEAR}:&nbsp;
     <div>
-      <b dangerouslySetInnerHTML={{__html: parseRemark(conflict.NAME)}}/>
+      <BDescription dangerouslySetInnerHTML={{__html: parseRemark(conflict.NAME)}}/>
       {
         conflict.CONFLICTS.map((e, i) =>
-          <div key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
+          <DivDescription key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
         )
       }
     </div>
@@ -34,9 +42,9 @@ const getTooltipContent = (year: TYear, key: string, conflicts: TArmedConflicts[
     <div key={key}>
       <TooltipTitle>
         {key}
-        {deaths !== undefined && <TitleDescription>&nbsp;(<b>{deaths}</b> deaths in 2020)</TitleDescription>}
+        {deaths !== undefined && <SpanDescription>&nbsp;(<b>{deaths}</b> deaths in 2020)</SpanDescription>}
       </TooltipTitle>
-      <div>{conflicts.length} ongoing conflicts</div>
+      <DivDescription>{conflicts.length} ongoing conflicts</DivDescription>
       {conflicts.sort((a, b) => b.YEAR - a.YEAR).map(getToolTipRow)}
     </div>
   )

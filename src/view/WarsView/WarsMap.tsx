@@ -16,13 +16,17 @@ const ConflictWrapper = styled(TooltipRow)`
   flex-direction: column;
 `
 
+const Description = styled.div`
+  white-space: nowrap;
+`
+
 const getToolTipRow = (war: TWar, index: number) => (
   <ConflictWrapper key={index}>
     <b>{war.START}-{war.FINISHED ?? 'Ongoing'}&nbsp;</b>
     <div>
       {
         war.CONFLICTS.map((e, i) =>
-          <div key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
+          <Description key={i} dangerouslySetInnerHTML={{__html: `- ${parseRemark(e)}`}}/>
         )
       }
     </div>

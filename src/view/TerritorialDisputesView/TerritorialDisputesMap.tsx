@@ -4,7 +4,8 @@ import geographyCountryNameMap from '../../data/geographyCountryNameMap'
 import territorialDisputes from '../../data/territorialDisputes.json'
 import ConflictMap from '../../component/ConflictMap'
 import { groupBy } from '../../util'
-import { TooltipTitle, TTooltipProps } from '../../component/Tooltip'
+import { TooltipTitle, TooltipRow, TTooltipProps } from '../../component/Tooltip'
+import styled from 'styled-components'
 
 export type TTerritorialDispute = { TERRITORY: string; COUNTRY: string; DESCRIPTION: string; }
 
@@ -12,11 +13,15 @@ const territorialDisputeMapByCountry = groupBy(territorialDisputes, (e) => e.COU
 
 const max = 15
 
+export const Description = styled.div`
+  white-space: nowrap;
+`
+
 const getTooltipContent = (key: string, disputes: TTerritorialDispute[]) => {
   return (
     <div key={key}>
       <TooltipTitle>{key}</TooltipTitle>
-      <div><b>{disputes.length}</b> ongoing disputes</div>
+      <Description><b>{disputes.length}</b>&nbsp;ongoing disputes</Description>
     </div>
   )
 }
