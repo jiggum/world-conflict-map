@@ -86,7 +86,7 @@ const MassacresMap = ({
           .flat(2)
           .reduce((acc, val) => acc + val, 0)
         const correction = Math.min(1, filteredMassacres.length / 10)
-        return deaths > 0 ? Math.min(maxDeaths, deaths / maxDeaths) * correction : -1 / 6
+        return Math.min((-1.4 / 6) + ((1.4 + 6) / 6 * (deaths / Math.min(maxDeaths, 200000) * correction) ** (1 / 2)), 1)
       }}
       select={(value) => {
         if (!value) {

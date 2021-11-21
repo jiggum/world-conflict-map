@@ -84,7 +84,7 @@ const BorderConflictsMap = ({
           .flat(2)
           .reduce((acc, val) => acc + val, 0)
         const correction = Math.min(1, filteredConflicts.length / 10)
-        return deaths > 0 ? Math.min(maxDeaths, deaths / maxDeaths) * correction : -1 / 6
+        return deaths > 0 ? Math.min(1, deaths / maxDeaths) * correction : -1 / 6
       }}
       select={(value) => {
         if (!value) {
