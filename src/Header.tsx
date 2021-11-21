@@ -59,12 +59,6 @@ function Header() {
           Massacres
         </Link>
       </IButton>
-      /
-      <IButton active={location.pathname === '/terrors'}>
-        <Link to="/terrors">
-          Terrors
-        </Link>
-      </IButton>
     </Wrapper>
   )
 }
